@@ -1,0 +1,12 @@
+[theme]
+# Color de acento primario para elementos interactivos y títulos.
+primaryColor = "#F5D6C3"
+
+# Color de fondo para el área de contenido principal y encabezados.
+backgroundColor = "#EDF2F4"
+
+# Color de fondo utilizado para la barra lateral y la mayoría de los widgets interactivos.
+secondaryBackgroundColor = "#8D99AE"
+
+# Color utilizado para casi todo el texto.
+textColor = "#333333"
