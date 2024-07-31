@@ -241,8 +241,14 @@ def comandos_basicos_terminal():
 def configuracion_e_inicializacion_git():
     st.title("Configuración e Inicialización de Git")
     st.markdown("""
-    En esta sección, aprenderás cómo configurar Git para tu entorno y cómo inicializar un nuevo repositorio.
+    En esta sección, aprenderás cómo configurar Git para tu entorno y cómo inicializar un nuevo repositorio, pero antes trataremos.......
+    ### ¿Qué es Git?
+    Git es un sistema de control de versiones distribuido que te permite rastrear cambios en tus archivos y colaborar con otros desarrolladores. Es una herramienta esencial en el desarrollo de software moderno.
 
+    **Beneficios de Git:**
+    - **Distribución**: Cada desarrollador tiene una copia completa del historial del proyecto, lo que facilita el trabajo sin conexión y mejora la seguridad.
+    - **Velocidad**: Optimizado para rendimiento, Git maneja grandes proyectos de forma rápida y eficiente.
+    - **Colaboración**: Facilita la colaboración entre múltiples desarrolladores, permitiendo trabajar en paralelo y fusionar cambios de manera efectiva.
     ### Contenido
     1. ⚙️ **Configuración de Git**
     2. 🚀 **Inicialización de Repositorios**
@@ -260,7 +266,7 @@ def configuracion_e_inicializacion_git():
 
     **Ejemplo:** Configura el nombre de usuario
     ```bash
-    $ git config --global user.name "Alex Martínez"
+    $ git config --global user.name "Alex Marza"
     ```
 
     #### Configurar el Correo Electrónico
@@ -271,7 +277,7 @@ def configuracion_e_inicializacion_git():
 
     **Ejemplo:** Configura el correo electrónico
     ```bash
-    $ git config --global user.email "alex.martinez@example.com"
+    $ git config --global user.email "alex.marza@example.com"
     ```
 
     #### Verificar la Configuración Actual
@@ -283,8 +289,8 @@ def configuracion_e_inicializacion_git():
     **Ejemplo:** Verifica la configuración de Git
     ```bash
     $ git config --list
-    user.name=Alex Martínez
-    user.email=alex.martinez@example.com
+    user.name=Alex Marza
+    user.email=alex.marza@example.com
     ```
 
     #### Configuración Local
@@ -295,33 +301,10 @@ def configuracion_e_inicializacion_git():
 
     **Ejemplo:** Configura el nombre de usuario local
     ```bash
-    $ git config user.name "Alex Martínez Local"
+    $ git config user.name "Alex Marza Local"
     ```
 
     📌 **Tip:** Usa `--global` para configuraciones que se aplicarán a todos los repositorios en tu máquina.
-    """)
-
-    st.markdown("### 2. 🚀 Inicialización de Repositorios")
-    st.markdown("""
-    Una vez que Git esté configurado, puedes comenzar a gestionar tus proyectos con él. Aquí te mostramos cómo inicializar un nuevo repositorio.
-
-    #### Inicializar un Nuevo Repositorio
-    Utiliza el siguiente comando para crear un nuevo repositorio en el directorio actual:
-    ```bash
-    git init
-    ```
-
-    **Ejemplo:** Inicializa un repositorio en un nuevo proyecto
-    ```bash
-    $ mkdir mi_proyecto
-    $ cd mi_proyecto
-    $ git init
-    Initialized empty Git repository in /home/usuario/mi_proyecto/.git/
-    ```
-
-    Aquí hemos creado un nuevo directorio llamado `mi_proyecto`, cambiamos a ese directorio y luego inicializamos un repositorio Git vacío.
-
-    📌 **Tip:** Después de inicializar un repositorio, puedes comenzar a añadir archivos y realizar commits.
     """)
 
     st.markdown("""
@@ -340,33 +323,102 @@ def configuracion_e_inicializacion_git():
     df_comandos_git = pd.DataFrame(comandos)
     st.dataframe(df_comandos_git, use_container_width=True)
 
+    st.markdown("### 2. 🚀 Inicialización de Repositorios en Git")
+    st.markdown("""
+    Una vez que Git esté configurado, puedes comenzar a gestionar tus proyectos con él. Aquí te mostramos cómo inicializar un nuevo repositorio.
+
+    ### Pasos para Inicializar un Repositorio en GitHub
+
+    #### Paso 1: Crea el Repositorio en GitHub
+    Ve a [GitHub](https://github.com/) y crea un nuevo repositorio. Copia la URL del repositorio que has creado.
+
+    #### Paso 2: Crea la Carpeta y Ficheros Necesarios para tu Proyecto
+    En la terminal de Visual Studio Code editor de código fuente preferid0), navega hasta la ubicación donde deseas crear tu proyecto y crea una nueva carpeta:
+    ```bash
+    $ mkdir mi_proyecto
+    $ cd mi_proyecto
+    ```
+
+    #### Paso 3: Inicializa el Repositorio Git
+    Inicializa un repositorio en la carpeta del proyecto:
+    ```bash
+    $ git init
+    Initialized empty Git repository in /home/usuario/mi_proyecto/.git/
+    ```
+
+    #### Paso 4: Añade los Archivos al Índice
+    Añade todos los archivos de tu proyecto al índice de Git:
+    ```bash
+    $ git add .
+    ```
+
+    #### Paso 5: Realiza un Commit Inicial
+    Realiza un commit inicial con un mensaje descriptivo:
+    ```bash
+    $ git commit -m "versión 1 del proyecto"
+    ```
+
+    #### Paso 6: Renombra la Rama Principal a 'main'
+    Renombra la rama principal a 'main' (opcional, pero recomendado):
+    ```bash
+    $ git branch -M main
+    ```
+
+    #### Paso 7: Vincula el Repositorio Local con GitHub
+    Añade la URL del repositorio remoto que copiaste en el paso 1:
+    ```bash
+    $ git remote add origin https://github.com/usuario/mi_proyecto.git
+    ```
+
+    #### Paso 8: Envía los Cambios al Repositorio Remoto
+    Envía los cambios de la rama 'main' al repositorio remoto en GitHub:
+    ```bash
+    $ git push -u origin main
+    ```
+
+    📌 **Tip:** Asegúrate de que tienes permisos de escritura en el repositorio remoto.
+    """)
+
+    st.markdown("""
+    ## Resumen de Comandos
+    A continuación, se presenta un resumen de los comandos básicos para inicialización en Git.
+    """)
+
+    comandos_inicializacion = [
+        {"Comando": "mkdir nombre_carpeta", "Descripción": "Crea una nueva carpeta."},
+        {"Comando": "cd nombre_carpeta", "Descripción": "Cambia al directorio especificado."},
+        {"Comando": "git init", "Descripción": "Inicializa un nuevo repositorio Git en el directorio actual."},
+        {"Comando": "git add .", "Descripción": "Añade todos los archivos al índice de Git."},
+        {"Comando": "git commit -m 'mensaje'", "Descripción": "Realiza un commit con el mensaje especificado."},
+        {"Comando": "git branch -M main", "Descripción": "Renombra la rama principal a 'main'."},
+        {"Comando": "git remote add origin URL", "Descripción": "Vincula el repositorio local con el remoto en GitHub."},
+        {"Comando": "git push -u origin main", "Descripción": "Envía los cambios al repositorio remoto en GitHub."}
+    ]
+
+    df_comandos_inicializacion = pd.DataFrame(comandos_inicializacion)
+    st.dataframe(df_comandos_inicializacion, use_container_width=True)
 
 
 
-# Función para la página de Operaciones Básicas
+
+
 def operaciones_basicas():
     st.title("Operaciones Básicas con Git")
     st.markdown("""
     En esta sección, cubriremos las operaciones básicas que puedes realizar con Git, incluyendo cómo clonar repositorios, añadir y eliminar archivos, y cómo hacer commits y ver el historial.
 
-    ### ¿Qué es Git?
-    Git es un sistema de control de versiones distribuido que te permite rastrear cambios en tus archivos y colaborar con otros desarrolladores. Es una herramienta esencial en el desarrollo de software moderno.
-
-    **Beneficios de Git:**
-    - **Distribución**: Cada desarrollador tiene una copia completa del historial del proyecto, lo que facilita el trabajo sin conexión y mejora la seguridad.
-    - **Velocidad**: Optimizado para rendimiento, Git maneja grandes proyectos de forma rápida y eficiente.
-    - **Colaboración**: Facilita la colaboración entre múltiples desarrolladores, permitiendo trabajar en paralelo y fusionar cambios de manera efectiva.
+    
 
     ### Contenido
     1. 📂 **Clonar Repositorios**
     2. ✏️ **Añadir y Eliminar Archivos**
     3. 📜 **Hacer Commits y Ver Historial**
+    4. 🔄 **Actualizar y Sincronizar Repositorios**
     """)
 
-    # st.image("path/to/your/image.png", caption="Git: Sistema de Control de Versiones Distribuido")
-
+    # Clonar Repositorios
     st.markdown("""
-    ### Clonar Repositorios
+    ### 1. Clonar Repositorios
     Clonar un repositorio es el primer paso para empezar a colaborar en un proyecto existente o para trabajar en un proyecto desde otra máquina. Este proceso copia todo el contenido del repositorio desde el servidor remoto a tu máquina local.
 
     #### ¿Por Qué Clonar un Repositorio?
@@ -383,16 +435,23 @@ def operaciones_basicas():
 
     Ejemplo: Para clonar el repositorio `Git` de GitHub, usa el comando:
     ```bash
-    git clone https://github.com/AlexCapis/Git.git
+    $ git clone https://github.com/AlexCapis/Git.git
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    Cloning into 'Git'...
+    remote: Enumerating objects: 100, done.
+    remote: Counting objects: 100% (100/100), done.
+    remote: Compressing objects: 100% (50/50), done.
+    remote: Total 100 (delta 0), reused 100 (delta 0), pack-reused 0
+    Receiving objects: 100% (100/100), done.
     ```
 
     #### ¿Qué Ocurre Después de Clonar?
     - **Creación de un Directorio Local**: Se crea una carpeta con el nombre del repositorio.
     - **Copia del Historial Completo**: Todo el historial de cambios es copiado a tu máquina local.
     - **Configuración de Orígenes Remotos**: El repositorio clonado estará vinculado al origen remoto de donde se clonó.
-
-    #### Visualización del Proceso
-    ![Clonar un repositorio](https://example.com/path/to/clone_image.png) ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 
     📌 **Tip:** Si el repositorio es privado, necesitarás autenticación (nombre de usuario y contraseña, token de acceso, etc.) para clonar.
 
@@ -410,17 +469,18 @@ def operaciones_basicas():
     ¡Ahora estás listo para comenzar a trabajar con Git clonando repositorios de manera efectiva!
     """)
 
+    # Añadir y Eliminar Archivos
     st.markdown("""
-        ### Añadir y Eliminar Archivos
+        ### 2. Añadir y Eliminar Archivos
         Git te permite añadir nuevos archivos a tu repositorio y eliminar los que ya no necesitas. Esto te ayuda a gestionar los cambios y mantener tu proyecto limpio y organizado.
     """)
 
     st.markdown("""
         #### ¿Qué es el Área de Staging?
         El área de staging es una zona intermedia donde se almacenan los cambios que quieres confirmar en el próximo commit. Esto te permite preparar y revisar los cambios antes de hacerlos permanentes.
-    """)
 
-    st.image("https://example.com/path/to/staging_area_image.png", caption="Flujo del área de staging en Git")
+        ![Flujo del área de staging en Git](https://example.com/path/to/staging_area_image.png)
+    """)
 
     st.markdown("""
         #### Añadir Archivos al Repositorio
@@ -429,8 +489,17 @@ def operaciones_basicas():
 
     st.code("git add <archivo>", language='bash')
 
-    st.markdown("Ejemplo: Añade un nuevo archivo al área de staging:")
-    st.code("git add nuevo-archivo.txt", language='bash')
+    st.markdown("""
+    Ejemplo: Añade un nuevo archivo al área de staging:
+    ```bash
+    $ git add nuevo-archivo.txt
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    # No hay salida si el comando se ejecuta correctamente.
+    ```
+    """)
 
     st.markdown("""
         #### Eliminar Archivos del Repositorio
@@ -439,13 +508,23 @@ def operaciones_basicas():
 
     st.code("git rm <archivo>", language='bash')
 
-    st.markdown("Ejemplo: Elimina un archivo específico:")
-    st.code("git rm archivo-a-eliminar.txt", language='bash')
+    st.markdown("""
+    Ejemplo: Elimina un archivo específico:
+    ```bash
+    $ git rm archivo-a-eliminar.txt
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    rm 'archivo-a-eliminar.txt'
+    ```
+    """)
 
     st.markdown("📌 **Tip:** Si te encuentras con un error, verifica que el archivo que estás intentando añadir o eliminar existe y que tienes los permisos adecuados.")
 
+    # Hacer Commits y Ver Historial
     st.markdown("""
-        ### Hacer Commits y Ver Historial
+        ### 3. Hacer Commits y Ver Historial
         Realizar commits es una de las funciones más importantes de Git, ya que te permite guardar el estado de tu proyecto en un punto específico en el tiempo. También puedes ver el historial de commits para rastrear los cambios realizados y entender cómo ha evolucionado tu proyecto.
     """)
 
@@ -456,8 +535,19 @@ def operaciones_basicas():
 
     st.code("git commit -m \"Mensaje del commit\"", language='bash')
 
-    st.markdown("Ejemplo: Guarda tus cambios con un mensaje descriptivo:")
-    st.code("git commit -m \"Añadido nuevo archivo de configuración\"", language='bash')
+    st.markdown("""
+    Ejemplo: Guarda tus cambios con un mensaje descriptivo:
+    ```bash
+    $ git commit -m "Añadido nuevo archivo de configuración"
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    [main 1a2b3c4] Añadido nuevo archivo de configuración
+     1 file changed, 1 insertion(+)
+     create mode 100644 nuevo-archivo.txt
+    ```
+    """)
 
     st.markdown("""
         #### Ver el Historial de Commits
@@ -466,44 +556,166 @@ def operaciones_basicas():
 
     st.code("git log", language='bash')
 
-    st.markdown("Ejemplo: Muestra el historial de commits en tu terminal:")
-    st.code("git log", language='bash')
+    st.markdown("""
+    Ejemplo: Muestra el historial de commits en tu terminal:
+    ```bash
+    $ git log
+    commit 1a2b3c4d5e6f7g8h9i0jklmnopqrstuv (HEAD -> main)
+    Author: Tu Nombre <tucorreo@example.com>
+    Date:   Mon Jul 31 10:00:00 2024 +0000
+
+        Añadido nuevo archivo de configuración
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    commit 1a2b3c4d5e6f7g8h9i0jklmnopqrstuv
+    Author: Tu Nombre <tucorreo@example.com>
+    Date:   Mon Jul 31 10:00:00 2024 +0000
+
+        Añadido nuevo archivo de configuración
+    ```
+    """)
 
     st.markdown("📌 **Tip:** Usa `git log --oneline` para ver un historial más compacto y legible.")
 
-    # Título de la sección
-    st.markdown("### Resumen de Comandos Básicos")
-
-    # Crear un DataFrame para la tabla de comandos
-    data = {
-        "Comando": [
-            "`git clone <URL>`",
-            "`git add <archivo>`",
-            "`git rm <archivo>`",
-            "`git commit -m \"mensaje\"`",
-            "`git log`"
-        ],
-        "Descripción": [
-            "Clona un repositorio",
-            "Añade un archivo al área de staging",
-            "Elimina un archivo del repositorio",
-            "Guarda los cambios con un mensaje",
-            "Muestra el historial de commits"
-        ]
-    }
-
-    df = pd.DataFrame(data)
-
-    # Mostrar la tabla usando Streamlit
-    st.table(df)
-
-    # Mensaje adicional
+    # Actualizar y Sincronizar Repositorios
     st.markdown("""
-    ¡Con estos comandos básicos, ya puedes comenzar a trabajar con Git y gestionar tu código de manera efectiva!
+        ### 4.  Actualizar y Sincronizar Repositorios
+        Usa `git pull` para mantener tu repositorio local actualizado con los cambios del repositorio remoto es esencial para colaborar efectivamente y evitar conflictos.
+
+        
+        Este comando descarga los cambios del repositorio remoto y los fusiona con tu copia local.
+    """)
+
+    st.code("git pull", language='bash')
+
+    st.markdown("""
+    Ejemplo: Actualiza tu repositorio local con los cambios del remoto:
+    ```bash
+    $ git pull
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    remote: Enumerating objects: 10, done.
+    remote: Counting objects: 100% (10/10), done.
+    remote: Compressing objects: 100% (8/8), done.
+    remote: Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (8/8), done.
+    From https://github.com/AlexCapis/Git
+       1a2b3c4..5d6e7f8  main       -> origin/main
+    Updating 1a2b3c4..5d6e7f8
+    Fast-forward
+     archivo-a-eliminar.txt | 1 -
+     1 file changed, 1 deletion(-)
+    ```
+
+    #### `git push`
+        Usa `git push` para enviar tus cambios locales al repositorio remoto.
+    """)
+
+    st.code("git push", language='bash')
+
+    st.markdown("""
+    Ejemplo: Envía tus cambios al repositorio remoto:
+    ```bash
+    $ git push
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    Counting objects: 5, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (5/5), 1.23 KiB | 1.23 MiB/s, done.
+    Total 5 (delta 0), reused 0 (delta 0)
+    To https://github.com/AlexCapis/Git
+       1a2b3c4..5d6e7f8  main -> main
+    ```
+
+    #### `git status`
+        Este comando muestra el estado actual de tu repositorio, incluyendo los archivos modificados y el estado del área de staging.
+    """)
+
+    st.code("git status", language='bash')
+
+    st.markdown("""
+    Ejemplo: Verifica el estado de tu repositorio:
+    ```bash
+    $ git status
+    On branch main
+    Your branch is up-to-date with 'origin/main'.
+
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
+        new file:   nuevo-archivo.txt
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    On branch main
+    Your branch is up-to-date with 'origin/main'.
+
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
+        new file:   nuevo-archivo.txt
+    ```
     """)
 
     st.markdown("""
+    #### `git status -s`
+        La opción `-s` muestra el estado en un formato compacto.
+    """)
+
+    st.code("git status -s", language='bash')
+
+    st.markdown("""
+    Ejemplo: Estado compacto del repositorio:
+    ```bash
+    $ git status -s
+    A  nuevo-archivo.txt
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    A  nuevo-archivo.txt
+    ```
+    """)
+
+    st.markdown("""
+    #### `git alias`
+        Los alias en Git te permiten crear atajos para comandos largos.
+    """)
+
+    st.code("git config --global alias.<nombre-alias> '<comando>'", language='bash')
+
+    st.markdown("""
+    Ejemplo: Crea un alias para `git status`:
+    ```bash
+    $ git config --global alias.st status
+    ```
+
+    Después puedes usar:
+    ```bash
+    $ git st
+    ```
+
+    **Salida Esperada:**
+    ```bash
+    On branch main
+    Your branch is up-to-date with 'origin/main'.
+
+    Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
+        new file:   nuevo-archivo.txt
+    ```
+    """)
+
+    # Resumen de Comandos Básicos
+    st.markdown("""
     ### Resumen de Comandos Básicos
+
     Aquí tienes un resumen de los comandos básicos que hemos cubierto:
 
     | Comando                     | Descripción                           |
@@ -513,9 +725,22 @@ def operaciones_basicas():
     | `git rm <archivo>`          | Elimina un archivo del repositorio    |
     | `git commit -m "mensaje"`   | Guarda los cambios con un mensaje     |
     | `git log`                   | Muestra el historial de commits       |
+    | `git pull`                  | Descarga y fusiona cambios del remoto |
+    | `git push`                  | Envía cambios locales al remoto       |
+    | `git status`                | Muestra el estado del repositorio     |
+    | `git status -s`             | Muestra el estado en formato compacto |
+    | `git config --global alias.<nombre-alias> '<comando>'` | Crea un alias para un comando largo |
 
     ¡Con estos comandos básicos, ya puedes comenzar a trabajar con Git y gestionar tu código de manera efectiva!
     """)
+
+
+
+
+
+
+
+
 
 
 # Función para la sección de Ramas y Colaboración
@@ -1007,19 +1232,19 @@ def feedback():
 # Diccionario para la navegación
 paginas = {
     "Home": pagina_principal,
-    "1 - Comandos Básicos Terminal": comandos_basicos_terminal,
-    "2 - Configuración e Inicialización": configuracion_e_inicializacion_git,
-    "3 - Operaciones Básicas": operaciones_basicas,
-    "4 - Ramas y Colaboración": ramas_colaboracion,
-    "5 - Uso Avanzado de Git": avanzado_git,
-    "6 - Integración con GitHun": integracion_github,
-    "7 - Resumen Taller": resumen_taller,
-    "8 - Ejercicios": ejercicios,
-    "9 - Feedback": feedback
+    "Comandos Básicos Terminal": comandos_basicos_terminal,
+    "Configuración e Inicialización": configuracion_e_inicializacion_git,
+    "Operaciones Básicas": operaciones_basicas,
+    "Ramas y Colaboración": ramas_colaboracion,
+    "Uso Avanzado de Git": avanzado_git,
+    "Integración con GitHun": integracion_github,
+    "Resumen Taller": resumen_taller,
+    "Ejercicios": ejercicios,
+    "Feedback": feedback
 }
 
 # Sidebar para la selección de página
-st.sidebar.title("Navegación")
+st.sidebar.title("Contenido")
 seleccion = st.sidebar.radio("Selecciona una sección", list(paginas.keys()))
 
 # Ejecutar la función correspondiente a la selección de página
