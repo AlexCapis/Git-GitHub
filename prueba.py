@@ -691,13 +691,8 @@ def operaciones_basicas():
     ¡Con estos comandos básicos, ya puedes comenzar a trabajar con Git y gestionar tu código de manera efectiva!
     """)
 
-
-
-
-
-# Función para la sección de Ramas y Colaboración
 def ramas_colaboracion():
-    st.markdown("## Ramas y Colaboración")
+    st.title("Ramas y Colaboración")
     st.markdown("""
     En esta sección, aprenderás a crear y gestionar ramas, realizar merges y resolver conflictos, y estrategias de colaboración en proyectos.
 
@@ -717,10 +712,13 @@ def ramas_colaboracion():
     git branch <nombre-de-la-rama>
     ```
 
-    Ejemplo:
+    **Ejemplo Real:**
     ```bash
     git branch feature-nueva
     ```
+
+    **Explicación del Ejemplo:**
+    - `git branch feature-nueva`: Crea una nueva rama llamada `feature-nueva`. Esto te permite trabajar en nuevas características sin afectar la rama principal.
 
     #### Cambiar a una Rama Diferente
     Para cambiar a una rama existente, utiliza:
@@ -728,10 +726,27 @@ def ramas_colaboracion():
     git checkout <nombre-de-la-rama>
     ```
 
-    Ejemplo:
+    **Ejemplo Real:**
     ```bash
     git checkout feature-nueva
     ```
+
+    **Explicación del Ejemplo:**
+    - `git checkout feature-nueva`: Cambia a la rama `feature-nueva`, permitiéndote trabajar en los cambios realizados en esa rama.
+
+    #### Crear y Cambiar a una Nueva Rama en un Solo Paso
+    Utiliza el siguiente comando para crear una nueva rama y cambiarte a ella en un solo paso:
+    ```bash
+    git checkout -b <nombre-de-la-rama>
+    ```
+
+    **Ejemplo Real:**
+    ```bash
+    git checkout -b feature-nueva
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git checkout -b feature-nueva`: Crea una nueva rama llamada `feature-nueva` y cambia a ella inmediatamente.
 
     #### Ver todas las Ramas
     Puedes listar todas las ramas en tu repositorio con:
@@ -739,7 +754,18 @@ def ramas_colaboracion():
     git branch
     ```
 
-    📌 **Tip:** Usa ramas descriptivas para mantener tu proyecto organizado.
+    **Ejemplo Real:**
+    ```bash
+    git branch
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git branch`: Muestra una lista de todas las ramas en tu repositorio, con un asterisco (*) indicando la rama activa.
+
+    📌 **Tip:** Usa nombres descriptivos para tus ramas para mantener tu proyecto organizado, por ejemplo, `feature/nueva-funcionalidad` o `bugfix/arreglo-error`.
+
+    📌 **Tip:** Si deseas eliminar una rama que ya no necesitas, usa `git branch -d <nombre-de-la-rama>`. Asegúrate de que la rama haya sido fusionada antes de eliminarla para evitar la pérdida de trabajo.
+
     """)
 
     st.markdown("### 2. 🔀 Realizar Merges y Resolver Conflictos")
@@ -757,10 +783,13 @@ def ramas_colaboracion():
     git merge <nombre-de-la-rama>
     ```
 
-    Ejemplo:
+    **Ejemplo Real:**
     ```bash
     git merge feature-nueva
     ```
+
+    **Explicación del Ejemplo:**
+    - `git merge feature-nueva`: Integra los cambios de `feature-nueva` en la rama actual (en este caso, `main`). Asegúrate de resolver cualquier conflicto si es necesario.
 
     #### Resolver Conflictos
     Si Git encuentra cambios conflictivos, te pedirá que los resuelvas manualmente. Abre los archivos conflictivos, edita y guarda los cambios, y luego añade los archivos resueltos al área de staging:
@@ -768,12 +797,24 @@ def ramas_colaboracion():
     git add <archivo-conflictivo>
     ```
 
+    **Ejemplo Real:**
+    ```bash
+    git add archivo-conflictivo.txt
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git add archivo-conflictivo.txt`: Añade el archivo `archivo-conflictivo.txt` al área de staging después de haber resuelto los conflictos.
+
     Una vez resueltos todos los conflictos, realiza el commit:
     ```bash
     git commit -m "Resolver conflictos de merge"
     ```
 
-    📌 **Tip:** Usa herramientas de merge como `kdiff3`, `meld`, o editores como VS Code para facilitar la resolución de conflictos.
+    **Explicación del Ejemplo:**
+    - `git commit -m "Resolver conflictos de merge"`: Guarda los cambios después de resolver los conflictos. El mensaje del commit debe describir los conflictos que se resolvieron.
+
+    📌 **Tip:** Usa herramientas de merge como `kdiff3`, `meld`, o editores como VS Code para facilitar la resolución de conflictos. Estas herramientas te proporcionan una interfaz visual para comparar y fusionar los cambios.
+
     """)
 
     st.markdown("### 3. 🤝 Estrategias de Colaboración en Proyectos")
@@ -793,13 +834,8 @@ def ramas_colaboracion():
     - Herramientas como Jenkins, Travis CI, y GitHub Actions son útiles para la integración continua.
 
     📌 **Tip:** Establece convenciones de commits y flujo de trabajo (como GitFlow) para mantener el orden y la coherencia en el proyecto.
+
     """)
-
-    st.markdown("""
-    ¡Con estas estrategias y comandos, estarás listo para colaborar efectivamente y gestionar tus ramas en Git!
-    """)
-
-
 
     # Título de la sección
     st.markdown("### Resumen de Comandos para Ramas y Colaboración")
@@ -809,20 +845,22 @@ def ramas_colaboracion():
         "Comando": [
             "`git branch <nombre-de-la-rama>`",
             "`git checkout <nombre-de-la-rama>`",
+            "`git checkout -b <nombre-de-la-rama>`",
             "`git branch`",
-            "`git checkout main`",
             "`git merge <nombre-de-la-rama>`",
             "`git add <archivo-conflictivo>`",
-            "`git commit -m \"Resolver conflictos de merge\"`"
+            "`git commit -m \"Resolver conflictos de merge\"`",
+            "`git branch -d <nombre-de-la-rama>`"
         ],
         "Descripción": [
             "Crea una nueva rama",
             "Cambia a una rama diferente",
+            "Crea una nueva rama y cambia a ella en un solo paso",
             "Ver todas las ramas",
-            "Cambiar a la rama principal (o la rama destino del merge)",
             "Realizar un merge",
             "Añadir archivos conflictivos resueltos al área de staging",
-            "Guardar los cambios después de resolver conflictos de merge"
+            "Guardar los cambios después de resolver conflictos de merge",
+            "Eliminar una rama"
         ]
     }
 
@@ -839,6 +877,12 @@ def ramas_colaboracion():
     
     📌 **Tip:** Establecer convenciones de commits y flujo de trabajo (como GitFlow) para mantener el orden y la coherencia en el proyecto.
     """)
+
+    st.markdown("""
+    ¡Con estas estrategias y comandos, estarás listo para colaborar efectivamente y gestionar tus ramas en Git!
+    """)
+
+
 
 
 # Función para la sección Uso Avanzado de Git
