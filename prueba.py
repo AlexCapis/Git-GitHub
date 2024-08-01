@@ -883,20 +883,26 @@ def ramas_colaboracion():
     """)
 
 
+import streamlit as st
+import pandas as pd
 
-
-# Función para la sección Uso Avanzado de Git
 def avanzado_git():
-    st.markdown("## Uso Avanzado de Git")
+    st.title("Uso Avanzado de Git")
+    
     st.markdown("""
-    En esta sección, exploraremos técnicas avanzadas como rebase, stash y cherry-pick para mejorar tu flujo de trabajo. Estas herramientas te permiten mantener un historial de commits limpio y manejar cambios de forma eficiente.
+    En esta sección, exploraremos técnicas avanzadas como rebase, stash, cherry-pick y otros comandos útiles para mejorar tu flujo de trabajo. Estas herramientas te permiten mantener un historial de commits limpio y manejar cambios de forma eficiente.
 
     ### Contenido
     1. 🔄 **Rebase**
     2. 🗂️ **Stash**
     3. 🍒 **Cherry-Pick**
+    4. 🔄 **Reset**
+    5. 🔄 **Diff y Reflog**
+    6. 🏷️ **Tag**
+    """)
 
-    ### Rebase
+    st.markdown("### 🔄 Rebase")
+    st.markdown("""
     Rebase te permite reescribir el historial de commits, haciendo que tu historia de commits sea más lineal y fácil de seguir.
 
     #### Comando de Rebase
@@ -904,14 +910,22 @@ def avanzado_git():
     git rebase <rama-base>
     ```
 
-    Ejemplo:
+    **Ejemplo Real:**
+    Supongamos que estás trabajando en una rama `feature` y quieres actualizarla con los últimos cambios de la rama `main`:
     ```bash
+    git checkout feature
     git rebase main
     ```
 
-    📌 **Tip:** Utiliza `rebase` en vez de `merge` para mantener un historial de commits más limpio.
+    **Explicación del Ejemplo:**
+    - `git rebase main`: Reescribe el historial de la rama `feature` para que parezca que se basó en la punta actual de `main`. Esto hace que la historia sea más limpia y evita un merge commit adicional.
 
-    ### Stash
+    📌 **Tip:** Utiliza `rebase` en lugar de `merge` para mantener un historial de commits más lineal. Sin embargo, evita rebase en ramas compartidas, ya que puede reescribir el historial y causar problemas a otros colaboradores.
+
+    """)
+
+    st.markdown("### 🗂️ Stash")
+    st.markdown("""
     Stash guarda temporalmente tus cambios sin hacer un commit, lo que te permite cambiar de ramas sin perder tu trabajo.
 
     #### Comando de Stash
@@ -919,14 +933,39 @@ def avanzado_git():
     git stash
     ```
 
-    Para aplicar los cambios guardados:
+    **Ejemplo Real:**
+    Si estás trabajando en la rama `feature` y necesitas cambiar a la rama `main` para resolver un problema urgente, pero no has terminado tus cambios, usa:
     ```bash
+    git stash
+    git checkout main
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git stash`: Guarda tus cambios actuales en un stash temporal y limpia tu área de trabajo. Puedes luego cambiar de rama sin perder los cambios.
+
+    #### Aplicar y Eliminar Stash
+    ```bash
+    git stash apply
+    git stash pop
+    ```
+
+    **Ejemplo Real:**
+    Después de resolver el problema en `main`, regresa a `feature` y aplica los cambios guardados:
+    ```bash
+    git checkout feature
     git stash apply
     ```
 
-    📌 **Tip:** Usa `git stash list` para ver todos los stashes guardados y `git stash pop` para aplicar y eliminar el stash.
+    **Explicación del Ejemplo:**
+    - `git stash apply`: Aplica los cambios guardados en el stash a tu área de trabajo actual.
+    - `git stash pop`: Aplica los cambios del stash y luego elimina el stash de la lista.
 
-    ### Cherry-Pick
+    📌 **Tip:** Usa `git stash list` para ver todos los stashes guardados. Esto te ayudará a gestionar múltiples stashes si los estás utilizando.
+
+    """)
+
+    st.markdown("### 🍒 Cherry-Pick")
+    st.markdown("""
     Cherry-pick te permite aplicar cambios de commits específicos a tu rama actual, sin necesidad de hacer un merge completo.
 
     #### Comando de Cherry-Pick
@@ -934,12 +973,114 @@ def avanzado_git():
     git cherry-pick <id-del-commit>
     ```
 
-    Ejemplo:
+    **Ejemplo Real:**
+    Supongamos que tienes un commit específico en la rama `bugfix` que deseas aplicar a la rama `main`:
     ```bash
+    git checkout main
     git cherry-pick a1b2c3d4
     ```
 
-    📌 **Tip:** Ideal para aplicar hotfixes en ramas de producción sin mezclar cambios innecesarios.
+    **Explicación del Ejemplo:**
+    - `git cherry-pick a1b2c3d4`: Aplica el commit con el ID `a1b2c3d4` a la rama `main`. Esto es útil para aplicar correcciones o cambios específicos sin fusionar todas las ramas.
+
+    📌 **Tip:** Ideal para aplicar hotfixes en ramas de producción sin mezclar cambios innecesarios de otras ramas.
+
+    """)
+
+    st.markdown("### 🔄 Reset")
+    st.markdown("""
+    `git reset` te permite deshacer cambios y volver a un estado anterior en tu repositorio.
+
+    #### Comando de Reset
+    ```bash
+    git reset --hard <commit-id>
+    ```
+
+    **Ejemplo Real:**
+    Si quieres deshacer todos los cambios recientes y volver a un commit anterior, usa:
+    ```bash
+    git reset --hard a1b2c3d4
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git reset --hard a1b2c3d4`: Reestablece tu repositorio al commit con el ID `a1b2c3d4`. Todos los cambios no confirmados y commits posteriores se perderán.
+
+    #### Reset Suave
+    ```bash
+    git reset --soft HEAD~1
+    ```
+
+    **Ejemplo Real:**
+    Si deseas deshacer el último commit pero conservar los cambios en el área de staging:
+    ```bash
+    git reset --soft HEAD~1
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git reset --soft HEAD~1`: Deshace el último commit pero mantiene los cambios en el área de staging, permitiéndote corregir el commit y hacer uno nuevo.
+
+    📌 **Tip:** Usa `git reset --hard` con precaución, ya que perderás todos los cambios no confirmados. `git reset --soft` es útil para modificar commits recientes sin perder cambios.
+
+    """)
+
+    st.markdown("### 🔄 Diff y Reflog")
+    st.markdown("""
+    #### Diff
+    `git diff` muestra las diferencias entre archivos en tu repositorio.
+
+    ```bash
+    git diff
+    ```
+
+    **Ejemplo Real:**
+    Para ver las diferencias entre tus cambios actuales y el último commit:
+    ```bash
+    git diff
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git diff`: Muestra los cambios en los archivos no confirmados en comparación con el último commit.
+
+    #### Reflog
+    `git reflog` muestra el historial de los cambios en los HEADs de tu repositorio, lo que te permite recuperar commits perdidos.
+
+    ```bash
+    git reflog
+    ```
+
+    **Ejemplo Real:**
+    Para ver el historial de movimientos del HEAD:
+    ```bash
+    git reflog
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git reflog`: Muestra el historial de todos los cambios en el HEAD, útil para recuperar commits o revertir cambios.
+
+    📌 **Tip:** Usa `git diff` para revisar cambios antes de hacer un commit y `git reflog` para recuperar commits que hayas perdido accidentalmente.
+
+    """)
+
+    st.markdown("### 🏷️ Tag")
+    st.markdown("""
+    `git tag` te permite crear etiquetas en puntos específicos del historial de commits, a menudo usado para marcar versiones de software.
+
+    #### Comando de Tag
+    ```bash
+    git tag <nombre-del-tag>
+    ```
+
+    **Ejemplo Real:**
+    Para marcar un commit como versión `v1.0`:
+    ```bash
+    git tag v1.0
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git tag v1.0`: Crea una etiqueta `v1.0` en el commit actual. Las etiquetas son útiles para marcar versiones estables en tu proyecto.
+
+    📌 **Tip:** Usa etiquetas para marcar versiones de lanzamiento en tu repositorio y facilitar el seguimiento de versiones.
+
     """)
 
     # Resumen de Comandos
@@ -950,18 +1091,33 @@ def avanzado_git():
             "`git rebase <rama-base>`",
             "`git stash`",
             "`git stash apply`",
-            "`git cherry-pick <id-del-commit>`"
+            "`git cherry-pick <id-del-commit>`",
+            "`git reset --hard <commit-id>`",
+            "`git reset --soft HEAD~1`",
+            "`git diff`",
+            "`git reflog`",
+            "`git tag <nombre-del-tag>`"
         ],
         "Descripción": [
             "Reescribe el historial de commits",
             "Guarda temporalmente tus cambios",
             "Aplica los cambios guardados con stash",
-            "Aplica cambios de un commit específico"
+            "Aplica cambios de un commit específico",
+            "Deshace cambios y vuelve a un commit anterior",
+            "Deshace el último commit pero conserva los cambios",
+            "Muestra las diferencias entre archivos",
+            "Muestra el historial de movimientos del HEAD",
+            "Crea una etiqueta en el historial de commits"
         ]
     }
 
     df = pd.DataFrame(data)
     st.table(df)
+
+
+
+
+
 
 # Función para la sección Uso Avanzado de Git
 def integracion_github():
