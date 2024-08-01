@@ -399,15 +399,13 @@ def configuracion_e_inicializacion_git():
     st.dataframe(df_comandos_inicializacion, use_container_width=True)
 
 
-
-
+import streamlit as st
+import pandas as pd
 
 def operaciones_basicas():
     st.title("Operaciones Básicas con Git")
     st.markdown("""
     En esta sección, cubriremos las operaciones básicas que puedes realizar con Git, incluyendo cómo clonar repositorios, añadir y eliminar archivos, y cómo hacer commits y ver el historial.
-
-    
 
     ### Contenido
     1. 📂 **Clonar Repositorios**
@@ -433,31 +431,16 @@ def operaciones_basicas():
     git clone <URL-del-repositorio>
     ```
 
-    Ejemplo: Para clonar el repositorio `Git` de GitHub, usa el comando:
+    **Ejemplo Real:**
+    Para clonar el repositorio `Git` de GitHub, usa el siguiente comando:
     ```bash
-    $ git clone https://github.com/AlexCapis/Git.git
+    git clone https://github.com/AlexCapis/Git.git
     ```
 
-    **Salida Esperada:**
-    ```bash
-    Cloning into 'Git'...
-    remote: Enumerating objects: 100, done.
-    remote: Counting objects: 100% (100/100), done.
-    remote: Compressing objects: 100% (50/50), done.
-    remote: Total 100 (delta 0), reused 100 (delta 0), pack-reused 0
-    Receiving objects: 100% (100/100), done.
-    ```
-
-    #### ¿Qué Ocurre Después de Clonar?
-    - **Creación de un Directorio Local**: Se crea una carpeta con el nombre del repositorio.
-    - **Copia del Historial Completo**: Todo el historial de cambios es copiado a tu máquina local.
-    - **Configuración de Orígenes Remotos**: El repositorio clonado estará vinculado al origen remoto de donde se clonó.
+    **Explicación del Ejemplo:**
+    - `git clone https://github.com/AlexCapis/Git.git`: Este comando clona el repositorio desde la URL proporcionada a tu directorio actual. El repositorio será copiado en una nueva carpeta llamada `Git` en tu máquina local.
 
     📌 **Tip:** Si el repositorio es privado, necesitarás autenticación (nombre de usuario y contraseña, token de acceso, etc.) para clonar.
-
-    **Beneficios de Clonar Correctamente**
-    - **Sincronización Fácil**: Puedes sincronizar tu copia local con los cambios más recientes del repositorio remoto.
-    - **Desarrollo y Pruebas Locales**: Puedes probar y desarrollar nuevas funcionalidades en tu entorno local sin afectar a otros colaboradores.
 
     **Resumen del Comando Clonado**
     ```bash
@@ -471,246 +454,198 @@ def operaciones_basicas():
 
     # Añadir y Eliminar Archivos
     st.markdown("""
-        ### 2. Añadir y Eliminar Archivos
-        Git te permite añadir nuevos archivos a tu repositorio y eliminar los que ya no necesitas. Esto te ayuda a gestionar los cambios y mantener tu proyecto limpio y organizado.
+    ### 2. Añadir y Eliminar Archivos
+    Git te permite añadir nuevos archivos a tu repositorio y eliminar los que ya no necesitas. Esto te ayuda a gestionar los cambios y mantener tu proyecto limpio y organizado.
+
+    #### ¿Qué es el Área de Staging?
+    El área de staging es una zona intermedia donde se almacenan los cambios que quieres confirmar en el próximo commit. Esto te permite preparar y revisar los cambios antes de hacerlos permanentes.
+
+    ![Flujo del área de staging en Git](https://example.com/path/to/staging_area_image.png)
     """)
 
     st.markdown("""
-        #### ¿Qué es el Área de Staging?
-        El área de staging es una zona intermedia donde se almacenan los cambios que quieres confirmar en el próximo commit. Esto te permite preparar y revisar los cambios antes de hacerlos permanentes.
-
-        ![Flujo del área de staging en Git](https://example.com/path/to/staging_area_image.png)
-    """)
-
-    st.markdown("""
-        #### Añadir Archivos al Repositorio
-        Para añadir nuevos archivos al área de staging, utiliza el comando `git add`.
+    #### Añadir Archivos al Repositorio
+    Para añadir nuevos archivos al área de staging, utiliza el comando `git add`.
     """)
 
     st.code("git add <archivo>", language='bash')
 
     st.markdown("""
-    Ejemplo: Añade un nuevo archivo al área de staging:
+    **Ejemplo Real:**
+    Para añadir un archivo llamado `nuevo-archivo.txt` al área de staging, usa el siguiente comando:
     ```bash
-    $ git add nuevo-archivo.txt
+    git add nuevo-archivo.txt
     ```
 
-    **Salida Esperada:**
-    ```bash
-    # No hay salida si el comando se ejecuta correctamente.
-    ```
-    """)
+    **Explicación del Ejemplo:**
+    - `git add nuevo-archivo.txt`: Este comando agrega el archivo `nuevo-archivo.txt` al área de staging, preparándolo para el siguiente commit. No se realizan cambios en el repositorio hasta que se haga un commit.
+                
+    **Explicación del Comando:**
+    - `git add .`: Este comando agrega todos los archivos en el directorio actual y sus subdirectorios al área de staging. Es una manera rápida de añadir múltiples archivos a la vez.
 
-    st.markdown("""
-        #### Eliminar Archivos del Repositorio
-        Para eliminar un archivo del repositorio y del área de staging, usa el comando `git rm`.
+    **Advertencia:**
+    - **Uso Cauteloso:** `git add .` añade todos los archivos modificados, nuevos y eliminados en el directorio actual y sus subdirectorios al área de staging. Esto puede incluir archivos que no deseas agregar, como archivos temporales, de configuración o de compilación. Es recomendable revisar los archivos antes de usar este comando para evitar agregar cambios no deseados.
+
+    📌 **Tip:** Utiliza `git status` para revisar qué archivos están a punto de ser añadidos al área de staging antes de ejecutar `git add .`.
+
+
+                
+
+
+
+    #### Eliminar Archivos del Repositorio
+    Para eliminar un archivo del repositorio y del área de staging, usa el comando `git rm`.
     """)
+    
 
     st.code("git rm <archivo>", language='bash')
 
     st.markdown("""
-    Ejemplo: Elimina un archivo específico:
+    **Ejemplo Real:**
+    Para eliminar un archivo llamado `archivo-a-eliminar.txt`, usa el siguiente comando:
     ```bash
-    $ git rm archivo-a-eliminar.txt
+    git rm archivo-a-eliminar.txt
     ```
 
-    **Salida Esperada:**
-    ```bash
-    rm 'archivo-a-eliminar.txt'
-    ```
+    **Explicación del Ejemplo:**
+    - `git rm archivo-a-eliminar.txt`: Este comando elimina el archivo `archivo-a-eliminar.txt` tanto del repositorio como del área de staging. El archivo ya no estará disponible en el repositorio después de hacer un commit.
+
+    📌 **Tip:** Si solo deseas eliminar el archivo del área de staging pero mantenerlo en tu directorio de trabajo, usa `git reset HEAD <archivo>` en lugar de `git rm`.
+
     """)
-
-    st.markdown("📌 **Tip:** Si te encuentras con un error, verifica que el archivo que estás intentando añadir o eliminar existe y que tienes los permisos adecuados.")
 
     # Hacer Commits y Ver Historial
     st.markdown("""
-        ### 3. Hacer Commits y Ver Historial
-        Realizar commits es una de las funciones más importantes de Git, ya que te permite guardar el estado de tu proyecto en un punto específico en el tiempo. También puedes ver el historial de commits para rastrear los cambios realizados y entender cómo ha evolucionado tu proyecto.
+    ### 3. Hacer Commits y Ver Historial
+    Realizar commits es una de las funciones más importantes de Git, ya que te permite guardar el estado de tu proyecto en un punto específico en el tiempo. También puedes ver el historial de commits para rastrear los cambios realizados y entender cómo ha evolucionado tu proyecto.
     """)
 
     st.markdown("""
-        #### Hacer un Commit
-        Para guardar los cambios en el repositorio, usa el comando `git commit` con un mensaje descriptivo.
+    #### Hacer un Commit
+    Para guardar los cambios en el repositorio, usa el comando `git commit` con un mensaje descriptivo.
     """)
 
     st.code("git commit -m \"Mensaje del commit\"", language='bash')
 
     st.markdown("""
-    Ejemplo: Guarda tus cambios con un mensaje descriptivo:
+    **Ejemplo Real:**
+    Para guardar tus cambios con un mensaje descriptivo, usa el siguiente comando:
     ```bash
-    $ git commit -m "Añadido nuevo archivo de configuración"
+    git commit -m "Añadido nuevo archivo de configuración"
     ```
 
-    **Salida Esperada:**
-    ```bash
-    [main 1a2b3c4] Añadido nuevo archivo de configuración
-     1 file changed, 1 insertion(+)
-     create mode 100644 nuevo-archivo.txt
-    ```
-    """)
+    **Explicación del Ejemplo:**
+    - `git commit -m "Añadido nuevo archivo de configuración"`: Este comando crea un nuevo commit con el mensaje `"Añadido nuevo archivo de configuración"`. El commit guardará los cambios que están en el área de staging.
 
-    st.markdown("""
-        #### Ver el Historial de Commits
-        Para ver el historial de commits, utiliza el comando `git log`.
+    #### Ver el Historial de Commits
+    Para ver el historial de commits, utiliza el comando `git log`.
     """)
 
     st.code("git log", language='bash')
 
     st.markdown("""
-    Ejemplo: Muestra el historial de commits en tu terminal:
+    **Ejemplo Real:**
+    Para ver el historial de commits, usa el siguiente comando:
     ```bash
-    $ git log
-    commit 1a2b3c4d5e6f7g8h9i0jklmnopqrstuv (HEAD -> main)
-    Author: Tu Nombre <tucorreo@example.com>
-    Date:   Mon Jul 31 10:00:00 2024 +0000
-
-        Añadido nuevo archivo de configuración
+    git log
     ```
 
-    **Salida Esperada:**
-    ```bash
-    commit 1a2b3c4d5e6f7g8h9i0jklmnopqrstuv
-    Author: Tu Nombre <tucorreo@example.com>
-    Date:   Mon Jul 31 10:00:00 2024 +0000
+    **Explicación del Ejemplo:**
+    - `git log`: Muestra el historial de commits del repositorio, incluyendo los mensajes de commit, el autor, la fecha y el hash del commit. Esto te permite rastrear la evolución de tu proyecto y revisar los cambios realizados.
 
-        Añadido nuevo archivo de configuración
-    ```
+    📌 **Tip:** Usa `git log --oneline` para ver un historial más compacto y legible.
+
     """)
-
-    st.markdown("📌 **Tip:** Usa `git log --oneline` para ver un historial más compacto y legible.")
 
     # Actualizar y Sincronizar Repositorios
     st.markdown("""
-        ### 4.  Actualizar y Sincronizar Repositorios
-        Usa `git pull` para mantener tu repositorio local actualizado con los cambios del repositorio remoto es esencial para colaborar efectivamente y evitar conflictos.
+    ### 4. Actualizar y Sincronizar Repositorios
+    Mantener tu repositorio local actualizado con los cambios del repositorio remoto es esencial para colaborar efectivamente y evitar conflictos.
 
-        
-        Este comando descarga los cambios del repositorio remoto y los fusiona con tu copia local.
+    #### Actualizar el Repositorio Local
+    Usa `git pull` para descargar y fusionar los cambios del repositorio remoto con tu repositorio local.
     """)
 
     st.code("git pull", language='bash')
 
     st.markdown("""
-    Ejemplo: Actualiza tu repositorio local con los cambios del remoto:
+    **Ejemplo Real:**
+    Para actualizar tu repositorio local con los cambios del remoto, usa el siguiente comando:
     ```bash
-    $ git pull
+    git pull
     ```
 
-    **Salida Esperada:**
-    ```bash
-    remote: Enumerating objects: 10, done.
-    remote: Counting objects: 100% (10/10), done.
-    remote: Compressing objects: 100% (8/8), done.
-    remote: Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
-    Unpacking objects: 100% (8/8), done.
-    From https://github.com/AlexCapis/Git
-       1a2b3c4..5d6e7f8  main       -> origin/main
-    Updating 1a2b3c4..5d6e7f8
-    Fast-forward
-     archivo-a-eliminar.txt | 1 -
-     1 file changed, 1 deletion(-)
-    ```
+    **Explicación del Ejemplo:**
+    - `git pull`: Este comando descarga los cambios del repositorio remoto y los fusiona con tu repositorio local. Es útil para mantener tu copia local al día con los últimos cambios realizados por otros colaboradores.
 
-    #### `git push`
-        Usa `git push` para enviar tus cambios locales al repositorio remoto.
+    #### Enviar Cambios al Repositorio Remoto
+    Usa `git push` para enviar tus cambios locales al repositorio remoto.
     """)
 
     st.code("git push", language='bash')
 
     st.markdown("""
-    Ejemplo: Envía tus cambios al repositorio remoto:
+    **Ejemplo Real:**
+    Para enviar tus cambios al repositorio remoto, usa el siguiente comando:
     ```bash
-    $ git push
+    git push
     ```
 
-    **Salida Esperada:**
-    ```bash
-    Counting objects: 5, done.
-    Delta compression using up to 4 threads.
-    Compressing objects: 100% (4/4), done.
-    Writing objects: 100% (5/5), 1.23 KiB | 1.23 MiB/s, done.
-    Total 5 (delta 0), reused 0 (delta 0)
-    To https://github.com/AlexCapis/Git
-       1a2b3c4..5d6e7f8  main -> main
-    ```
+    **Explicación del Ejemplo:**
+    - `git push`: Este comando envía los commits de tu rama local al repositorio remoto. Es necesario para compartir tus cambios con otros colaboradores o para realizar una copia de seguridad de tu trabajo en el servidor remoto.
 
-    #### `git status`
-        Este comando muestra el estado actual de tu repositorio, incluyendo los archivos modificados y el estado del área de staging.
+    #### Verificar el Estado del Repositorio
+    Usa `git status` para ver el estado actual de tu repositorio, incluyendo los archivos modificados y el estado del área de staging.
     """)
 
     st.code("git status", language='bash')
 
     st.markdown("""
-    Ejemplo: Verifica el estado de tu repositorio:
+    **Ejemplo Real:**
+    Para verificar el estado de tu repositorio, usa el siguiente comando:
     ```bash
-    $ git status
-    On branch main
-    Your branch is up-to-date with 'origin/main'.
-
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
-        new file:   nuevo-archivo.txt
+    git status
     ```
 
-    **Salida Esperada:**
-    ```bash
-    On branch main
-    Your branch is up-to-date with 'origin/main'.
+    **Explicación del Ejemplo:**
+    - `git status`: Muestra información sobre el estado actual del repositorio, como los archivos modificados, los archivos en el área de staging y la rama en la que te encuentras. Es útil para obtener una visión general de los cambios que están listos para ser confirmados o los archivos que necesitan atención.
 
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
-        new file:   nuevo-archivo.txt
-    ```
-    """)
-
-    st.markdown("""
-    #### `git status -s`
-        La opción `-s` muestra el estado en un formato compacto.
+    #### Estado Compacto del Repositorio
+    Usa `git status -s` para ver el estado del repositorio en un formato compacto.
     """)
 
     st.code("git status -s", language='bash')
 
     st.markdown("""
-    Ejemplo: Estado compacto del repositorio:
+    **Ejemplo Real:**
+    Para ver el estado de tu repositorio en un formato compacto, usa el siguiente comando:
     ```bash
-    $ git status -s
-    A  nuevo-archivo.txt
+    git status -s
     ```
 
-    **Salida Esperada:**
-    ```bash
-    A  nuevo-archivo.txt
-    ```
-    """)
+    **Explicación del Ejemplo:**
+    - `git status -s`: Muestra el estado del repositorio en un formato compacto, lo que facilita una visión rápida de los cambios. Los cambios se representan con códigos de estado abreviados, como `A` para archivos añadidos y `M` para archivos modificados.
 
-    st.markdown("""
-    #### `git alias`
-        Los alias en Git te permiten crear atajos para comandos largos.
+    #### Crear Alias para Comandos
+    Los alias en Git te permiten crear atajos para comandos largos.
     """)
 
     st.code("git config --global alias.<nombre-alias> '<comando>'", language='bash')
 
     st.markdown("""
-    Ejemplo: Crea un alias para `git status`:
+    **Ejemplo Real:**
+    Para crear un alias para el comando `git status`, usa el siguiente comando:
     ```bash
-    $ git config --global alias.st status
+    git config --global alias.st status
     ```
 
-    Después puedes usar:
+    Después puedes usar el alias así:
     ```bash
-    $ git st
+    git st
     ```
 
-    **Salida Esperada:**
-    ```bash
-    On branch main
-    Your branch is up-to-date with 'origin/main'.
-
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
-        new file:   nuevo-archivo.txt
-    ```
-    """)
+    **Explicación del Ejemplo:**
+    - `git config --global alias.st status`: Este comando crea un alias `st` para el comando `git status`. Luego, puedes usar `git st` en lugar de `git status`, lo que ahorra tiempo al escribir comandos largos.""")
 
     # Resumen de Comandos Básicos
     st.markdown("""
@@ -718,26 +653,43 @@ def operaciones_basicas():
 
     Aquí tienes un resumen de los comandos básicos que hemos cubierto:
 
-    | Comando                     | Descripción                           |
-    |-----------------------------|---------------------------------------|
-    | `git clone <URL>`           | Clona un repositorio                  |
-    | `git add <archivo>`         | Añade un archivo al área de staging   |
-    | `git rm <archivo>`          | Elimina un archivo del repositorio    |
-    | `git commit -m "mensaje"`   | Guarda los cambios con un mensaje     |
-    | `git log`                   | Muestra el historial de commits       |
-    | `git pull`                  | Descarga y fusiona cambios del remoto |
-    | `git push`                  | Envía cambios locales al remoto       |
-    | `git status`                | Muestra el estado del repositorio     |
-    | `git status -s`             | Muestra el estado en formato compacto |
-    | `git config --global alias.<nombre-alias> '<comando>'` | Crea un alias para un comando largo |
-
-    ¡Con estos comandos básicos, ya puedes comenzar a trabajar con Git y gestionar tu código de manera efectiva!
     """)
 
+    data = {
+        "Comando": [
+            "git clone <URL>",
+            "git add <archivo>",
+            "git add ."
+            "git rm <archivo>",
+            "git commit -m \"mensaje\"",
+            "git log",
+            "git pull",
+            "git push",
+            "git status",
+            "git status -s",
+            "git config --global alias.<nombre-alias> '<comando>'"
+        ],
+        "Descripción": [
+            "Clona un repositorio",
+            "Añade un archivo al área de staging",
+            "Añade todo lo que esté en el área de staging",
+            "Elimina un archivo del repositorio",
+            "Guarda los cambios con un mensaje",
+            "Muestra el historial de commits",
+            "Descarga y fusiona cambios del remoto",
+            "Envía cambios locales al remoto",
+            "Muestra el estado del repositorio",
+            "Muestra el estado en formato compacto",
+            "Crea un alias para un comando largo"
+        ]
+    }
 
+    df = pd.DataFrame(data)
+    st.dataframe(df)
 
-
-
+    st.markdown("""
+    ¡Con estos comandos básicos, ya puedes comenzar a trabajar con Git y gestionar tu código de manera efectiva!
+    """)
 
 
 
