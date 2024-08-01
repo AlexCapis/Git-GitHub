@@ -1427,50 +1427,178 @@ def resumen_taller():
     - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
     """)
 
+import streamlit as st
 
+# Inicializar variables de estado para las respuestas y puntuación
+if 'correctas' not in st.session_state:
+    st.session_state.correctas = 0
+if 'respuestas' not in st.session_state:
+    st.session_state.respuestas = {}
+if 'opciones' not in st.session_state:
+    st.session_state.opciones = {}
+if 'respuestas_correctas' not in st.session_state:
+    st.session_state.respuestas_correctas = {
+        "q1": "git clone <URL>",
+        "q2": "git add <archivo>",
+        "q3": 'git commit -m "mensaje"',
+        "q4": "git log",
+        "q5": "git stash",
+        "q6": "git merge feature-x",
+        "q7": "git rm deprecated_feature.py",
+        "q8": "git diff abc123 def456",
+        "q9": "git push origin feature-y",
+        "q10": "git reset --soft HEAD~1"
+    }
 
+def inicializar_opciones():
+    st.session_state.opciones = {
+        "q1": ["git clone <URL>", "git pull <URL>", "git fetch <URL>", "git clone --bare <URL>"],
+        "q2": ["git add <archivo>", "git commit <archivo>", "git push <archivo>", "git remove <archivo>"],
+        "q3": ['git commit -m "mensaje"', 'git commit -a -m "mensaje"', 'git commit --message "mensaje"', 'git commit -m "nuevo mensaje"'],
+        "q4": ["git log", "git status", "git history", "git log --oneline"],
+        "q5": ["git stash", "git tag", "git commit --amend", "git reset"],
+        "q6": ["git merge feature-x", "git rebase feature-x", "git cherry-pick feature-x", "git pull feature-x"],
+        "q7": ["git rm deprecated_feature.py", "git delete deprecated_feature.py", "git remove deprecated_feature.py", "git drop deprecated_feature.py"],
+        "q8": ["git diff abc123 def456", "git log abc123 def456", "git status abc123 def456", "git show abc123 def456"],
+        "q9": ["git push origin feature-y", "git upload feature-y", "git push --set-upstream origin feature-y", "git push --new-branch feature-y"],
+        "q10": ["git reset --soft HEAD~1", "git revert HEAD", "git reset --hard HEAD~1", "git restore --source HEAD~1"]
+    }
 
-# Función para la sección de ejercicios
+def verificar_respuesta(respuesta_usuario, pregunta_id):
+    respuesta_correcta = st.session_state.respuestas_correctas[pregunta_id]
+    if respuesta_usuario.strip() == respuesta_correcta:
+        st.success("¡Correcto!")
+        st.session_state.correctas += 1
+    else:
+        st.error(f"Incorrecto. La respuesta correcta es: {respuesta_correcta}")
+    st.session_state.respuestas[pregunta_id] = respuesta_usuario
+
 def ejercicios():
+    if not st.session_state.opciones:
+        inicializar_opciones()
+    
     st.title("Ejercicios de Git")
-
-    # Pregunta 1
-    st.header("Pregunta 1: ¿Cuál es el comando para clonar un repositorio?")
-    respuesta1 = st.text_input("Introduce el comando completo:", key="q1_respuesta")
+    
+    # Ejercicio 1
+    st.header("Ejercicio 1: Clonar un Repositorio")
+    st.markdown("""
+    Imagina que te han proporcionado la URL de un repositorio Git y quieres empezar a trabajar en él en tu máquina local.
+    ¿Cuál de los siguientes comandos usarías para clonar el repositorio?
+    """)
+    opciones1 = st.session_state.opciones["q1"]
+    respuesta1 = st.radio("Selecciona la respuesta correcta:", opciones1, key="q1_respuesta")
     if st.button("Verificar Respuesta 1", key="q1_btn"):
-        verificar_respuesta(respuesta1, "git clone <URL>")
+        verificar_respuesta(respuesta1, "q1")
 
-    # Pregunta 2
-    st.header("Pregunta 2: ¿Cómo añades un archivo al área de staging?")
-    respuesta2 = st.radio("Selecciona la respuesta correcta:", 
-                            ["git add <archivo>", "git commit <archivo>", "git push <archivo>"], key="q2_respuesta")
+    # Ejercicio 2
+    st.header("Ejercicio 2: Añadir Archivos al Área de Staging")
+    st.markdown("""
+    Has hecho cambios en un archivo llamado `index.html` y ahora quieres prepararlo para el próximo commit.
+    ¿Qué comando usarías para añadir este archivo al área de staging?
+    """)
+    respuesta2 = st.text_input("Introduce el comando completo:", key="q2_respuesta")
     if st.button("Verificar Respuesta 2", key="q2_btn"):
-        verificar_respuesta(respuesta2, "git add <archivo>")
+        verificar_respuesta(respuesta2, "q2")
 
-    # Pregunta 3
-    st.header("Pregunta 3: ¿Cuál es el comando para guardar cambios en el repositorio con un 'mensaje'?")
-    respuesta3 = st.text_input("Introduce el comando completo:", key="q3_respuesta")
+    # Ejercicio 3
+    st.header("Ejercicio 3: Hacer un Commit con un Mensaje")
+    st.markdown("""
+    Has realizado cambios significativos en el archivo `main.py` y quieres guardar estos cambios con el mensaje 'Añadida nueva función'.
+    ¿Cuál es el comando que debes usar?
+    """)
+    opciones3 = st.session_state.opciones["q3"]
+    respuesta3 = st.radio("Selecciona la respuesta correcta:", opciones3, key="q3_respuesta")
     if st.button("Verificar Respuesta 3", key="q3_btn"):
-        verificar_respuesta(respuesta3, 'git commit -m "mensaje"')
+        verificar_respuesta(respuesta3, "q3")
 
-    # Pregunta 4
-    st.header("Pregunta 4: ¿Qué comando se usa para ver el historial de commits?")
-    respuesta4 = st.radio("Selecciona la respuesta correcta:", 
-                            ["git log", "git status", "git history"], key="q4_respuesta")
+    # Ejercicio 4
+    st.header("Ejercicio 4: Ver el Historial de Commits")
+    st.markdown("""
+    Quieres revisar todos los commits realizados en el repositorio para entender qué cambios se han hecho.
+    ¿Qué comando utilizarías para ver el historial de commits?
+    """)
+    opciones4 = st.session_state.opciones["q4"]
+    respuesta4 = st.radio("Selecciona la respuesta correcta:", opciones4, key="q4_respuesta")
     if st.button("Verificar Respuesta 4", key="q4_btn"):
-        verificar_respuesta(respuesta4, "git log")
+        verificar_respuesta(respuesta4, "q4")
 
-    # Pregunta 5
-    st.header("Pregunta 5: ¿Cómo guardas temporalmente tus cambios sin hacer commit?")
-    respuesta5 = st.text_input("Introduce el comando completo:", key="q5_respuesta")
+    # Ejercicio 5
+    st.header("Ejercicio 5: Guardar Cambios Temporalmente")
+    st.markdown("""
+    Estás trabajando en una nueva característica pero necesitas cambiar de rama para corregir un error urgente. 
+    Quieres guardar tus cambios actuales sin hacer commit. ¿Cuál de los siguientes comandos usarías?
+    """)
+    opciones5 = st.session_state.opciones["q5"]
+    respuesta5 = st.radio("Selecciona la respuesta correcta:", opciones5, key="q5_respuesta")
     if st.button("Verificar Respuesta 5", key="q5_btn"):
-        verificar_respuesta(respuesta5, "git stash")
+        verificar_respuesta(respuesta5, "q5")
 
-# Función para la sección Uso Avanzado de Git
-# def ponte_a_prueba():
+    # Ejercicio 6
+    st.header("Ejercicio 6: Fusionar Cambios de una Rama")
+    st.markdown("""
+    Has terminado de trabajar en una rama llamada `feature-x` y quieres fusionar estos cambios a la rama `main`.
+    ¿Cuál de los siguientes comandos usarías para hacer la fusión?
+    """)
+    opciones6 = st.session_state.opciones["q6"]
+    respuesta6 = st.radio("Selecciona la respuesta correcta:", opciones6, key="q6_respuesta")
+    if st.button("Verificar Respuesta 6", key="q6_btn"):
+        verificar_respuesta(respuesta6, "q6")
 
+    # Ejercicio 7
+    st.header("Ejercicio 7: Eliminar un Archivo del Repositorio")
+    st.markdown("""
+    Decidiste que el archivo `deprecated_feature.py` ya no es necesario en el repositorio y quieres eliminarlo.
+    ¿Qué comando utilizarías para eliminar este archivo del repositorio?
+    """)
+    opciones7 = st.session_state.opciones["q7"]
+    respuesta7 = st.radio("Selecciona la respuesta correcta:", opciones7, key="q7_respuesta")
+    if st.button("Verificar Respuesta 7", key="q7_btn"):
+        verificar_respuesta(respuesta7, "q7")
 
+    # Ejercicio 8
+    st.header("Ejercicio 8: Ver Cambios entre Commits")
+    st.markdown("""
+    Necesitas revisar las diferencias entre dos commits específicos en el historial para entender los cambios realizados.
+    Supongamos que los commits tienen los siguientes IDs: `abc123` y `def456`. ¿Qué comando utilizarías para comparar estos dos commits?
+    """)
+    opciones8 = st.session_state.opciones["q8"]
+    respuesta8 = st.radio("Selecciona la respuesta correcta:", opciones8, key="q8_respuesta")
+    if st.button("Verificar Respuesta 8", key="q8_btn"):
+        verificar_respuesta(respuesta8, "q8")
 
+    # Ejercicio 9
+    st.header("Ejercicio 9: Subir una Nueva Rama al Repositorio Remoto")
+    st.markdown("""
+    Has creado una nueva rama local llamada `feature-y` y quieres subirla al repositorio remoto.
+    ¿Cuál es el comando que usarías?
+    """)
+    opciones9 = st.session_state.opciones["q9"]
+    respuesta9 = st.radio("Selecciona la respuesta correcta:", opciones9, key="q9_respuesta")
+    if st.button("Verificar Respuesta 9", key="q9_btn"):
+        verificar_respuesta(respuesta9, "q9")
+
+    # Ejercicio 10
+    st.header("Ejercicio 10: Revertir el Último Commit")
+    st.markdown("""
+    Cometiste un error en el último commit y decides revertirlo. 
+    ¿Cuál de los siguientes comandos usarías para deshacer el último commit pero conservar los cambios en el área de staging?
+    """)
+    opciones10 = st.session_state.opciones["q10"]
+    respuesta10 = st.radio("Selecciona la respuesta correcta:", opciones10, key="q10_respuesta")
+    if st.button("Verificar Respuesta 10", key="q10_btn"):
+        verificar_respuesta(respuesta10, "q10")
+
+    # Resultado Final
+    if st.button("Ver Resultado", key="result_btn"):
+        puntuacion = (st.session_state.correctas / 10) * 100
+        st.write(f"Puntuación: {puntuacion:.2f}%")
+
+        if puntuacion < 50:
+            st.error("Lamentablemente, has suspendido el test. Te recomendamos repasar los conceptos básicos de Git.")
+        elif puntuacion <= 75:
+            st.warning("Has aprobado el test, pero hay margen para mejorar. Sigue estudiando para afianzar tus conocimientos.")
+        else:
+            st.success("¡Excelente trabajo! Has demostrado un gran dominio de Git. Sigue así.")
 
 
 
