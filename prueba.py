@@ -1118,17 +1118,19 @@ def avanzado_git():
 
 
 
+import streamlit as st
+import pandas as pd
 
-# Función para la sección Uso Avanzado de Git
 def integracion_github():
-    st.markdown("## Integración con GitHub")
+    st.title("Integración con GitHub")
+    
     st.markdown("""
-    En esta sección, aprenderás cómo integrar tu repositorio local con GitHub, manejar pull requests y trabajar con GitHub Actions.
+    En esta sección, aprenderás cómo conectar tu repositorio local con GitHub, crear y gestionar pull requests, y algunos consejos útiles para mejorar tu flujo de trabajo con Git.
 
     ### Contenido
     1. 🌐 **Conectar Repositorio Local a GitHub**
     2. 🚀 **Pull Requests**
-    3. ⚙️ **GitHub Actions**
+    3. 🔍 **Consejos y Comandos Útiles**
 
     ### Conectar Repositorio Local a GitHub
     Para trabajar con GitHub, primero necesitas conectar tu repositorio local a un repositorio remoto en GitHub.
@@ -1145,66 +1147,104 @@ def integracion_github():
     git push -u origin main
     ```
 
-    Ejemplo:
+    **Ejemplo Real:**
     ```bash
     git remote add origin https://github.com/usuario/repositorio.git
     git branch -M main
     git push -u origin main
     ```
 
+    **Explicación del Ejemplo:**
+    - `git remote add origin <URL-del-repositorio>`: Conecta tu repositorio local con el remoto en GitHub.
+    - `git branch -M main`: Renombra la rama actual a `main`, si no lo has hecho ya.
+    - `git push -u origin main`: Sube la rama `main` al repositorio remoto y establece el seguimiento para futuros `push` y `pull`.
+
     📌 **Tip:** Asegúrate de reemplazar `<URL-del-repositorio>` con la URL de tu repositorio en GitHub.
 
-    ### Pull Requests
-    Las pull requests te permiten proponer cambios en el código que pueden ser revisados y fusionados por otros colaboradores.
+    """)
+
+    st.markdown("### 🚀 Pull Requests")
+    st.markdown("""
+    Las pull requests permiten que otros revisen tus cambios antes de fusionarlos con la rama principal del proyecto.
 
     #### Crear una Pull Request
-    1. Haz commits de tus cambios en una nueva rama.
-    2. Sube tu rama a GitHub:
+    1. Crea y realiza commits en una nueva rama:
     ```bash
+    git checkout -b <nombre-de-la-rama>
+    # realiza cambios y commits
     git push origin <nombre-de-la-rama>
     ```
-    3. En GitHub, ve a la página de tu repositorio y haz clic en "Compare & pull request".
-    4. Rellena los detalles necesarios y haz clic en "Create pull request".
+    2. En GitHub, ve a la página de tu repositorio y haz clic en "Compare & pull request".
+    3. Completa los detalles necesarios y haz clic en "Create pull request".
 
-    ### GitHub Actions
-    GitHub Actions te permite automatizar flujos de trabajo como la construcción, prueba y despliegue de tu código.
-
-    #### Crear un Workflow de GitHub Actions
-    1. En tu repositorio de GitHub, ve a la pestaña "Actions".
-    2. Selecciona un flujo de trabajo predefinido o crea uno nuevo.
-    3. Sigue las instrucciones para configurar el flujo de trabajo.
-
-    Ejemplo de archivo YAML para un workflow simple:
-    ```yaml
-    name: CI
-
-    on:
-      push:
-        branches: [ main ]
-      pull_request:
-        branches: [ main ]
-
-    jobs:
-      build:
-
-        runs-on: ubuntu-latest
-
-        steps:
-        - uses: actions/checkout@v2
-        - name: Set up Python
-          uses: actions/setup-python@v2
-          with:
-            python-version: '3.x'
-        - name: Install dependencies
-          run: |
-            python -m pip install --upgrade pip
-            pip install -r requirements.txt
-        - name: Run tests
-          run: |
-            pytest
+    **Ejemplo Real:**
+    ```bash
+    git checkout -b feature/nueva-funcionalidad
+    # realiza cambios
+    git add .
+    git commit -m "Añadir nueva funcionalidad"
+    git push origin feature/nueva-funcionalidad
     ```
 
-    📌 **Tip:** Adapta el archivo YAML a las necesidades específicas de tu proyecto.
+    **Explicación del Ejemplo:**
+    - `git checkout -b <nombre-de-la-rama>`: Crea una nueva rama y cambia a ella.
+    - `git push origin <nombre-de-la-rama>`: Sube tu rama al repositorio remoto en GitHub.
+    - En GitHub, puedes abrir una pull request para integrar los cambios de la nueva rama en la rama principal.
+
+    📌 **Tip:** Usa descripciones claras y detalladas en tus pull requests para facilitar la revisión y colaboración.
+
+    """)
+
+    st.markdown("### 🔍 Consejos y Comandos Útiles")
+    st.markdown("""
+    Aquí te presentamos algunos consejos y comandos adicionales que pueden ser útiles al trabajar con Git y GitHub.
+
+    #### Comando de Verificación del Estado del Repositorio
+    ```bash
+    git status
+    ```
+
+    **Ejemplo Real:**
+    ```bash
+    git status
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git status`: Muestra el estado actual de tu repositorio, incluyendo archivos modificados y el estado de tus ramas.
+
+    #### Sincronizar tu Repositorio con GitHub
+    ```bash
+    git fetch origin
+    git pull origin main
+    ```
+
+    **Ejemplo Real:**
+    ```bash
+    git fetch origin
+    git pull origin main
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git fetch origin`: Obtiene actualizaciones del repositorio remoto sin aplicarlas.
+    - `git pull origin main`: Actualiza tu rama local con los últimos cambios de la rama `main` del repositorio remoto.
+
+    #### Comando para Cambiar el Nombre de una Rama Remota
+    ```bash
+    git push origin :<nombre-antiguo>
+    git push origin <nombre-nuevo>
+    ```
+
+    **Ejemplo Real:**
+    ```bash
+    git push origin :old-branch-name
+    git push origin new-branch-name
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git push origin :<nombre-antiguo>`: Elimina la rama remota con el nombre antiguo.
+    - `git push origin <nombre-nuevo>`: Sube una nueva rama con el nombre nuevo al repositorio remoto.
+
+    📌 **Tip:** Mantén tus ramas y repositorios organizados para facilitar la colaboración y la gestión del proyecto.
 
     """)
 
@@ -1216,18 +1256,30 @@ def integracion_github():
             "`git remote add origin <URL-del-repositorio>`",
             "`git branch -M main`",
             "`git push -u origin main`",
-            "`git push origin <nombre-de-la-rama>`"
+            "`git push origin <nombre-de-la-rama>`",
+            "`git status`",
+            "`git fetch origin`",
+            "`git pull origin main`",
+            "`git push origin :<nombre-antiguo>`",
+            "`git push origin <nombre-nuevo>`"
         ],
         "Descripción": [
             "Conecta el repositorio local con el remoto en GitHub",
             "Renombra la rama actual a 'main'",
             "Sube la rama 'main' al repositorio remoto y establece el seguimiento",
-            "Sube la rama especificada al repositorio remoto"
+            "Sube la rama especificada al repositorio remoto",
+            "Muestra el estado actual del repositorio",
+            "Obtiene actualizaciones del repositorio remoto",
+            "Actualiza tu rama local con los últimos cambios del remoto",
+            "Elimina una rama remota",
+            "Sube una nueva rama remota con un nombre nuevo"
         ]
     }
 
     df = pd.DataFrame(data)
     st.table(df)
+
+
 
 # Función para la sección Uso Avanzado de Git
 # def resumen_taller():
