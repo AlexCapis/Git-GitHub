@@ -1281,68 +1281,144 @@ def integracion_github():
 
 
 
-# Función para la sección Uso Avanzado de Git
-# def resumen_taller():
-# Función para la página de resumen
+import streamlit as st
+import pandas as pd
+
 def resumen_taller():
     st.title("Resumen del Taller de Git")
 
     st.header("Comandos de Git Tratados")
 
     st.markdown("""
-    En esta sección encontrarás una tabla con los comandos clave de Git que hemos cubierto en el taller. Cada comando viene con una descripción, un ejemplo práctico, y enlaces a la documentación oficial para que puedas aprender más en profundidad.
+    En esta sección, encontrarás una tabla con los comandos clave de Git que hemos cubierto en el taller. Cada comando viene con una descripción, un ejemplo práctico y enlaces a la documentación oficial para que puedas aprender más en profundidad.
 
-    Esta referencia rápida está diseñada para ayudarte a recordar y aplicar los comandos básicos de Git de manera efectiva.
+    Esta referencia rápida está diseñada para ayudarte a recordar y aplicar los comandos básicos y avanzados de Git de manera efectiva.
     """)
 
-    # Crear un DataFrame con los comandos
-    comandos = {
-        "Comando": ["git clone <URL>", "git add <archivo>", 'git commit -m "mensaje"', "git log", "git stash"],
-        "Descripción": [
-            "Clona un repositorio remoto a tu máquina local. Ideal para comenzar a trabajar en un proyecto existente.",
-            "Añade un archivo específico al área de staging para prepararlo para el commit. Es un paso previo al commit.",
-            "Guarda los cambios realizados en el repositorio con un mensaje que describe lo que se ha cambiado.",
-            "Muestra el historial de commits realizados en el repositorio, útil para revisar el progreso del proyecto.",
-            "Guarda temporalmente los cambios no confirmados sin hacer commit. Útil si necesitas cambiar de rama o trabajar en otra cosa sin perder el trabajo actual."
-        ],
-        "Ejemplo Práctico": [
-            "`git clone https://github.com/user/repo.git`\nClona el repositorio del usuario al directorio actual.",
-            "`git add archivo.txt`\nPrepara el archivo 'archivo.txt' para el próximo commit.",
-            "`git commit -m 'Añadir nuevo archivo'`\nGuarda los cambios realizados con el mensaje 'Añadir nuevo archivo'.",
-            "`git log --oneline`\nMuestra un historial resumido de commits en una sola línea por commit.",
-            "`git stash push -m 'Cambios temporales'`\nGuarda los cambios actuales temporalmente con una descripción."
-        ],
-        "Documentación": [
-            "[git clone](https://git-scm.com/docs/git-clone)",
-            "[git add](https://git-scm.com/docs/git-add)",
-            "[git commit](https://git-scm.com/docs/git-commit)",
-            "[git log](https://git-scm.com/docs/git-log)",
-            "[git stash](https://git-scm.com/docs/git-stash)"
-        ],
-        "Recurso Adicional": [
-            "[Tutorial Git Clone](https://www.atlassian.com/git/tutorials/clone)",
-            "[Guía Git Add](https://www.atlassian.com/git/tutorials/saving-changes/git-add)",
-            "[Artículos sobre Git Commit](https://www.git-scm.com/docs/git-commit)",
-            "[Cómo usar Git Log](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-log)",
-            "[Introducción a Git Stash](https://www.git-scm.com/docs/git-stash)"
-        ]
-    }
+    # Crear un DataFrame con todos los comandos
+    comandos = [
+        {"Comando": "ls", "Descripción": "Lista los archivos y directorios en el directorio actual."},
+        {"Comando": "cd nombre_del_directorio", "Descripción": "Cambia el directorio actual al especificado."},
+        {"Comando": "cd ..", "Descripción": "Sube un nivel en la jerarquía de directorios."},
+        {"Comando": "pwd", "Descripción": "Muestra la ruta completa del directorio actual."},
+        {"Comando": "mkdir nombre_del_directorio", "Descripción": "Crea un nuevo directorio."},
+        {"Comando": "touch nombre_del_archivo", "Descripción": "Crea un nuevo archivo vacío. (Linux y MacOS)"},
+        {"Comando": "New-Item -ItemType file nombre_del_archivo", "Descripción": "Crea un nuevo archivo vacío. (Windows)"},
+        {"Comando": "rm nombre_del_archivo", "Descripción": "Elimina archivos o directorios."},
+        {"Comando": "cp archivo_origen archivo_destino", "Descripción": "Copia archivos o directorios."},
+        {"Comando": "mv archivo_origen archivo_destino", "Descripción": "Mueve o renombra archivos o directorios."},
+        {"Comando": "mkdir nombre_carpeta", "Descripción": "Crea una nueva carpeta."},
+        {"Comando": "cd nombre_carpeta", "Descripción": "Cambia al directorio especificado."},
+        {"Comando": "git init", "Descripción": "Inicializa un nuevo repositorio Git en el directorio actual."},
+        {"Comando": "git add .", "Descripción": "Añade todos los archivos al índice de Git."},
+        {"Comando": "git commit -m 'mensaje'", "Descripción": "Realiza un commit con el mensaje especificado."},
+        {"Comando": "git branch -M main", "Descripción": "Renombra la rama principal a 'main'."},
+        {"Comando": "git remote add origin URL", "Descripción": "Vincula el repositorio local con el remoto en GitHub."},
+        {"Comando": "git push -u origin main", "Descripción": "Envía los cambios al repositorio remoto en GitHub."},
+        {"Comando": "git clone <URL>", "Descripción": "Clona un repositorio remoto a tu máquina local."},
+        {"Comando": "git add <archivo>", "Descripción": "Añade un archivo específico al área de staging."},
+        {"Comando": "git rm <archivo>", "Descripción": "Elimina un archivo del repositorio."},
+        {"Comando": "git log", "Descripción": "Muestra el historial de commits realizados en el repositorio."},
+        {"Comando": "git pull", "Descripción": "Descarga y fusiona cambios del repositorio remoto."},
+        {"Comando": "git push", "Descripción": "Envía cambios locales al repositorio remoto."},
+        {"Comando": "git status", "Descripción": "Muestra el estado actual del repositorio."},
+        {"Comando": "git status -s", "Descripción": "Muestra el estado en formato compacto."},
+        {"Comando": "git config --global alias.<nombre-alias> '<comando>'", "Descripción": "Crea un alias para un comando largo."},
+        {"Comando": "git rebase <rama-base>", "Descripción": "Reescribe el historial de commits para una historia más lineal."},
+        {"Comando": "git stash", "Descripción": "Guarda temporalmente tus cambios no confirmados."},
+        {"Comando": "git stash apply", "Descripción": "Aplica los cambios guardados con stash."},
+        {"Comando": "git cherry-pick <id-del-commit>", "Descripción": "Aplica cambios de un commit específico a tu rama actual."},
+        {"Comando": "git reset --hard <commit-id>", "Descripción": "Deshace cambios y vuelve a un commit anterior eliminando los cambios actuales."},
+        {"Comando": "git reset --soft HEAD~1", "Descripción": "Deshace el último commit pero conserva los cambios en el área de staging."},
+        {"Comando": "git diff", "Descripción": "Muestra las diferencias entre archivos o entre commits."},
+        {"Comando": "git reflog", "Descripción": "Muestra el historial de movimientos del HEAD."},
+        {"Comando": "git tag <nombre-del-tag>", "Descripción": "Crea una etiqueta en el historial de commits."},
+        {"Comando": "git remote add origin <URL-del-repositorio>", "Descripción": "Conecta el repositorio local con el remoto en GitHub."},
+        {"Comando": "git branch -M main", "Descripción": "Renombra la rama actual a 'main'."},
+        {"Comando": "git push -u origin main", "Descripción": "Sube la rama 'main' al repositorio remoto y establece el seguimiento."},
+        {"Comando": "git push origin <nombre-de-la-rama>", "Descripción": "Sube la rama especificada al repositorio remoto."},
+        {"Comando": "git fetch origin", "Descripción": "Obtiene actualizaciones del repositorio remoto."},
+        {"Comando": "git pull origin main", "Descripción": "Actualiza tu rama local con los últimos cambios del remoto."},
+        {"Comando": "git push origin :<nombre-antiguo>", "Descripción": "Elimina una rama remota con el nombre antiguo."},
+        {"Comando": "git push origin <nombre-nuevo>", "Descripción": "Sube una nueva rama remota con un nombre nuevo."}
+    ]
 
     df_comandos = pd.DataFrame(comandos)
     st.dataframe(df_comandos, use_container_width=True)
 
     st.header("Tips y Trucos Útiles")
     st.markdown("""
-    A continuación, se presentan algunos consejos y trucos que pueden ayudarte a mejorar tu flujo de trabajo con Git:
+    A continuación, se presentan algunos consejos y trucos que pueden ayudarte a mejorar tu flujo de trabajo con Git. Cada consejo viene con un ejemplo práctico y una explicación para ilustrar su uso.
 
-    - **Utiliza alias en Git:** Configura alias para comandos comunes para ahorrar tiempo. Por ejemplo: `git config --global alias.st status` permite usar `git st` en lugar de `git status`.
+    - **Utiliza alias en Git:** Configura alias para comandos comunes para ahorrar tiempo.
+      - **Ejemplo:** Para usar `git st` en lugar de `git status`, configura un alias así:
+        ```bash
+        git config --global alias.st status
+        ```
+        **Explicación:** Este comando crea un alias llamado `st` que puedes usar en lugar de escribir `git status` cada vez. Es útil para acelerar tu flujo de trabajo con Git.
+
     - **Revertir un commit:** Usa `git revert <commit>` para crear un nuevo commit que revierta los cambios del commit especificado, sin eliminar el historial.
+      - **Ejemplo:** Para revertir el commit con ID `abc123`, usa:
+        ```bash
+        git revert abc123
+        ```
+        **Explicación:** Este comando crea un nuevo commit que deshace los cambios introducidos en el commit `abc123`. Es una forma segura de revertir cambios sin modificar el historial de commits.
+
     - **Comparar cambios:** Usa `git diff` para ver las diferencias entre tu área de trabajo y el área de staging, o entre commits.
+      - **Ejemplo:** Para comparar cambios en tu área de trabajo:
+        ```bash
+        git diff
+        ```
+        **Explicación:** Muestra las diferencias entre los archivos modificados en tu directorio de trabajo y el último commit. Es útil para revisar cambios antes de hacer un commit.
+
+      - **Ejemplo:** Para comparar cambios entre el último commit y tu área de staging:
+        ```bash
+        git diff --cached
+        ```
+        **Explicación:** Muestra las diferencias entre el área de staging y el último commit. Es útil para revisar qué cambios se han preparado para el próximo commit.
+
     - **Deshacer cambios en un archivo:** Usa `git restore <archivo>` para descartar cambios en un archivo específico que no has añadido al área de staging.
+      - **Ejemplo:** Para descartar cambios en `archivo.txt`:
+        ```bash
+        git restore archivo.txt
+        ```
+        **Explicación:** Este comando descarta los cambios realizados en `archivo.txt` que no se han añadido al área de staging. Es útil si decides que no quieres mantener las modificaciones en un archivo específico.
+
     - **Ver cambios en un archivo específico:** Usa `git log -p <archivo>` para revisar los cambios realizados en un archivo a lo largo del tiempo.
-    - **Colores en el terminal:** Activa colores en el terminal para diferenciar mejor los cambios con `git config --global color.ui auto`.
+      - **Ejemplo:** Para ver el historial de cambios en `archivo.txt`:
+        ```bash
+        git log -p archivo.txt
+        ```
+        **Explicación:** Muestra el historial de commits que han modificado `archivo.txt`, incluyendo los detalles de cada cambio. Es útil para rastrear cómo ha evolucionado un archivo a lo largo del tiempo.
+
+    - **Colores en el terminal:** Activa colores en el terminal para diferenciar mejor los cambios.
+      - **Ejemplo:** Para habilitar colores en Git:
+        ```bash
+        git config --global color.ui auto
+        ```
+        **Explicación:** Este comando habilita la coloración automática de la salida de los comandos de Git, lo que facilita la lectura de la información en el terminal, especialmente para distinguir entre cambios añadidos, modificados o eliminados.
+
     - **Búsqueda en el historial de commits:** Usa `git log --grep="texto"` para buscar commits que contienen un texto específico en el mensaje.
+      - **Ejemplo:** Para buscar commits que contienen la palabra "bug":
+        ```bash
+        git log --grep="bug"
+        ```
+        **Explicación:** Muestra una lista de commits cuyos mensajes contienen el texto "bug". Es útil para encontrar cambios relacionados con un tema específico, como un error o una característica.
+
     - **Modificar el último commit:** Si necesitas hacer cambios en el último commit, usa `git commit --amend` para editar el mensaje o agregar más cambios.
+      - **Ejemplo:** Para cambiar el mensaje del último commit:
+        ```bash
+        git commit --amend -m "Nuevo mensaje del commit"
+        ```
+        **Explicación:** Permite modificar el mensaje del último commit sin crear un nuevo commit. Es útil para corregir errores en el mensaje de commit original.
+
+      - **Ejemplo:** Para agregar más cambios al último commit:
+        ```bash
+        git add archivo_modificado
+        git commit --amend --no-edit
+        ```
+        **Explicación:** Añade cambios adicionales al último commit sin cambiar el mensaje. Es útil para incluir correcciones adicionales sin crear un nuevo commit.
+
     """)
 
     st.markdown("""
@@ -1350,6 +1426,7 @@ def resumen_taller():
     - [Git Official Documentation](https://git-scm.com/doc)
     - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
     """)
+
 
 
 
