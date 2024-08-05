@@ -14,23 +14,36 @@ def verificar_respuesta(respuesta, correcta):
     else:
         st.error(f"Incorrecto. La respuesta correcta es `{correcta}`.")
 
-# Función para la página principal
 def pagina_principal():
-    st.image("./img/git_image.png")
-    st.title("Home")
-    st.header("Bienvenido al Taller Completo de Git & GitHub")
+    # Crear columnas para centrar la imagen
+    left_co, cent_co, right_co = st.columns(3)
+    
+    with cent_co:
+        st.image("./img/git.png", caption="Control de versiones con Git & GitHub")
+    
+    # Título principal con un estilo más llamativo
+    st.markdown("# **Bienvenido al Taller Completo de Git & GitHub** :computer:")
+    
+    # Subtítulos y texto con emojis para hacerlo más atractivo
     st.markdown("""
-        En este taller, aprenderás los conceptos fundamentales y avanzados de Git y GitHub, herramientas esenciales para el desarrollo colaborativo y el control de versiones. 
-
-        ### ¿Qué aprenderás?
-        - **Operaciones Básicas con Git**: Cómo clonar repositorios, añadir y eliminar archivos, hacer commits y ver el historial.
-        - **Ramas y Colaboración**: Cómo crear y gestionar ramas, realizar merges y resolver conflictos, y estrategias de colaboración en proyectos.
+        ### 🚀 ¿Qué aprenderás?
+        - **Comandos Básicos de Terminal**: Conocerás los comandos necesarios antes de empezar a usar Git.
+        - **Configuración e Inicialización**: Cómo configurar e inicializar Git en tu sistema.
+        - **Operaciones Básicas**: Clonar repositorios, añadir y eliminar archivos, hacer commits y ver el historial.
+        - **Ramas y Colaboración**: Crear y gestionar ramas, realizar merges y resolver conflictos, estrategias de colaboración.
         - **Uso Avanzado de Git**: Técnicas avanzadas como rebase, stash, y cherry-pick para mejorar tu flujo de trabajo.
-        - **Integración con GitHub**: Cómo conectar repositorios locales con GitHub, realizar push y pull requests, y colaborar eficazmente en GitHub.
-        - **Ejercicios y Quizzes Dinámicos**: Preguntas interactivas, ejercicios prácticos y casos de estudio simulados para aplicar y evaluar tus conocimientos.
+        - **Integración con GitHub**: Conectar repositorios locales con GitHub, realizar push y pull requests, colaborar eficazmente.
+        - **Resumen del Taller**: Recapitulación de los conceptos aprendidos.
+        - **Ejercicios Prácticos**: Aplicar tus conocimientos en ejercicios interactivos.
+        - **Feedback**: Dar tu opinión para ayudar a mejorar continuamente.
 
         ¡Esperamos que disfrutes del taller y que te conviertas en un experto en Git y GitHub!
-        """)
+    """)
+
+    # Añadir un botón para empezar el taller
+    if st.button("¡Empecemos el taller!"):
+        st.balloons()
+        st.markdown("### ¡Vamos allá! Selecciona una sección del menú para comenzar.")
 
 
 def comandos_basicos_terminal():
@@ -140,20 +153,20 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Crea un archivo vacío llamado `archivo_nuevo.txt`
     ```bash
-    $ touch archivo_nuevo.txt
-    $ ls
+    touch archivo_nuevo.txt
+    ls
     archivo_nuevo.txt  app.py  documentos  imágenes  README.md
     ```
     En este ejemplo, hemos creado un archivo vacío llamado `archivo_nuevo.txt`. Al listar el contenido del directorio actual con `ls`, podemos ver que `archivo_nuevo.txt` ha sido añadido.
                 
-    ### Crear n Nuevo Archivo (Windows)
+    ### Crear un Nuevo Archivo (Windows)
     ```bash
-    $ New-Item -ItemType file <nombre-del-archivo>
+    New-Item -ItemType file <nombre-del-archivo>
     ```
     **Ejemplo:** Crea un archivo vacío llamado `archivo_nuevo.txt`               
     ```bash
-    $ New-Item -ItemType file archivo_nuevo.txt
-    $ ls
+    New-Item -ItemType file archivo_nuevo.txt
+    ls
     archivo_nuevo.txt  app.py  documentos  imágenes  README.md
     ```
     En este ejemplo, hemos creado un archivo vacío llamado `archivo_nuevo.txt`. Al listar el contenido del directorio actual con `ls`, podemos ver que `archivo_nuevo.txt` ha sido añadido.
@@ -166,8 +179,8 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Elimina el archivo `archivo_viejo.txt`
     ```bash
-    $ rm archivo_viejo.txt
-    $ ls
+    rm archivo_viejo.txt
+    ls
     app.py  documentos  imágenes  README.md
     ```
     Aquí, hemos eliminado el archivo `archivo_viejo.txt`. Al listar el contenido del directorio actual con `ls`, podemos ver que `archivo_viejo.txt` ya no está presente.
@@ -387,8 +400,6 @@ def configuracion_e_inicializacion_git():
     st.dataframe(df_comandos_inicializacion, use_container_width=True)
 
 
-import streamlit as st
-import pandas as pd
 
 def operaciones_basicas():
     st.title("Operaciones Básicas con Git")
@@ -871,8 +882,7 @@ def ramas_colaboracion():
     """)
 
 
-import streamlit as st
-import pandas as pd
+
 
 def avanzado_git():
     st.title("Uso Avanzado de Git")
@@ -1103,12 +1113,6 @@ def avanzado_git():
     st.table(df)
 
 
-
-
-
-import streamlit as st
-import pandas as pd
-
 def integracion_github():
     st.title("Integración con GitHub")
     
@@ -1268,10 +1272,6 @@ def integracion_github():
     st.table(df)
 
 
-
-import streamlit as st
-import pandas as pd
-
 def resumen_taller():
     st.title("Resumen del Taller de Git")
 
@@ -1408,14 +1408,16 @@ def resumen_taller():
         **Explicación:** Añade cambios adicionales al último commit sin cambiar el mensaje. Es útil para incluir correcciones adicionales sin crear un nuevo commit.
 
     """)
-
+    st.header("Documentación")
     st.markdown("""
     **Recursos Adicionales:**
+    - [Libro Pro Git Gratuito](https://git-scm.com/book/en/v2)
+    - [Cheat Sheet Git](https://training.github.com/downloads/es_ES/github-git-cheat-sheet/)
+    - [Documentación GitHub](docs.github.com/es)
     - [Git Official Documentation](https://git-scm.com/doc)
     - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
     """)
 
-import streamlit as st
 
 # Inicializar variables de estado para las respuestas y puntuación
 if 'correctas' not in st.session_state:
@@ -1633,8 +1635,8 @@ paginas = {
     "Ramas y Colaboración": ramas_colaboracion,
     "Uso Avanzado de Git": avanzado_git,
     "Integración con GitHub": integracion_github,
-    "Resumen Taller": resumen_taller,
-    "Ejercicios": ejercicios,
+    "Resumen, Tips y Documentación": resumen_taller,
+    "Ejercicios Prácticos": ejercicios,
     "Feedback": feedback
 }
 
