@@ -1,72 +1,49 @@
-# Taller Interactivo de Git y GitHub
+# Taller de Git con Los Simpsons
 
-Bienvenido al Taller Interactivo de Git y GitHub, diseñado para ayudarte a aprender y dominar el uso de Git y GitHub de manera práctica y efectiva. Este proyecto utiliza Streamlit para proporcionar una interfaz sencilla y una experiencia de aprendizaje interactiva.
+¡Bienvenidos al Taller de Git! Este taller ha sido diseñado para ofrecerte una comprensión práctica de las herramientas de control de versiones y cómo utilizarlas en tu flujo de trabajo, todo esto con la divertida y entrañable compañía de los personajes de Los Simpson.
 
-## Tabla de Contenidos
+## Temas del Taller
 
-- [Introducción](#introducción)
-- [Instalación](#instalación)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Características](#características)
-- [Uso](#uso)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
+El taller se compone de los siguientes temas:
 
-## Introducción
+1. **Comandos Básicos con Ralph Wiggum:** "Hola, ¡Hola, soy Ralph! No te preocupes, aprenderemos lo básico del terminal. ¡No habrá nada raro como una cebolla en el parque, lo prometo!"
 
-Este taller está estructurado en varias secciones que cubren desde los conceptos básicos hasta el uso avanzado de Git y la integración con GitHub. Cada sección incluye explicaciones teóricas, ejemplos prácticos y ejercicios interactivos para consolidar tus conocimientos.
+2. **Configuración e Inicialización con Marge:** "Hola, soy Marge. Configurar Git es como organizar la despensa: una vez que todo está en su sitio, la vida es mucho más fácil. ¡Vamos a evitar que Homer borre todo accidentalmente!"
 
-## Instalación
+3. **Operaciones Básicas con Homer:** "¡D'oh! Soy Homer y estoy aquí para enseñarte las operaciones básicas. Recuerda, al igual que cuando intento no comer donuts, ¡hay que ser preciso al hacer commit y push! ¡Si no, todo puede salir mal!"
 
-Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local:
+4. **Ramas y Colaboración con Bart:** "¡Yo soy el Barto! Vamos a liarla con unas cuantas ramas de Git, pero no te preocupes, ¡Lisa nos salvará antes de que se nos vaya todo de las manos!"
 
-1. **Clona el repositorio**:
+5. **Uso Avanzado de Git con Lisa:** "Soy Lisa Simpson y, como siempre, me toca poner un poco de orden. Aprenderemos técnicas avanzadas para que tu proyecto sea tan eficiente como mi saxofón los domingos por la tarde."
 
-    ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd <NOMBRE_DEL_REPOSITORIO>
-    ```
+6. **Integración con GitHub con Ned Flanders:** "¡Hola holita, vecinitos! Integrar Git con GitHub es más fácil que una limonada bien fresquita en una tarde de verano. ¡Nada complicado, lo prometo!"
 
-2. **Crea y activa un entorno virtual** (opcional pero recomendado):
+7. **Resumen del Taller con Nelson Muntz:** "Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo lo que hemos visto porque, ¡eh!, si hasta Milhouse ha aprendido, tú también puedes."
 
-    ```bash
-    python -m venv env
-    source env/bin/activate  # En Windows usa `env\Scripts\activate`
-    ```
+8. **Ejercicios Prácticos con Apu:** "¡Gracias, vuelve pronto! Soy Apu, y no te preocupes, te tengo preparado un surtido de ejercicios prácticos para que domines Git mejor que los precios en el Badulaque."
 
-3. **Instala las dependencias**:
+9. **Feedback con Maggie:** "Incluso Maggie tiene algo que decir, ¿por qué no tú? ¡Tu feedback es valioso! Déjanos tus comentarios y sugerencias para que podamos mejorar y hacer que este taller sea todavía más increíble."
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+## ¿Cómo usar la aplicación?
 
-4. **Ejecuta la aplicación**:
+Para ejecutar esta aplicación, sigue estos pasos:
 
-    ```bash
-    streamlit run app.py
-    ```
+1. **Clona este repositorio:**
 
-## Estructura del Proyecto
+   ```bash
+   git clone <URL del repositorio>
+   cd <nombre del repositorio>
 
-- `app.py`: Archivo principal que ejecuta la aplicación Streamlit.
-- `pages/`: Directorio que contiene las diferentes secciones del taller.
-- `requirements.txt`: Archivo con las dependencias necesarias para el proyecto.
-- `README.md`: Este archivo.
+2. **Ejecuta la aplicación**
 
-La navegación del taller se realiza mediante un diccionario de páginas:
+   ```bash
+    streamlit run app_SIMPSONS.py
 
-```python
-# Diccionario para la navegación
-paginas = {
-    "Home": pagina_principal,
-    "Comandos Básicos Terminal": comandos_basicos_terminal,
-    "Configuración e Inicialización": configuracion_e_inicializacion_git,
-    "Operaciones Básicas": operaciones_basicas,
-    "Ramas y Colaboración": ramas_colaboracion,
-    "Uso Avanzado de Git": avanzado_git,
-    "Integración con GitHub": integracion_github,
-    "Resumen Taller": resumen_taller,
-    "Ejercicios": ejercicios,
-    "Feedback": feedback
-}
+
+3. **Accede a la aplicación**
+
+Una vez que ejecutes el comando anterior, Streamlit abrirá automáticamente tu navegador web y podrás acceder a la aplicación en la dirección http://localhost:8501.
+
+
+## Contribuciones
+¡Nos encantaría recibir tus comentarios y sugerencias! Si deseas contribuir a mejorar esta aplicación, no dudes en abrir un problema o enviar una solicitud de extracción (pull request).
