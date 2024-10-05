@@ -2,10 +2,11 @@ import streamlit as st
 import os
 import pandas as pd
 
-st.set_page_config(page_title="Taller Git&GitHub", page_icon=":octopus:", layout="wide")
 
-# Inicio de git, opciones y menus
-st.markdown("<h1 style='text-align: center;'>Taller Completo de Git & GitHub</h1>", unsafe_allow_html=True)
+import streamlit as st
+
+# Configuración de la página
+st.set_page_config(page_title="Taller de Git con Los Simpsons", page_icon="::", layout="wide")
 
 # Función para verificar las respuestas
 def verificar_respuesta(respuesta, correcta):
@@ -14,36 +15,57 @@ def verificar_respuesta(respuesta, correcta):
     else:
         st.error(f"Incorrecto. La respuesta correcta es `{correcta}`.")
 
-def pagina_principal():
-    # Crear columnas para centrar la imagen
-    left_co, cent_co, right_co = st.columns(3)
-    
-    with cent_co:
-        st.image("./img/git.png", caption="Control de versiones con Git & GitHub")
-    
-    # Título principal con un estilo más llamativo
-    st.markdown("# **Bienvenido al Taller de Git & GitHub** :computer:")
-    
-    # Subtítulos y texto con emojis para hacerlo más atractivo
-    st.markdown("""
-        ### 🚀 ¿Qué aprenderás?
-        - **Comandos Básicos de Terminal**: Conocerás los comandos necesarios antes de empezar a usar Git.
-        - **Configuración e Inicialización**: Cómo configurar e inicializar Git en tu sistema.
-        - **Operaciones Básicas**: Clonar repositorios, añadir y eliminar archivos, hacer commits y ver el historial.
-        - **Ramas y Colaboración**: Crear y gestionar ramas, realizar merges y resolver conflictos, estrategias de colaboración.
-        - **Uso Avanzado de Git**: Técnicas avanzadas como rebase, stash, y cherry-pick para mejorar tu flujo de trabajo.
-        - **Integración con GitHub**: Conectar repositorios locales con GitHub, realizar push y pull requests, colaborar eficazmente.
-        - **Resumen del Taller**: Recapitulación de los conceptos aprendidos.
-        - **Ejercicios Prácticos**: Aplicar tus conocimientos en ejercicios interactivos.
-        - **Feedback**: Dar tu opinión para ayudar a mejorar continuamente.
 
-        ¡Esperamos que disfrutes del taller y que te conviertas en un experto en Git y GitHub!
+# Función para la página principal
+def pagina_principal():
+    # Título y bienvenida
+    st.markdown("<h1 style='text-align: center;'>¡Bienvenidos al Taller de Git con Los Simpsons!</h1>", unsafe_allow_html=True)
+    st.markdown("""
+    <div style='text-align: center;'>
+        <img src='https://upload.wikimedia.org/wikipedia/en/a/a0/The_Simpsons_-_logo.png' width='400'>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Historia de introducción
+    st.markdown("""
+    ### ¡Bienvenidos a Springfield!
+
+    Bienvenidos a un taller donde aprender Git es más fácil que conseguir una rosquilla para Homer. En este taller, aprenderás a manejar el control de versiones como si fueras parte de la familia Simpson. ¿Te imaginas a Homer aprendiendo a hacer commits? ¡Eso es un espectáculo que no querrás perderte!
+
+    Aquí, cada miembro de la familia tiene algo que enseñarte. Lisa, la cerebrito del grupo, se asegura de que todo sea ordenado y eficiente. Marge, con su infalible sentido del hogar, te guiará para que tu proyecto esté tan limpio como su casa. Bart, el rebelde, te mostrará cómo tomar riesgos y hacer cosas inesperadas con Git, mientras que Maggie, aunque no hable, siempre está lista para detectar esos errores que nadie más ve.
+
+    ### Menú de Navegación
+
+    - **Comandos Básicos con Ralph Wiggum**: "Hola, soy Ralph. Aprenderemos a usar el terminal... sin cebollas del parque ni raras travesuras. ¡Prometido!"
+    
+    - **Configuración e Inicialización con Marge**: "Hola, soy Marge. Configurar Git es tan fácil como hacer una tarta de manzana... ¡Pero no de esas que se les queman a Homer!"
+    
+    - **Operaciones Básicas con Milhouse**: "¡Hey, soy Milhouse! Aunque a veces me siento un poco como un perdedor, puedo enseñarte los comandos básicos de Git para que no termines como yo... ¡Sin nada en la cabeza!"
+    
+    - **Ramas y Colaboración con Bart**: "¡Yo soy Bart! Vamos a liarla con unas cuantas ramas de Git, pero no te preocupes, Lisa nos guiará para que no terminemos en un lío de código. ¡Prepárate para el caos organizado!"
+    
+    - **Uso Avanzado de Git con Lisa Simpson**: "Soy Lisa, y si hay algo que detesto, son los proyectos desorganizados. Te enseñaré técnicas avanzadas para que tu código sea tan perfecto como mi saxofón. ¡Sin errores, por favor!"
+    
+    - **Integración con GitHub con Ned Flanders**: "¡Hola holita, vecinitos! Conectar Git con GitHub es más fácil que hacerle un favor a un vecino. ¡Acompáñame y lo haremos juntos!"
+    
+    - **Resumen del Taller con Nelson Muntz**: "Ha-ha! Soy Nelson y voy a repasar todo lo que hemos aprendido. ¡Si hasta Milhouse puede hacerlo, tú también!"
+    
+    - **Ejercicios Prácticos con Apu**: "¡Hola, soy Apu! Te tengo preparados ejercicios prácticos que son más emocionantes que un atragantamiento de donuts. ¡Vamos a poner todo esto en práctica!"
+    
+    - **Feedback con Maggie**: "Maggie puede que no hable, pero su mirada dice todo. Tu opinión es importante para nosotros, ¡así que no dudes en dar tu feedback!"
+    
+    Así que, ¿estás listo para embarcarte en esta aventura Git al estilo de Springfield? Y recuerda, como siempre dice Homer: "Cuando dudes, haz un commit... ¡y si se estropea, siempre puedes deshacerlo!" 🍩
     """)
 
-    # Añadir un botón para empezar el taller
-    if st.button("¡Empecemos el taller!"):
-        st.balloons()
-        st.markdown("### ¡Vamos allá! Selecciona una sección del menú para comenzar.")
+
+
+
+
+
+
+
+
+
 
 
 def comandos_basicos_terminal():
@@ -180,7 +202,7 @@ def comandos_basicos_terminal():
     **Ejemplo:** Elimina el archivo `archivo_viejo.txt`
     ```bash
     rm archivo_viejo.txt
-    $ ls
+    ls
     app.py  documentos  imágenes  README.md
     ```
     Aquí, hemos eliminado el archivo `archivo_viejo.txt`. Al listar el contenido del directorio actual con `ls`, podemos ver que `archivo_viejo.txt` ya no está presente.
@@ -1629,15 +1651,15 @@ def feedback():
 # Diccionario para la navegación
 paginas = {
     "Home": pagina_principal,
-    "Comandos Básicos Terminal": comandos_basicos_terminal,
-    "Configuración e Inicialización": configuracion_e_inicializacion_git,
-    "Operaciones Básicas": operaciones_basicas,
-    "Ramas y Colaboración": ramas_colaboracion,
-    "Uso Avanzado de Git": avanzado_git,
-    "Integración con GitHub": integracion_github,
-    "Resumen, Tips y Documentación": resumen_taller,
-    "Ejercicios Prácticos": ejercicios,
-    "Feedback": feedback
+    "Comandos Básicos el Ralph": comandos_basicos_terminal,
+    "Configuración e Inicialización con Marge": configuracion_e_inicializacion_git,
+    "Operaciones Básicas con Bart": operaciones_basicas,
+    "Ramas y Colaboración con Milhouse": ramas_colaboracion,
+    "Uso Avanzado de Git con Lisa": avanzado_git,
+    "Integración de GitHub con Ned": integracion_github,
+    "Resumen con Edna": resumen_taller,
+    "Ejercicios con la familia Simpsons": ejercicios,
+    "Feedback con Maggie": feedback
 }
 
 # Sidebar para la selección de página
