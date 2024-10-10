@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # Configuración de la página
-st.set_page_config(page_title="Taller de Git con Los Simpsons", page_icon="::", layout="wide")
+st.set_page_config(page_title="Taller de Git con Los Simpsons", page_icon="🍩", layout="wide")
 
 # Función para verificar las respuestas
 def verificar_respuesta(respuesta, correcta):
@@ -13,63 +13,99 @@ def verificar_respuesta(respuesta, correcta):
     else:
         st.error(f"Incorrecto. La respuesta correcta es `{correcta}`.")
 
-# Función para la página principal
+
 def pagina_principal():
     # Título y bienvenida
     st.markdown("<h1 style='text-align: center;'>¡Bienvenidos al Taller de Git con Los Simpsons!</h1>", unsafe_allow_html=True)
-    st.markdown("""
-    <div style='text-align: center;'>
-        <img src='https://upload.wikimedia.org/wikipedia/en/a/a0/The_Simpsons_-_logo.png' width='400'>
-    </div>
-    """, unsafe_allow_html=True)
-    
+    st.markdown("---")
+
+    # Centrando la imagen de Maggie usando st.image() y con ancho ajustado
+    col1, col2, col3 = st.columns([1, 2, 1])  # Tres columnas para centrar el contenido en el medio
+    with col2:
+        st.image("images/SIMPSONS.jpeg", width=400)  # Imagen centrada en la columna del medio
+
+
     # Historia de introducción
     st.markdown("""
     ### ¡Bienvenidos a Springfield!
 
-    Springfield está revolucionado porque Homer ha sido nombrado el nuevo encargado del control de versiones en la Planta Nuclear... ¡y no tiene ni idea de cómo funciona Git! Pero no te preocupes, porque Lisa está aquí para asegurarse de que no cause un desastre que borre todo el código... de nuevo.
+    En este taller aprender Git te resultará más fácil que beberse una Duff para Homer. En este taller, aprenderás a manejar el control de versiones como si fueras parte de la familia Simpson. ¿Te imaginas a Homer aprendiendo a hacer commits? ¡Eso es un espectáculo que no querrás perderte!
 
-    En este taller de Git, los personajes de Los Simpsons te enseñarán cómo dominar el control de versiones mientras intentan salvar el día en Springfield. ¡Vamos a aprender Git de la manera más divertida posible!
-
-    **¿Cómo funciona esto?**  
-    - Homer añadirá commits de forma caótica y aleatoria, pero tú aprenderás a hacerlo de forma correcta.
-    - Marge te ayudará a organizar tu proyecto con la misma dedicación con la que limpia la casa, y sin olvidarse de ninguna rama.
-    - Bart te mostrará cómo crear y destruir ramas con su usual anarquía, pero también aprenderás cómo hacerlo bien y no dejar un caos tras de ti.
-    - Lisa te enseñará a ser eficiente, meticuloso y perfecto con tu código... aunque seguro que Homer no sigue todas sus recomendaciones.
-
-    ### Menú de Navegación
-
-    - **Comandos Básicos con Ralph Wiggum**: "Hola, ¡Hola, soy Ralph! No te preocupes, aprenderemos lo básico del terminal. ¡No habrá nada raro como una cebolla en el parque, lo prometo!
-                
-    - **Configuración e Inicialización con Marge**: "Hola, soy Marge. Configurar Git es como organizar la despensa: una vez que todo está en su sitio, la vida es mucho más fácil. ¡Vamos a evitar que Homer borre todo accidentalmente!"
-    
-    - **Operaciones Básicas con Milhouse**: "¡Hey, soy Milhouse! A lo mejor no soy el más popular del colegio, pero cuando se trata de Git, ¡puedo enseñarte algunos trucos geniales! Solo prometo no llorar si algo sale mal."
-    
-    - **Ramas y Colaboración con Bart**: "¡Yo soy el Barto! Vamos a liarla con unas cuantas ramas de Git, pero no te preocupes, ¡Lisa nos salvará antes de que se nos vaya todo de las manos!"
-    
-    - **Uso Avanzado de Git con Lisa**: "Soy Lisa Simpson y, como siempre, me toca poner un poco de orden. Aprenderemos técnicas avanzadas para que tu proyecto sea tan eficiente como mi saxofón los domingos por la tarde."
-    
-    - **Integración con GitHub con Ned Flanders**: "¡Hola holita, vecinitos! Integrar Git con GitHub es más fácil que una limonada bien fresquita en una tarde de verano. ¡Nada complicado, lo prometo!"
-    
-    - **Resumen del Taller con Nelson Muntz**: "Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo lo que hemos visto porque, ¡eh!, si hasta Milhouse ha aprendido, tú también puedes."
-    
-    - **Ejercicios Prácticos con Apu**: "¡Gracias, vuelve pronto! Soy Apu, y no te preocupes, te tengo preparado un surtido de ejercicios prácticos para que domines Git mejor que los precios en el Badulaque."
-    
-    - **Feedback con Maggie**: Incluso Maggie tiene algo que decir, ¿por qué no tú? ¡Tu feedback es valioso! Déjanos tus comentarios y sugerencias para que podamos mejorar y hacer que este taller sea todavía más increíble.
-                
-    ¡Estamos emocionados de que te unas a nosotros en esta aventura Git al estilo de Springfield! Y recuerda, como diría Homer: "En caso de duda, ¡haz un commit!" 🍩
+    Aquí, cada personaje tiene algo que enseñarte. Lisa, la cerebrito del grupo, se asegura de que todo sea ordenado y eficiente. Marge, con su infalible sentido del hogar, te guiará para que tu proyecto esté tan limpio como su casa. Bart, el rebelde, te mostrará cómo tomar riesgos y hacer cosas inesperadas con Git, mientras que Maggie, aunque no hable, siempre está lista para detectar mejoras que nadie más ve.
     """)
 
+    # Menú de Navegación
+    st.markdown("## Menú de Navegación")
+
+    # Dividir en dos columnas
+    col1, col2 = st.columns(2)
+
+    # Primera columna (izquierda)
+    with col1:
+        st.markdown("### Ralph")
+        st.image("images/ralph/ralph_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Comandos Básicos con Ralph**: Hola, ¡Hola, soy Ralph! No te preocupes, aprenderemos lo básico del terminal. ¡No habrá nada raro como una cebolla en el parque, lo prometo!
+        """)
+
+        st.markdown("### Homer")
+        st.image("images/homer/homer_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Operaciones Básicas con Homer**: ¡Mmm, comandos básicos de Git! Tan buenos como una cerveza fría después del trabajo. Verás que hacer **git add** o **git commit** es como abrir una Duff: una vez que empiezas, no puedes parar.
+        """)
+
+        st.markdown("### Lisa")
+        st.image("images/lisa/lisa_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Uso Avanzado de Git con Lisa**: Soy Lisa Simpson y, como siempre, me toca poner un poco de orden. Aprenderemos técnicas avanzadas para que tu proyecto sea tan eficiente como mi saxofón los domingos por la tarde.
+        """)
 
 
+        st.markdown("### Nelson")
+        st.image("images/nelson/nelson_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Resumen del Taller con Nelson**: Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo lo que hemos visto porque, ¡eh!, si hasta Milhouse ha aprendido, tú también puedes.
+        """)
 
+        st.markdown("### Maggie")
+        st.image("images/maggie/maggie_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Feedback con Maggie**: Incluso Maggie tiene algo que decir, ¿por qué no tú? ¡Tu feedback es valioso! Déjanos tus comentarios y sugerencias para que podamos mejorar y hacer que este taller sea todavía más increíble.
+        """)
 
+    # Segunda columna (derecha)
+    with col2:
+        st.markdown("### Marge")
+        st.image("images/marge/marge_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Configuración e Inicialización con Marge**: Hola, soy Marge. Configurar Git es como organizar la despensa: una vez que todo está en su sitio, la vida es mucho más fácil. ¡Vamos a evitar que Homer borre todo accidentalmente!
+        """)
 
+        st.markdown("### Bart")
+        st.image("images/bart/bart_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Ramas y Colaboración con Bart**: ¡Yo soy el Barto! Vamos a liarla con unas cuantas ramas de Git, pero no te preocupes, ¡Lisa nos salvará antes de que se nos vaya todo de las manos!
+        """)
+
+        st.markdown("### Ned Flanders")
+        st.image("images/ned/ned_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Integración con GitHub con Ned Flanders**: ¡Hola holita, vecinitos! Integrar Git con GitHub es más fácil que una limonada bien fresquita en una tarde de verano. ¡Nada complicado, lo prometo!
+        """)
+
+        st.markdown("### Apu")
+        st.image("images/apu/apu_presentacion.jpeg", width=200)
+        st.markdown("""
+        **Ejercicios Prácticos con Apu**: ¡Gracias, vuelve pronto! Soy Apu, y no te preocupes, te tengo preparado un surtido de ejercicios prácticos para que domines Git mejor que los precios en el Badulaque.
+        """)
+
+    
+    st.markdown("¡Estamos emocionados de que te unas a nosotros en esta aventura Git al estilo de Springfield! Y recuerda, si Ralph ha podido aprender Git, tú también puedes.")
 
 def comandos_basicos_terminal():
-    st.title("Comandos Básicos de Terminal con Ralph Wiggum: ¡Donde la Terminal es Magia!")
+    st.title("Comandos Básicos con Ralph: ¡Chu-chu-chuly!")
     st.markdown("""
-    Bienvenido a esta clase especial de comandos de terminal, ¡guiada por el mismísimo Ralph Wiggum! Si Ralph puede aprender esto (aunque piense que la terminal es un dinosaurio), tú también puedes. ¡Prepárate para aprender con ejemplos ridículos y divertidos al estilo de Springfield!
+    Bienvenido a esta clase especial de comandos de terminal, ¡guiada por el mismísimo Ralph Wiggum! Si Ralph puede aprender esto (aunque piense que 'terminal' es un tipo de dinosaurio), tú también puedes. ¡Prepárate para aprender con los mejores ejemplos al estilo de Springfield!
 
     ### Contenido
     1. 🦖 **Navegación y Listado de Archivos con Ralph el Explorador**
@@ -89,11 +125,11 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Ralph quiere ver qué hay en su carpeta de dinosaurios:
     ```bash
-    $ ls
-    raptor.txt  tiranosaurio.jpg  velociraptor_cosas.txt  rosquillas.txt
+    ls
+    raptor.txt  tiranosaurio.jpg  velociraptor_cosas.txt  rosquillas
     ```
-    Ralph se da cuenta de que no solo hay dinosaurios, ¡también hay rosquillas! Ahora está en una encrucijada: ¿buscar más dinosaurios o comerse una rosquilla? 🤷‍♂️
-
+    Ralph se da cuenta de que no solo hay dinosaurios, ¡también hay rosquillas!, pero ¿qué es mejor buscar más dinosaurios o comerse una rosquilla? 🤷‍♂️
+    
     #### Mostrar la Ruta del Directorio Actual (¡Para no Perderse!)
     Ralph suele perderse con facilidad, pero con este comando puede saber exactamente dónde está:
     ```bash
@@ -102,7 +138,7 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Ralph quiere saber en qué carpeta está:
     ```bash
-    $ pwd
+    pwd
     /home/springfield/dinosaurios
     ```
     Ralph descubre que está en la carpeta de dinosaurios y no en la cocina de los Simpson, como pensaba. Así evita volver a perderse... al menos por ahora.
@@ -115,22 +151,24 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Ralph quiere ir a la carpeta `rosquillas`:
     ```bash
-    $ cd rosquillas
-    $ pwd
-    /home/springfield/rosquillas
+    cd rosquillas
+    pwd
+    /home/springfield/dinosaurios/rosquillas
     ```
     Ralph ha llegado a la carpeta correcta y ahora puede disfrutar de sus rosquillas... hasta que Homer las descubra.
 
     📌 **Tip de Lisa:** Ralph, si alguna vez te pierdes de nuevo, recuerda que puedes "subir" a la carpeta anterior usando `cd ..`. Así es como funciona:
     
-    **Ejemplo:** Si Ralph está en la carpeta `rosquillas` pero quiere volver a la carpeta `springfield`:
+    **Ejemplo:** Si Ralph está en la carpeta `rosquillas` pero quiere volver a la carpeta `dinosaurios`:
     ```bash
-    $ cd ..
-    $ pwd
-    /home/springfield
+    cd ..
+    pwd
+    /home/springfield/dinosaurios
     ```
-    ¡Enhorabuena, Ralph! Has vuelto a la carpeta `springfield` sano y salvo. Ahora puedes seguir buscando dinosaurios... o más rosquillas.
+    ¡Enhorabuena, Ralph! Has vuelto a la carpeta `dinosaurios` sano y salvo. Ahora puedes seguir buscando dinosaurios.
     """)
+
+    st.image("images/ralph/ralph_carpetas_dinosaurios.jpeg", width=200)
 
     # Imagen recomendada:
     # **Ubicación**: Justo después de la primera sección de Ralph el Explorador.
@@ -148,8 +186,8 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Ralph crea la habitación de Bart, donde podrá guardar todas sus bromas y juguetes:
     ```bash
-    $ mkdir habitacion_de_bart
-    $ ls
+    mkdir habitacion_de_bart
+    ls
     dinosaurios  rosquillas  habitacion_de_bart
     ```
     ¡Ralph ha creado una nueva habitación en la casa! Bart ahora tiene su espacio propio para hacer travesuras sin molestar a Lisa... al menos por ahora.
@@ -159,10 +197,10 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Ralph construye las demás habitaciones:
     ```bash
-    $ mkdir habitacion_de_lisa
-    $ mkdir habitacion_de_homer_marge
-    $ mkdir habitacion_de_maggie
-    $ ls
+    mkdir habitacion_de_lisa
+    mkdir habitacion_de_homer_marge
+    mkdir habitacion_de_maggie
+    ls
     dinosaurios  rosquillas  habitacion_de_bart  habitacion_de_lisa  habitacion_de_homer_marge  habitacion_de_maggie
     ```
     La casa de los Simpson está tomando forma, y Ralph no podría estar más orgulloso.
@@ -175,8 +213,8 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Ralph derriba la habitación del dinosaurio:
     ```bash
-    $ rm -r dinosaurios
-    $ ls
+    rm -r dinosaurios
+    ls
     rosquillas  habitacion_de_bart  habitacion_de_lisa  habitacion_de_homer_marge  habitacion_de_maggie
     ```
     La habitación del dinosaurio ya no está, pero Ralph sigue adelante con su proyecto.
@@ -191,14 +229,14 @@ def comandos_basicos_terminal():
 
     **Ejemplo Incorrecto:**
     ```bash
-    $ rm -rf *
+    rm -rf *
     ```
 
     Si Ralph ejecuta este comando desde el directorio principal, todos los archivos y directorios de la casa serán eliminados.
 
     **Resultado:**
     ```bash
-    $ ls
+    ls
     (nada...)
     ```
     ¡Oh no! Ralph ha borrado toda la casa de los Simpson por accidente. Marge se enfada, y Homer se queda sin su habitación y sin su preciada nevera.
@@ -206,7 +244,7 @@ def comandos_basicos_terminal():
     **Lección:** Asegúrate siempre de estar en el directorio correcto antes de eliminar algo. Un paso en falso puede tener consecuencias desastrosas.
     """)
 
-
+    st.image("images/ralph/ralph_bart_constuctores.jpeg", width=200)
 
     # Imagen recomendada:
     # **Ubicación**: Después de la sección de construir directorios.
@@ -224,8 +262,8 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Bart y Ralph crean un archivo llamado `broma_homer.txt`:
     ```bash
-    $ touch broma_homer.txt
-    $ ls
+    touch broma_homer.txt
+    ls
     broma_homero.txt  travesuras_de_bart  dinosaurios  rosquillas
     ```
     Ahora tienen un archivo listo para llenarlo de ideas graciosas. Ralph está emocionado porque Homer ni siquiera sospechará de la broma que están planeando.
@@ -238,8 +276,8 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Bart y Ralph eliminan el archivo `broma_homer.txt` para que Homer no descubra su plan:
     ```bash
-    $ rm broma_homer.txt
-    $ ls
+    rm broma_homer.txt
+    ls
     travesuras_de_bart  dinosaurios  rosquillas
     ```
     ¡Uf! El archivo ha sido eliminado justo a tiempo. Ralph suspira aliviado porque no quiere que Homer lo descubra.
@@ -252,8 +290,8 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Bart y Ralph copian la broma de Homer para asegurarse de que llegue a todos los rincones de la casa:
     ```bash
-    $ cp broma_homer.txt broma_homer_copia.txt
-    $ ls
+    cp broma_homer.txt broma_homer_copia.txt
+    ls
     broma_homer.txt  broma_homer_copia.txt  travesuras_de_bart  dinosaurios
     ```
     ¡Misión cumplida! Ahora tienen copias de su broma en varios lugares, por si alguna se pierde en el camino. Ralph sonríe porque es más probable que la broma funcione.
@@ -266,8 +304,8 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Bart y Ralph mueven el archivo de broma de Homer a otro lugar en la casa para confundirlo aún más:
     ```bash
-    $ mv broma_homer.txt /casa_de_los_simpson/nevera/
-    $ ls
+    mv broma_homer.txt /casa_de_los_simpson/nevera/
+    ls
     broma_homer_copia.txt  travesuras_de_bart  dinosaurios
     ```
     ¡Perfecto! El archivo ha sido movido a un lugar secreto. Ahora Homero jamás encontrará el archivo de la broma.
@@ -283,20 +321,20 @@ def comandos_basicos_terminal():
 
     **Ejemplo:** Bart lee el contenido de su archivo de travesuras:
     ```bash
-    $ cat travesuras_de_bart
+    cat travesuras_de_bart
     - Poner una bomba de ruido en la nevera de Homer.
     - Cambiar el shampoo de Lisa por pegamento.
     ```
     Ralph se ríe a carcajadas y ya está pensando en cómo llevar a cabo algunas de estas ideas locas.
 
-    **Conclusión:** Así es como Ralph y Bart aprenden a gestionar archivos mientras planifican travesuras en Springfield.¡Que se preparen los vecinos de Springfield! 🎉
+    **Conclusión:** Así es como Ralph y Bart aprenden a gestionar archivos mientras planifican bromas en Springfield.¡Que se preparen los vecinos de Springfield! 🎉
     """)               
 
-
+    st.image("images/ralph/ralph_bart_bromas.jpeg", width=200)
 
     # Imagen recomendada:
     # **Ubicación**: Al final de la sección de gestión de archivos.
-    # **Contenido**: Bart trabajando en su computadora creando archivos con nombres divertidos y copiándolos por todas partes. Podría haber una pantalla mostrando las bromas, y Homero al fondo, ajeno a lo que ocurre.
+    # **Contenido**: Bart y Ralph de los simpsons trabajando en su computadora creando archivos con nombres divertidos y copiándolos por todas partes. Podría haber una pantalla mostrando las bromas, y Homero al fondo, ajeno a lo que ocurre.
     
     st.markdown("""
     ## Resumen de Comandos
@@ -323,8 +361,6 @@ def comandos_basicos_terminal():
     st.markdown("""
     Con estos comandos, ¡serás tan eficiente como Bart organizando sus bromas o Ralph buscando dinosaurios! Practica y diviértete con la terminal. Si Ralph puede aprender, tú también puedes hacerlo.
     """)
-
-
 
 
 def configuracion_e_inicializacion_git():
@@ -357,7 +393,7 @@ def configuracion_e_inicializacion_git():
 
     **Ejemplo:** Supongamos que estás firmando un libro de recetas muy especial:
     ```bash
-    $ git config --global user.name "Marge Simpson"
+    git config --global user.name "Marge Simpson"
     ```
 
     #### Configurar el Correo Electrónico
@@ -368,7 +404,7 @@ def configuracion_e_inicializacion_git():
 
     **Ejemplo:** Asegúrate de que tus amigos puedan contactarte fácilmente, especialmente si alguna vez me piden la receta de mis galletas de chocolate:
     ```bash
-    $ git config --global user.email "marge.simpson@example.com"
+    git config --global user.email "marge.simpson@example.com"
     ```
 
     #### Verificar la Configuración Actual
@@ -379,7 +415,7 @@ def configuracion_e_inicializacion_git():
 
     **Ejemplo:** Verifica si tu firma está bien puesta, como cuando reviso la lista de ingredientes antes de hacer mis galletas:
     ```bash
-    $ git config --list
+    git config --list
     user.name=Marge Simpson
     user.email=marge.simpson@example.com
     ```
@@ -392,7 +428,7 @@ def configuracion_e_inicializacion_git():
 
     **Ejemplo:** Para un proyecto único, hazlo así, como cuando me aseguro de que la cena de Navidad esté perfecta:
     ```bash
-    $ git config user.name "Marge Proyectos Especiales"
+    git config user.name "Marge Proyectos Especiales"
     ```
 
     📌 **Tip:** Usa `--global` para que se aplique a todos tus proyectos, como cuando organizo mis utensilios de cocina.
@@ -426,45 +462,45 @@ def configuracion_e_inicializacion_git():
     #### Paso 2: Crea la Carpeta y Archivos Necesarios para tu Proyecto
     En tu terminal, navega hasta el lugar donde quieres comenzar tu proyecto y crea una nueva carpeta. Es como preparar el área de trabajo antes de empezar a cocinar mi famosa lasaña:
     ```bash
-    $ mkdir mi_proyecto
-    $ cd mi_proyecto
+    mkdir mi_proyecto
+    cd mi_proyecto
     ```
 
     #### Paso 3: Inicializa el Repositorio Git
     Ahora es el momento de dar el primer paso y preparar tu cocina:
     ```bash
-    $ git init
+    git init
     Initialized empty Git repository in /home/usuario/mi_proyecto/.git/
     ```
 
     #### Paso 4: Añade los Archivos al Índice
     Añade todos los archivos de tu proyecto, como agregar los ingredientes a tu mezcla de lasaña:
     ```bash
-    $ git add .
+    git add .
     ```
 
     #### Paso 5: Realiza un Commit Inicial
     Realiza un commit inicial, como hacer la primera prueba de tu pastel. Asegúrate de que todo esté bien mezclado:
     ```bash
-    $ git commit -m "versión 1 del proyecto"
+    git commit -m "versión 1 del proyecto"
     ```
 
     #### Paso 6: Renombra la Rama Principal a 'main'
     Renombra la rama principal para que suene más formal, como un menú especial en nuestra mesa. Esto es como asegurarme de que la decoración de la mesa esté a la altura:
     ```bash
-    $ git branch -M main
+    git branch -M main
     ```
 
     #### Paso 7: Vincula el Repositorio Local con GitHub
     Ahora añade la URL del repositorio que copiaste antes. Es como enviar tu receta a la familia para que la prueben:
     ```bash
-    $ git remote add origin https://github.com/usuario/mi_proyecto.git
+    git remote add origin https://github.com/usuario/mi_proyecto.git
     ```
 
     #### Paso 8: Envía los Cambios al Repositorio Remoto
     Finalmente, envía tus cambios al repositorio remoto. Asegúrate de que todo esté en orden, como cuando verifico que todos los ingredientes estén listos para la cena:
     ```bash
-    $ git push -u origin main
+    git push -u origin main
     ```
 
     📌 **Tip:** Asegúrate de tener permisos de escritura en el repositorio remoto. ¡No querrás tener problemas como cuando Bart y Lisa discuten por el control remoto!
@@ -498,12 +534,6 @@ def configuracion_e_inicializacion_git():
 
     ¡Feliz codificación y que disfrutes de tus proyectos tanto como disfruto yo de mis galletas de chocolate! 🍪
     """)
-
-
-
-
-
-
 
 def operaciones_basicas():
     st.title("Operaciones Básicas con Git y Homer Simpson")
@@ -1706,7 +1736,7 @@ def feedback():
 # Diccionario para la navegación
 paginas = {
     "Home": pagina_principal,
-    "Comandos Básicos el Ralph": comandos_basicos_terminal,
+    "Comandos Básicos con Ralph": comandos_basicos_terminal,
     "Configuración e Inicialización con Marge": configuracion_e_inicializacion_git,
     "Operaciones Básicas con Homer": operaciones_basicas,
     "Ramas y Colaboración con Bart": ramas_colaboracion,
