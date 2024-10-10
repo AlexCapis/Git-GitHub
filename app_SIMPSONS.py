@@ -366,16 +366,19 @@ def comandos_basicos_terminal():
 def configuracion_e_inicializacion_git():
     st.title("Configuración e Inicialización de Git con Marge")
     st.markdown("""
-    ¡Hola, amigos! Soy Marge Simpson, y hoy te llevaré a un viaje en el tiempo y el espacio, a través de las complejidades del mundo de Git. Piensa en esto como una de esas aventuras locas que la familia Simpson suele tener, pero esta vez, no se trata de evitar que Bart se cuela en la tienda de donuts, sino de asegurarnos de que tus proyectos digitales estén perfectamente organizados.
+    ¡Hola, amigos! Soy Marge Simpson, y hoy te llevaré a un viaje en el tiempo y el espacio, a través de las complejidades del mundo de Git. Piensa en esto como una de esas aventuras locas que la familia Simpson suele tener, pero esta vez, no se trata de evitar que Bart le haga una broma a Skinner en el colegio, sino de asegurarnos de que tus proyectos digitales estén perfectamente organizados.
 
     ### ¿Qué es Git?
-    Imagina que estás en la cocina, donde cada receta es un proyecto. A veces, la cocina se convierte en un verdadero campo de batalla, con ingredientes volando y mi famoso pastel de manzana en riesgo de quemarse. ¡Ah, la vida en Springfield! Git es como ese viejo y confiable libro de recetas que utilizo, que guarda cada pequeño cambio que hago. Cada vez que modifico un pastel, puedo volver y ver exactamente qué hice, evitando que todo se convierta en un desastre, como cuando Bart trató de hacer un pastel para mi cumpleaños y terminó usando salsa de tomate como decoración.
+    Imagina que estás en la cocina, donde cada receta es un proyecto. A veces, la cocina se convierte en un verdadero campo de batalla, con ingredientes volando y mi famoso pastel de manzana en riesgo de quemarse. ¡Ah, la vida en Springfield! Git es como ese viejo y fiable libro de recetas que utilizo, que guarda cada pequeño cambio que hago. Cada vez que modifico un pastel, puedo volver y ver exactamente qué hice, evitando que todo se convierta en un desastre, como cuando Bart trató de hacer un pastel para mi cumpleaños y terminó usando salsa de tomate como decoración.
 
     **Beneficios de Git:**
     - **Distribución**: Cada desarrollador tiene su propia copia del proyecto, ¡lo que significa que pueden trabajar sin preocuparse de que Lisa les interrumpa con preguntas sobre sus tareas!
-    - **Velocidad**: Git es más rápido que Homero tratando de hacer una hamburguesa; maneja proyectos grandes sin despeinarse.
+    - **Velocidad**: Git es más rápido que Homer tratando de hacer una hamburguesa; maneja proyectos grandes sin despeinarse.
     - **Colaboración**: Permite que todos trabajen juntos sin pisarse los dedos de los pies, como cuando intentamos hacer una cena familiar. Cada uno tiene un rol, ¡y juntos creamos una cena espectacular!
+    """)
+    st.image("images/marge/marge_recetas_git.jpeg", width=200)
 
+    st.markdown("""
     ### Contenido
     1. ⚙️ **Configuración de Git**
     2. 🚀 **Inicialización de Repositorios**
@@ -449,6 +452,8 @@ def configuracion_e_inicializacion_git():
 
     df_comandos_git = pd.DataFrame(comandos)
     st.dataframe(df_comandos_git, use_container_width=True)
+
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 2. 🚀 Inicialización de Repositorios en GitHub")
     st.markdown("""
@@ -534,6 +539,7 @@ def configuracion_e_inicializacion_git():
 
     ¡Feliz codificación y que disfrutes de tus proyectos tanto como disfruto yo de mis galletas de chocolate! 🍪
     """)
+    st.image("images/ralph/ralph_bart_bromas.jpeg", width=200)
 
 def operaciones_basicas():
     st.title("Operaciones Básicas con Git y Homer Simpson")
@@ -579,6 +585,7 @@ def operaciones_basicas():
 
     **Homer**: *¡Y así, mis amigos, comienza nuestra aventura! Listos para explorar el mundo de Git como verdaderos héroes de la tecnología, ¡igual que cuando trato de evitar el ejercicio mientras disfruto de una buena cerveza Duff!*
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Añadir y Eliminar Archivos
     st.markdown("""
@@ -623,6 +630,8 @@ def operaciones_basicas():
     Esto mantendrá el archivo en su directorio, pero lo eliminará del área de staging.
     """)
 
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
+
     # Hacer Commits y Ver Historial
     st.markdown("""
     ### 3. Hacer Commits y Ver Historial
@@ -665,6 +674,8 @@ def operaciones_basicas():
     ```
     Esto le mostrará solo el mensaje de cada commit, permitiéndole revisar rápidamente la historia de su colección.
     """)
+
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Actualizar y Sincronizar Repositorios
     st.markdown("""
@@ -728,6 +739,8 @@ def operaciones_basicas():
     📌 **Tip:** Si necesitas un estado más detallado, simplemente utiliza `git status` sin la opción `-s`.
     """)
 
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
+
     # Crear Alias para Comandos
     st.markdown("""
     ### 5. Crear Alias para Comandos
@@ -789,6 +802,7 @@ def operaciones_basicas():
 
     ¡Recuerda! Practicar es la clave. Así que ve y haz que tus proyectos brillen, ¡como la mejor rosquilla de Springfield! ¡Hasta la próxima, amigos!
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
 
 
@@ -851,6 +865,7 @@ def ramas_colaboracion():
     Esto asegura que su cuaderno siempre esté ordenado.
 
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 2. 🔀 Realizar Merges y Resolver Conflictos")
     st.markdown("""
@@ -885,6 +900,7 @@ def ramas_colaboracion():
     Con `git commit -m "Resolver conflictos de merge"`Bart guarda sus cambios y da un mensaje claro sobre lo que resolvió.
 
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 3. 🤝 Estrategias de Colaboración en Proyectos")
     st.markdown("""
@@ -940,9 +956,7 @@ def ramas_colaboracion():
     st.markdown("""
     Así, con la creatividad y inteligencia de Bart para salirse siempre con la suya, y las herramientas adecuadas de Git, podrás colaborar y gestionar tus proyectos como un verdadero maestro del skate. ¡A practicar y aplicar lo que has aprendido!
     """)
-
-
-
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
 
 
@@ -982,6 +996,8 @@ def avanzado_git():
 
     📌 **Tip:** Usa `rebase` para mantener la historia de tus proyectos clara y organizada, así como tus apuntes en la biblioteca. 📚
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
+
 
     st.markdown("### 🗂️ Stash")
     st.markdown("""
@@ -1020,6 +1036,7 @@ def avanzado_git():
 
     📌 **Tip:** Usa `git stash list` para ver todos tus trabajos guardados, como tus proyectos en la biblioteca. 🏫
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 🍒 Cherry-Pick")
     st.markdown("""
@@ -1043,6 +1060,7 @@ def avanzado_git():
 
     📌 **Tip:** Ideal para seleccionar solo las mejores ideas, como elegir la respuesta más brillante en un concurso. 💡
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 🔄 Reset")
     st.markdown("""
@@ -1078,6 +1096,8 @@ def avanzado_git():
 
     📌 **Tip:** Usa `git reset --hard` con precaución; a veces es mejor aprender de los errores. ⚖️
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
+
 
     st.markdown("### 🔄 Diff y Reflog")
     st.markdown("""
@@ -1115,6 +1135,7 @@ def avanzado_git():
 
     📌 **Tip:** Usa `git diff` antes de hacer un commit para asegurarte de que todo esté en su lugar. ¡Es como revisar tu trabajo antes de entregarlo! ✨
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 🏷️ Tag")
     st.markdown("""
@@ -1136,6 +1157,8 @@ def avanzado_git():
 
     📌 **Tip:** Usa etiquetas para marcar versiones clave en tus proyectos, ¡así siempre recordarás tus logros! 🏆
     """)
+
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Resumen de Comandos
     st.markdown("### Resumen de Comandos Avanzados")
@@ -1167,16 +1190,6 @@ def avanzado_git():
 
     df = pd.DataFrame(data)
     st.dataframe(df)
-
-
-
-
-
-
-
-
-
-
 
 
 def integracion_github():
@@ -1220,6 +1233,7 @@ def integracion_github():
     📌 **Tip bendecidito:** Recuerda cambiar `<URL-del-repositorio>` por la URL de tu repositorio en GitHub, ¡y todo saldrá bien bonitito!
 
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 🚀 Pull Requests (o como pedir ayudita a los vecinitos)")
     st.markdown("""
@@ -1252,6 +1266,7 @@ def integracion_github():
     📌 **Tip divinito:** Sé claro y preciso al describir tu pull request, vecinito, ¡así ayudarás a tus compañeros a entender mejor y todos seremos más felices!
 
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 🔍 Consejitos útiles para vecinitos diligentes")
     st.markdown("""
@@ -1305,6 +1320,7 @@ def integracion_github():
     📌 **Tip celestial:** Mantén siempre tus ramitas ordenadas, vecinito, ¡así todo será más fácil y bendecidito para ti y los demás!
 
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Resumen de Comandos (como un sermoncito dominical)
     st.markdown("### Resumen de Comandos de Integración en GitHub, vecinito")
@@ -1338,10 +1354,7 @@ def integracion_github():
     st.table(df)
 
 
-
-
-
-
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
 
 def resumen_taller():
@@ -1405,6 +1418,8 @@ def resumen_taller():
 
     df_comandos = pd.DataFrame(comandos)
     st.dataframe(df_comandos, use_container_width=True)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
+
 
     st.header("Tips y Trucos Útiles")
     st.markdown("""
@@ -1548,6 +1563,7 @@ def ejercicios():
     st.title("Ejercicios de Git con Apu Nahasapeemapetilon")
 
     st.markdown("¡Bienvenidos al *Badulaque*! Como diría Apu: **Gracias, vuelva pronto... a hacer más commits!**")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 1
     st.header("Ejercicio 1: Clonar un Repositorio")
@@ -1560,6 +1576,7 @@ def ejercicios():
     respuesta1 = st.radio("Selecciona la respuesta correcta:", opciones1, key="q1_respuesta")
     if st.button("Verificar Respuesta 1", key="q1_btn"):
         verificar_respuesta(respuesta1, "q1")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 2
     st.header("Ejercicio 2: Añadir Archivos al Área de Staging")
@@ -1571,6 +1588,7 @@ def ejercicios():
     respuesta2 = st.radio("Selecciona la respuesta correcta:", opciones1, key="q2_respuesta")
     if st.button("Verificar Respuesta 2", key="q2_btn"):
         verificar_respuesta(respuesta2, "q2")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 3
     st.header("Ejercicio 3: Hacer un Commit con un Mensaje")
@@ -1581,6 +1599,7 @@ def ejercicios():
     respuesta3 = st.radio("Selecciona la respuesta correcta:", opciones3, key="q3_respuesta")
     if st.button("Verificar Respuesta 3", key="q3_btn"):
         verificar_respuesta(respuesta3, "q3")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 4
     st.header("Ejercicio 4: Ver el Historial de Commits")
@@ -1591,6 +1610,7 @@ def ejercicios():
     respuesta4 = st.radio("Selecciona la respuesta correcta:", opciones4, key="q4_respuesta")
     if st.button("Verificar Respuesta 4", key="q4_btn"):
         verificar_respuesta(respuesta4, "q4")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 5
     st.header("Ejercicio 5: Guardar Cambios Temporalmente")
@@ -1601,6 +1621,7 @@ def ejercicios():
     respuesta5 = st.radio("Selecciona la respuesta correcta:", opciones5, key="q5_respuesta")
     if st.button("Verificar Respuesta 5", key="q5_btn"):
         verificar_respuesta(respuesta5, "q5")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 6
     st.header("Ejercicio 6: Fusionar Cambios de una Rama")
@@ -1611,6 +1632,7 @@ def ejercicios():
     respuesta6 = st.radio("Selecciona la respuesta correcta:", opciones6, key="q6_respuesta")
     if st.button("Verificar Respuesta 6", key="q6_btn"):
         verificar_respuesta(respuesta6, "q6")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 7
     st.header("Ejercicio 7: Eliminar un Archivo del Repositorio")
@@ -1621,6 +1643,7 @@ def ejercicios():
     respuesta7 = st.radio("Selecciona la respuesta correcta:", opciones7, key="q7_respuesta")
     if st.button("Verificar Respuesta 7", key="q7_btn"):
         verificar_respuesta(respuesta7, "q7")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 8
     st.header("Ejercicio 8: Ver Cambios entre Commits")
@@ -1631,6 +1654,7 @@ def ejercicios():
     respuesta8 = st.radio("Selecciona la respuesta correcta:", opciones8, key="q8_respuesta")
     if st.button("Verificar Respuesta 8", key="q8_btn"):
         verificar_respuesta(respuesta8, "q8")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 9
     st.header("Ejercicio 9: Subir una nueva Rama al Repositorio Remoto")
@@ -1641,6 +1665,7 @@ def ejercicios():
     respuesta9 = st.radio("Selecciona la respuesta correcta:", opciones9, key="q9_respuesta")
     if st.button("Verificar Respuesta 9", key="q9_btn"):
         verificar_respuesta(respuesta9, "q9")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Ejercicio 10
     st.header("Ejercicio 10: Revertir el Último Commit")
@@ -1651,6 +1676,7 @@ def ejercicios():
     respuesta10 = st.radio("Selecciona la respuesta correcta:", opciones10, key="q10_respuesta")
     if st.button("Verificar Respuesta 10", key="q10_btn"):
         verificar_respuesta(respuesta10, "q10")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("**¡Gracias, vuelva pronto y recuerde hacer siempre un `git pull` antes de trabajar!** - Apu")
 
@@ -1700,6 +1726,8 @@ def feedback():
     # Espacio para otros comentarios
     st.subheader("Otros comentarios (Maggie está toda oídos, aunque no lo parezca...)")
     otros_comentarios = st.text_area("Tu respuesta:", key="otros_comentarios")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    
 
     # Botón para enviar feedback
     if st.button("Enviar Feedback", key="enviar_feedback"):
