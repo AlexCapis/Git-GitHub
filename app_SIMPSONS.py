@@ -62,9 +62,9 @@ def pagina_principal():
 
 
         st.markdown("### Nelson")
-        st.image("images/nelson/nelson_presentacion.jpeg", width=200)
+        st.image("images/nelson/nelson_presentacion_2.jpeg", width=200)
         st.markdown("""
-        **Resumen del Taller con Nelson**: Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo lo que hemos visto porque, ¡eh!, si hasta Milhouse ha aprendido, tú también puedes.
+        **Resumen del Taller con Nelson**: Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo porque lo digo yo… ¡o sino verás!.
         """)
 
         st.markdown("### Maggie")
@@ -103,7 +103,8 @@ def pagina_principal():
     st.markdown("¡Estamos emocionados de que te unas a nosotros en esta aventura Git al estilo de Springfield! Y recuerda, si Ralph ha podido aprender Git, tú también puedes.")
 
 def comandos_basicos_terminal():
-    st.title("Comandos Básicos con Ralph: ¡Chu-chu-chuly!")
+    st.markdown("<h1 style='text-align: center;'>Comandos Básicos con Ralph: ¡Chu-chu-chuly!</h1>", unsafe_allow_html=True)
+    st.markdown("---")
     st.markdown("""
     Bienvenido a esta clase especial de comandos de terminal, ¡guiada por el mismísimo Ralph Wiggum! Si Ralph puede aprender esto (aunque piense que 'terminal' es un tipo de dinosaurio), tú también puedes. ¡Prepárate para aprender con los mejores ejemplos al estilo de Springfield!
 
@@ -170,10 +171,6 @@ def comandos_basicos_terminal():
 
     st.image("images/ralph/ralph_carpetas_dinosaurios.jpeg", width=200)
 
-    # Imagen recomendada:
-    # **Ubicación**: Justo después de la primera sección de Ralph el Explorador.
-    # **Contenido**: Ralph con una lupa buscando "dinosaurios" en su computadora, y al fondo, un dinosaurio falso hecho de archivos en una carpeta. Puedes incluir en la imagen algo que luzca como un monitor antiguo de los Simpson.
-    
     st.markdown("### 2. 🏗️ Gestión de Directorios: Construyendo la Casa de los Simpson")
     st.markdown("""
     Ralph ha decidido que quiere ayudar a construir una nueva casa para los Simpson. Aunque su sentido de la arquitectura es un poco... peculiar, vamos a guiarlo en este proceso. Usaremos comandos de terminal para crear y gestionar directorios, como si estuviéramos levantando las habitaciones de la casa de los Simpson.
@@ -188,7 +185,7 @@ def comandos_basicos_terminal():
     ```bash
     mkdir habitacion_de_bart
     ls
-    dinosaurios  rosquillas  habitacion_de_bart
+    dinosaurios  chu-chu-chuly  habitacion_de_bart
     ```
     ¡Ralph ha creado una nueva habitación en la casa! Bart ahora tiene su espacio propio para hacer travesuras sin molestar a Lisa... al menos por ahora.
 
@@ -201,9 +198,9 @@ def comandos_basicos_terminal():
     mkdir habitacion_de_homer_marge
     mkdir habitacion_de_maggie
     ls
-    dinosaurios  rosquillas  habitacion_de_bart  habitacion_de_lisa  habitacion_de_homer_marge  habitacion_de_maggie
+    dinosaurios  chu-chu-chuly  habitacion_de_bart  habitacion_de_lisa  habitacion_de_homer_marge_&_homer  habitacion_de_maggie
     ```
-    La casa de los Simpson está tomando forma, y Ralph no podría estar más orgulloso.
+    La casa de los Simpson está tomando forma, y Ralph no podía estar más orgulloso.
 
     #### Eliminar un Directorio (¡Ups, Ralph Derriba una Habitación por Error!)
     Ralph, en su entusiasmo, construyó una habitación para el dinosaurio sin darse cuenta de que no era realmente necesaria. Ahora debe derribarla. Para eliminar un directorio (o "derribar una habitación", según Ralph), usa este comando:
@@ -215,14 +212,14 @@ def comandos_basicos_terminal():
     ```bash
     rm -r dinosaurios
     ls
-    rosquillas  habitacion_de_bart  habitacion_de_lisa  habitacion_de_homer_marge  habitacion_de_maggie
+    chu-chu-chuly  habitacion_de_bart  habitacion_de_lisa  habitacion_de_homer_marge  habitacion_de_maggie
     ```
     La habitación del dinosaurio ya no está, pero Ralph sigue adelante con su proyecto.
 
     #### Advertencia de Marge: ¡Cuidado al Demoler Habitaciones!
     Marge se acerca a Ralph y le advierte que tenga cuidado al usar comandos para eliminar directorios. Es como cuando Homer entra a la cocina: si no tienes cuidado, todo podría desaparecer en un abrir y cerrar de ojos.
 
-    📌 **Advertencia de Marge:** No uses `rm -rf` sin pensarlo dos veces, ya que podrías borrar toda la casa digital de los Simpson (¡como cuando Homer se come una tarta entera en segundos!). Asegúrate de estar en el directorio correcto antes de borrar algo importante.
+    📌 **Advertencia de Marge:** No uses `rm -rf` sin pensarlo dos veces, ya que podrías borrar toda la casa digital de los Simpsons (¡como cuando Homer se come una tarta entera en segundos!). Asegúrate de estar en el directorio correcto antes de borrar algo importante.
 
     #### Ejemplo de lo que NO debes hacer:
     Ralph está a punto de cometer un error. Intenta borrar la habitación de Homer, pero accidentalmente se encuentra en el directorio principal de la casa. Al usar `rm -rf *`, ¡podría borrar toda la casa de los Simpson!
@@ -246,16 +243,14 @@ def comandos_basicos_terminal():
 
     st.image("images/ralph/ralph_bart_constuctores.jpeg", width=200)
 
-    # Imagen recomendada:
-    # **Ubicación**: Después de la sección de construir directorios.
-    # **Contenido**: Una casa de los Simpson siendo construida digitalmente, con Ralph y Bart trabajando juntos. Ralph podría estar usando comandos, y Bart preparando alguna travesura en una carpeta. Añade detalles divertidos como una habitación que Homer ha demolido por accidente.
-
     st.markdown("### 3. 📦 Gestión de Archivos con Bart y Sus Bromas: Ralph Aprende a Ser Travieso")
     st.markdown("""
     Ralph ha encontrado a su nuevo mejor amigo y socio de travesuras: ¡Bart Simpson! Bart es un experto en hacer bromas a la gente de Springfield, y ahora Ralph quiere aprender a hacer bromas usando la terminal. Vamos a enseñar a Ralph y Bart cómo gestionar archivos mientras preparan sus travesuras.
 
     #### Crear un Nuevo Archivo (¡Bart y Ralph Preparan una Broma!)
-    Bart le muestra a Ralph cómo crear archivos para sus bromas. Utilizan el siguiente comando para crear un archivo vacío, donde escribirán sus ideas de bromas:
+    Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema operativo, el comando varía:
+
+- **En Linux o macOS**: Puedes crear un archivo vacío con `touch`:
     ```bash
     touch <nombre-del-archivo>
     ```
@@ -264,8 +259,14 @@ def comandos_basicos_terminal():
     ```bash
     touch broma_homer.txt
     ls
-    broma_homero.txt  travesuras_de_bart  dinosaurios  rosquillas
+    broma_homer.txt travesuras_de_bart dinosaurios rosquillas
     ```
+
+- **En Windows**: Usan `New-Item` en PowerShell para hacer lo mismo:
+    ```powershell
+    New-Item -Path . -Name "broma_homer.txt" -ItemType "File"
+    ```
+
     Ahora tienen un archivo listo para llenarlo de ideas graciosas. Ralph está emocionado porque Homer ni siquiera sospechará de la broma que están planeando.
 
     #### Eliminar un Archivo (¡Bart y Ralph Borran las Evidencias!)
@@ -278,7 +279,7 @@ def comandos_basicos_terminal():
     ```bash
     rm broma_homer.txt
     ls
-    travesuras_de_bart  dinosaurios  rosquillas
+    travesuras_de_bart  dinosaurios
     ```
     ¡Uf! El archivo ha sido eliminado justo a tiempo. Ralph suspira aliviado porque no quiere que Homer lo descubra.
 
@@ -313,15 +314,15 @@ def comandos_basicos_terminal():
     📌 **Tip de Bart:** ¡Siempre es divertido mover los archivos! Solo asegúrate de recordar dónde los dejaste, o podrías perderlos para siempre...
                 
 
-     #### Leer el Contenido de un Archivo (¡Ralph Leeendo las Ideas de Bart!)
+     #### Leer el Contenido de un Archivo (¡Ralph Leyendo las Ideas de Bart!)
     Bart quiere mostrarle a Ralph sus ideas de bromas, así que usa el siguiente comando para leer el contenido del archivo:
     ```bash
     cat <nombre-del-archivo>
     ```
 
-    **Ejemplo:** Bart lee el contenido de su archivo de travesuras:
+    **Ejemplo:** Bart lee el contenido de su archivo de brma_homer_copia.txt:
     ```bash
-    cat travesuras_de_bart
+    cat broma_homer_copia.txt
     - Poner una bomba de ruido en la nevera de Homer.
     - Cambiar el shampoo de Lisa por pegamento.
     ```
@@ -331,11 +332,6 @@ def comandos_basicos_terminal():
     """)               
 
     st.image("images/ralph/ralph_bart_bromas.jpeg", width=200)
-
-    # Imagen recomendada:
-    # **Ubicación**: Al final de la sección de gestión de archivos.
-    # **Contenido**: Bart y Ralph de los simpsons trabajando en su computadora creando archivos con nombres divertidos y copiándolos por todas partes. Podría haber una pantalla mostrando las bromas, y Homero al fondo, ajeno a lo que ocurre.
-    
     st.markdown("""
     ## Resumen de Comandos
     A continuación, se presenta un resumen de los comandos básicos de la terminal en formato de tabla, inspirado en las locuras de Springfield. ¡Porque aprender puede ser divertido!
@@ -357,24 +353,24 @@ def comandos_basicos_terminal():
 
     df_comandos = pd.DataFrame(comandos)
     st.dataframe(df_comandos)
-
     st.markdown("""
     Con estos comandos, ¡serás tan eficiente como Bart organizando sus bromas o Ralph buscando dinosaurios! Practica y diviértete con la terminal. Si Ralph puede aprender, tú también puedes hacerlo.
     """)
 
-
 def configuracion_e_inicializacion_git():
+    st.markdown("<h1 style='text-align: center;'>Operaciones Básicas con Git y Homer Simpson</h1>", unsafe_allow_html=True)
+    st.markdown("---")
     st.title("Configuración e Inicialización de Git con Marge")
     st.markdown("""
-    ¡Hola, amigos! Soy Marge Simpson, y hoy te llevaré a un viaje en el tiempo y el espacio, a través de las complejidades del mundo de Git. Piensa en esto como una de esas aventuras locas que la familia Simpson suele tener, pero esta vez, no se trata de evitar que Bart le haga una broma a Skinner en el colegio, sino de asegurarnos de que tus proyectos digitales estén perfectamente organizados.
+    ¡Hola! Soy Marge Simpson, y hoy te llevaré a un viaje en el tiempo y el espacio, a través de las complejidades del mundo de Git. Piensa en esto como una de esas aventuras locas que la familia Simpson suele tener, pero esta vez, no se trata de evitar que Bart le haga una broma a Skinner en el colegio, sino de asegurarnos de que tus proyectos digitales estén perfectamente organizados.
 
     ### ¿Qué es Git?
-    Imagina que estás en la cocina, donde cada receta es un proyecto. A veces, la cocina se convierte en un verdadero campo de batalla, con ingredientes volando y mi famoso pastel de manzana en riesgo de quemarse. ¡Ah, la vida en Springfield! Git es como ese viejo y fiable libro de recetas que utilizo, que guarda cada pequeño cambio que hago. Cada vez que modifico un pastel, puedo volver y ver exactamente qué hice, evitando que todo se convierta en un desastre, como cuando Bart trató de hacer un pastel para mi cumpleaños y terminó usando salsa de tomate como decoración.
+    Imagina que estás en la cocina, donde cada receta es un proyecto. A veces, la cocina se convierte en un verdadero campo de batalla, con ingredientes volando y mi famoso pastel de manzana en riesgo de quemarse. ¡Ah, la vida en Springfield! Git es como ese viejo y buen libro de recetas que utilizo, que guarda cada pequeño cambio que hago. Cada vez que modifico un pastel, puedo volver y ver exactamente qué hice, evitando que todo se convierta en un desastre, como cuando Bart trató de hacer un pastel para mi cumpleaños y terminó usando kétchup como decoración.
 
     **Beneficios de Git:**
     - **Distribución**: Cada desarrollador tiene su propia copia del proyecto, ¡lo que significa que pueden trabajar sin preocuparse de que Lisa les interrumpa con preguntas sobre sus tareas!
-    - **Velocidad**: Git es más rápido que Homer tratando de hacer una hamburguesa; maneja proyectos grandes sin despeinarse.
-    - **Colaboración**: Permite que todos trabajen juntos sin pisarse los dedos de los pies, como cuando intentamos hacer una cena familiar. Cada uno tiene un rol, ¡y juntos creamos una cena espectacular!
+    - **Velocidad**: Git es más rápido que Homer comiendo una krusty burguer; además, maneja proyectos grandes sin despeinarse.
+    - **Colaboración**: Permite que todos trabajen juntos sin estorbarse, como en una cena familiar bien organizada. Cada uno tiene su rol, ¡y juntos logramos una comida espectacular… o una catástrofe!
     """)
     st.image("images/marge/marge_recetas_git.jpeg", width=200)
 
@@ -447,7 +443,8 @@ def configuracion_e_inicializacion_git():
         {"Comando": "git config --global user.name 'Tu Nombre'", "Descripción": "Configura el nombre de usuario global en Git."},
         {"Comando": "git config --global user.email 'tuemail@example.com'", "Descripción": "Configura el correo electrónico global en Git."},
         {"Comando": "git config --list", "Descripción": "Muestra la configuración actual de Git."},
-        {"Comando": "git init", "Descripción": "Inicializa un nuevo repositorio Git en el directorio actual."}
+        {"Comando": "git config  user.name 'Tu Nombre'", "Descripción": "Configura el nombre de usuario local en Git."},
+        {"Comando": "git config user.email 'tuemail@example.com'", "Descripción": "Configura el correo electrónico local en Git."},
     ]
 
     df_comandos_git = pd.DataFrame(comandos)
@@ -512,12 +509,24 @@ def configuracion_e_inicializacion_git():
 
     """)
 
+
+    st.markdown("""
+    ### Conclusión
+    ¡Y ahí lo tienes! Desde la configuración inicial hasta la creación de tu primer repositorio, ahora estás listo para sumergirte en el mundo de Git. Recuerda que, como en la cocina, la práctica es clave. Cada pequeño paso que tomas te acerca a convertirte en un maestro en este arte.
+
+    Si tienes preguntas, ¡no dudes en preguntar! Estoy aquí para ayudarte, al igual que cuando ayudo a Bart y Lisa a hacer su tarea (aunque eso a veces puede ser un desafío).
+
+    ¡Feliz codificación y que disfrutes de tus proyectos tanto como disfruto yo de mis galletas de chocolate! 🍪
+    """)
+    st.image("images/marge/marge_profe.jpeg", width=200)
+    
     st.markdown("""
     ## Resumen de Comandos
     Aquí tienes un resumen de los comandos básicos para inicializar tu repositorio, como un recetario bien organizado que siempre debes tener a mano:
     """)
 
     comandos_inicializacion = [
+        {"Comando": "git init", "Descripción": "Inicializa un nuevo repositorio Git en el directorio actual."},
         {"Comando": "mkdir nombre_carpeta", "Descripción": "Crea una nueva carpeta."},
         {"Comando": "cd nombre_carpeta", "Descripción": "Cambia al directorio especificado."},
         {"Comando": "git init", "Descripción": "Inicializa un nuevo repositorio Git en el directorio actual."},
@@ -531,18 +540,9 @@ def configuracion_e_inicializacion_git():
     df_comandos_inicializacion = pd.DataFrame(comandos_inicializacion)
     st.dataframe(df_comandos_inicializacion, use_container_width=True)
 
-    st.markdown("""
-    ### Conclusión
-    ¡Y ahí lo tienes! Desde la configuración inicial hasta la creación de tu primer repositorio, ahora estás listo para sumergirte en el mundo de Git. Recuerda que, como en la cocina, la práctica es clave. Cada pequeño paso que tomas te acerca a convertirte en un maestro en este arte.
-
-    Si tienes preguntas, ¡no dudes en preguntar! Estoy aquí para ayudarte, al igual que cuando ayudo a Bart y Lisa a hacer su tarea (aunque eso a veces puede ser un desafío).
-
-    ¡Feliz codificación y que disfrutes de tus proyectos tanto como disfruto yo de mis galletas de chocolate! 🍪
-    """)
-    st.image("images/ralph/ralph_bart_bromas.jpeg", width=200)
-
 def operaciones_basicas():
-    st.title("Operaciones Básicas con Git y Homer Simpson")
+    st.markdown("<h1 style='text-align: center;'>Operaciones Básicas con Git y Homer Simpson</h1>", unsafe_allow_html=True)
+    st.markdown("---")
 
     st.markdown("""
     ¡Bienvenidos, amigos! Hoy aprenderemos a usar Git, pero no será un día cualquiera. Homer Simpson, el icónico padre de Springfield, nos acompañará en esta aventura. 
@@ -810,7 +810,9 @@ def operaciones_basicas():
 
 
 def ramas_colaboracion():
-    st.title("Ramas y Colaboración con Bart y El Barto")
+    st.markdown("<h1 style='text-align: center;'>Ramas y Colaboración con Bart y El Barto</h1>", unsafe_allow_html=True)
+    st.markdown("---")
+    
     st.markdown("""
     En esta sección, descubrirás cómo Bart y su alter ego, El Barto, manejan las ramas y la colaboración en sus épicas aventuras, y cómo tú también puedes hacer lo mismo en tus proyectos de Git.
 
@@ -961,7 +963,8 @@ def ramas_colaboracion():
 
 
 def avanzado_git():
-    st.title("Las Aventuras de Lisa en el Mundo de Git")
+    st.markdown("<h1 style='text-align: center;'>Las Aventuras de Lisa en el Mundo de Git</h1>", unsafe_allow_html=True)
+    st.markdown("---")
 
     st.markdown("""
     ¡Hola, amigos del código! Soy Lisa Simpson, y hoy seré su guía en esta emocionante aventura por el vasto universo de Git. 🌌
@@ -1193,7 +1196,8 @@ def avanzado_git():
 
 
 def integracion_github():
-    st.title("Integración de GitHub con Ned Flanders")
+    st.markdown("<h1 style='text-align: center;'>Integración de GitHub con Ned Flanders</h1>", unsafe_allow_html=True)
+    st.markdown("---")
 
     st.markdown("""
     ¡Hola, vecinito! Hoy vamos a aprender, con mucho cariñito y alegría, cómo conectar nuestro repositorio local con GitHub. Porque ya sabes, compartir es una bendición, y en este vecindario del código, siempre es bonito ayudar a los demás.
@@ -1233,7 +1237,7 @@ def integracion_github():
     📌 **Tip bendecidito:** Recuerda cambiar `<URL-del-repositorio>` por la URL de tu repositorio en GitHub, ¡y todo saldrá bien bonitito!
 
     """)
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/ned/conectar_gitHub.jpeg", width=200)
 
     st.markdown("### 🚀 Pull Requests (o como pedir ayudita a los vecinitos)")
     st.markdown("""
@@ -1266,7 +1270,7 @@ def integracion_github():
     📌 **Tip divinito:** Sé claro y preciso al describir tu pull request, vecinito, ¡así ayudarás a tus compañeros a entender mejor y todos seremos más felices!
 
     """)
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/ned/pull_request.jpeg", width=200)
 
     st.markdown("### 🔍 Consejitos útiles para vecinitos diligentes")
     st.markdown("""
@@ -1320,7 +1324,7 @@ def integracion_github():
     📌 **Tip celestial:** Mantén siempre tus ramitas ordenadas, vecinito, ¡así todo será más fácil y bendecidito para ti y los demás!
 
     """)
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/ned/amigos.jpeg", width=200)
 
     # Resumen de Comandos (como un sermoncito dominical)
     st.markdown("### Resumen de Comandos de Integración en GitHub, vecinito")
@@ -1354,11 +1358,10 @@ def integracion_github():
     st.table(df)
 
 
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
-
 
 def resumen_taller():
-    st.title("Resumen del Taller de Git")
+    st.markdown("<h1 style='text-align: center;'>Resumen del Taller de Git</h1>", unsafe_allow_html=True)
+    st.markdown("---")
 
     st.header("Comandos de Git Tratados")
 
@@ -1367,6 +1370,7 @@ def resumen_taller():
 
     Esta referencia rápida está diseñada para ayudarte a recordar y aplicar los comandos básicos y avanzados de Git de manera efectiva.
     """)
+    st.image("images/nelson/nelson_profe.jpeg", width=200)
 
     # Crear un DataFrame con todos los comandos
     comandos = [
@@ -1418,7 +1422,7 @@ def resumen_taller():
 
     df_comandos = pd.DataFrame(comandos)
     st.dataframe(df_comandos, use_container_width=True)
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/nelson/nelson_programando.jpeg", width=200)
 
 
     st.header("Tips y Trucos Útiles")
@@ -1495,7 +1499,12 @@ def resumen_taller():
         **Explicación:** Añade cambios adicionales al último commit sin cambiar el mensaje. Es útil para incluir correcciones adicionales sin crear un nuevo commit.
 
     """)
+
+
     st.header("Documentación")
+
+    st.image("images/nelson/nelson_enseñando.jpeg", width=200)
+    
     st.markdown("""
     **Recursos Adicionales:**
     - [Libro Pro Git Gratuito](https://git-scm.com/book/en/v2)
@@ -1560,10 +1569,12 @@ def ejercicios():
     if not st.session_state.opciones:
         inicializar_opciones()
     
-    st.title("Ejercicios de Git con Apu Nahasapeemapetilon")
+    st.markdown("<h1 style='text-align: center;'>Ejercicios de Git con Apu Nahasapeemapetilon</h1>", unsafe_allow_html=True)
+    st.markdown("---")
+    
 
     st.markdown("¡Bienvenidos al *Badulaque*! Como diría Apu: **Gracias, vuelva pronto... a hacer más commits!**")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/apu_repasando.jpeg", width=200)
 
     # Ejercicio 1
     st.header("Ejercicio 1: Clonar un Repositorio")
@@ -1576,7 +1587,7 @@ def ejercicios():
     respuesta1 = st.radio("Selecciona la respuesta correcta:", opciones1, key="q1_respuesta")
     if st.button("Verificar Respuesta 1", key="q1_btn"):
         verificar_respuesta(respuesta1, "q1")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/apu_clonar.jpeg", width=200)
 
     # Ejercicio 2
     st.header("Ejercicio 2: Añadir Archivos al Área de Staging")
@@ -1588,7 +1599,7 @@ def ejercicios():
     respuesta2 = st.radio("Selecciona la respuesta correcta:", opciones1, key="q2_respuesta")
     if st.button("Verificar Respuesta 2", key="q2_btn"):
         verificar_respuesta(respuesta2, "q2")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/apu_cambios.jpeg", width=200)
 
     # Ejercicio 3
     st.header("Ejercicio 3: Hacer un Commit con un Mensaje")
@@ -1599,7 +1610,7 @@ def ejercicios():
     respuesta3 = st.radio("Selecciona la respuesta correcta:", opciones3, key="q3_respuesta")
     if st.button("Verificar Respuesta 3", key="q3_btn"):
         verificar_respuesta(respuesta3, "q3")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/donuts_cambio.jpeg", width=200)
 
     # Ejercicio 4
     st.header("Ejercicio 4: Ver el Historial de Commits")
@@ -1610,7 +1621,7 @@ def ejercicios():
     respuesta4 = st.radio("Selecciona la respuesta correcta:", opciones4, key="q4_respuesta")
     if st.button("Verificar Respuesta 4", key="q4_btn"):
         verificar_respuesta(respuesta4, "q4")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/donuts_apu.jpeg", width=200)
 
     # Ejercicio 5
     st.header("Ejercicio 5: Guardar Cambios Temporalmente")
@@ -1621,7 +1632,7 @@ def ejercicios():
     respuesta5 = st.radio("Selecciona la respuesta correcta:", opciones5, key="q5_respuesta")
     if st.button("Verificar Respuesta 5", key="q5_btn"):
         verificar_respuesta(respuesta5, "q5")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/llamada.jpeg", width=200)
 
     # Ejercicio 6
     st.header("Ejercicio 6: Fusionar Cambios de una Rama")
@@ -1632,7 +1643,7 @@ def ejercicios():
     respuesta6 = st.radio("Selecciona la respuesta correcta:", opciones6, key="q6_respuesta")
     if st.button("Verificar Respuesta 6", key="q6_btn"):
         verificar_respuesta(respuesta6, "q6")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/cambios_rama.jpeg", width=200)
 
     # Ejercicio 7
     st.header("Ejercicio 7: Eliminar un Archivo del Repositorio")
@@ -1643,7 +1654,7 @@ def ejercicios():
     respuesta7 = st.radio("Selecciona la respuesta correcta:", opciones7, key="q7_respuesta")
     if st.button("Verificar Respuesta 7", key="q7_btn"):
         verificar_respuesta(respuesta7, "q7")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/no_sirve.jpeg", width=200)
 
     # Ejercicio 8
     st.header("Ejercicio 8: Ver Cambios entre Commits")
@@ -1654,7 +1665,7 @@ def ejercicios():
     respuesta8 = st.radio("Selecciona la respuesta correcta:", opciones8, key="q8_respuesta")
     if st.button("Verificar Respuesta 8", key="q8_btn"):
         verificar_respuesta(respuesta8, "q8")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/precios_lucha.jpeg", width=200)
 
     # Ejercicio 9
     st.header("Ejercicio 9: Subir una nueva Rama al Repositorio Remoto")
@@ -1665,7 +1676,7 @@ def ejercicios():
     respuesta9 = st.radio("Selecciona la respuesta correcta:", opciones9, key="q9_respuesta")
     if st.button("Verificar Respuesta 9", key="q9_btn"):
         verificar_respuesta(respuesta9, "q9")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/oferta_especial.jpeg", width=200)
 
     # Ejercicio 10
     st.header("Ejercicio 10: Revertir el Último Commit")
@@ -1676,7 +1687,7 @@ def ejercicios():
     respuesta10 = st.radio("Selecciona la respuesta correcta:", opciones10, key="q10_respuesta")
     if st.button("Verificar Respuesta 10", key="q10_btn"):
         verificar_respuesta(respuesta10, "q10")
-    st.image("images/marge/marge_enseñando.jpeg", width=200)
+    st.image("images/apu/error.jpeg", width=200)
 
     st.markdown("**¡Gracias, vuelva pronto y recuerde hacer siempre un `git pull` antes de trabajar!** - Apu")
 
@@ -1696,13 +1707,15 @@ def ejercicios():
 
 
 def feedback():
-    st.title("🍼 Feedback del Taller con Maggie")
+    st.markdown("<h1 style='text-align: center;'>Feedback del Taller con Maggie 🍼</h1>", unsafe_allow_html=True)
+    st.markdown("---")
 
     st.markdown("""
     **¡Pssst!** Maggie ha dejado caer su chupete para saber qué opinas del taller. Como no puede hablar, ella escucha atentamente lo que tienes que decir para seguir mejorando. ¡Déjanos tus impresiones y no olvides sonreír como lo harías con Maggie! 😊
     
     ### Preguntas de Feedback (Maggie promete que no habrá balbuceos... solo tus respuestas)
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     # Pedimos el nombre del participante
     nombre = st.text_input("Por favor, introduce tu nombre para identificar tu feedback", key="nombre")
@@ -1727,7 +1740,7 @@ def feedback():
     st.subheader("Otros comentarios (Maggie está toda oídos, aunque no lo parezca...)")
     otros_comentarios = st.text_area("Tu respuesta:", key="otros_comentarios")
     st.image("images/marge/marge_enseñando.jpeg", width=200)
-    
+
 
     # Botón para enviar feedback
     if st.button("Enviar Feedback", key="enviar_feedback"):

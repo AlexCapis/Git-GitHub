@@ -32,7 +32,7 @@ def pagina_principal():
 
     Bienvenidos a un taller donde aprender Git es más fácil que conseguir una rosquilla para Homer. En este taller, aprenderás a manejar el control de versiones como si fueras parte de la familia Simpson. ¿Te imaginas a Homer aprendiendo a hacer commits? ¡Eso es un espectáculo que no querrás perderte!
 
-    Aquí, cada miembro de la familia tiene algo que enseñarte. Lisa, la cerebrito del grupo, se asegura de que todo sea ordenado y eficiente. Marge, con su infalible sentido del hogar, te guiará para que tu proyecto esté tan limpio como su casa. Bart, el rebelde, te mostrará cómo tomar riesgos y hacer cosas inesperadas con Git, mientras que Maggie, aunque no hable, siempre está lista para detectar esos errores que nadie más ve.
+    Aquí, cada personaje tiene algo que enseñarte. Lisa, la cerebrito del grupo, se asegura de que todo sea ordenado y eficiente. Marge, con su infalible sentido del hogar, te guiará para que tu proyecto esté tan limpio como su casa. Bart, el rebelde, te mostrará cómo tomar riesgos y hacer cosas inesperadas con Git, mientras que Maggie, aunque no hable, siempre está lista para detectar mejoras que nadie más ve.
 
     ### Menú de Navegación
 
