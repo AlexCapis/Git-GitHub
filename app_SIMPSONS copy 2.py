@@ -43,71 +43,67 @@ def pagina_principal():
     # Primera columna (izquierda)
     with col1:
         st.markdown("### Ralph")
-        st.image("images/ralph/ralph_presentacion.jpeg", width=300, caption="Git es como caramelos,/n ¡pero sin pegamento!")
+        st.image("images/ralph/ralph_presentacion.jpeg", width=200)
         st.markdown("""
         **Comandos Básicos con Ralph**: Hola, ¡Hola, soy Ralph! No te preocupes, aprenderemos lo básico del terminal. ¡No habrá nada raro como una cebolla en el parque, lo prometo!
         """)
 
         st.markdown("### Homer")
-        st.image("images/homer/homer_presentacion.jpeg", width=300, caption="¿Por qué programar cuando puedes comer?")
+        st.image("images/homer/homer_presentacion.jpeg", width=200)
         st.markdown("""
         **Operaciones Básicas con Homer**: ¡Mmm, comandos básicos de Git! Tan buenos como una cerveza fría después del trabajo. Verás que hacer **git add** o **git commit** es como abrir una Duff: una vez que empiezas, no puedes parar.
         """)
 
         st.markdown("### Lisa")
-        st.image("images/lisa/lisa_presentacion.jpeg", width=300, caption="Organizar código es como el jazz, ¡requiere práctica y ritmo!")
+        st.image("images/lisa/lisa_presentacion.jpeg", width=200)
         st.markdown("""
         **Uso Avanzado de Git con Lisa**: Soy Lisa Simpson y, como siempre, me toca poner un poco de orden. Aprenderemos técnicas avanzadas para que tu proyecto sea tan eficiente como mi saxofón los domingos por la tarde.
         """)
 
+
         st.markdown("### Nelson")
-        st.image("images/nelson/nelson_presentacion_2.jpeg", width=300, caption="Ha-ha! ¡Si aprendes Git, te salvas de mis bromas!")
+        st.image("images/nelson/nelson_presentacion_2.jpeg", width=200)
         st.markdown("""
-        **Resumen del Taller con Nelson**: Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo porque lo digo yo… ¡o sino verás!
+        **Resumen del Taller con Nelson**: Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo porque lo digo yo… ¡o sino verás!.
         """)
 
         st.markdown("### Maggie")
-        st.image("images/maggie/maggie_presentacion.jpeg", width=300, caption="(Maggie asiente en silencio... ¡Tu feedback es importante, así que cuéntanos!)")
+        st.image("images/maggie/maggie_presentacion.jpeg", width=200)
         st.markdown("""
         **Feedback con Maggie**: Incluso Maggie tiene algo que decir, ¿por qué no tú? ¡Tu feedback es valioso! Déjanos tus comentarios y sugerencias para que podamos mejorar y hacer que este taller sea todavía más increíble.
         """)
 
-     # Segunda columna (derecha)
+    # Segunda columna (derecha)
     with col2:
         st.markdown("### Marge")
-        st.image("images/marge/marge_presentacion.jpeg", width=300, caption="Organizar Git es como ordenar la cocina. ¡Todo en su sitio!")
+        st.image("images/marge/marge_presentacion.jpeg", width=200)
         st.markdown("""
         **Configuración e Inicialización con Marge**: Hola, soy Marge. Configurar Git es como organizar la despensa: una vez que todo está en su sitio, la vida es mucho más fácil. ¡Vamos a evitar que Homer borre todo accidentalmente!
         """)
 
         st.markdown("### Bart")
-        st.image("images/bart/bart_presentacion.jpeg", width=300, caption="¡Soy el Barto! El caos de Git es mi especialidad.")
+        st.image("images/bart/bart_presentacion.jpeg", width=200)
         st.markdown("""
         **Ramas y Colaboración con Bart**: ¡Yo soy el Barto! Vamos a liarla con unas cuantas ramas de Git, pero no te preocupes, ¡Lisa nos salvará antes de que se nos vaya todo de las manos!
         """)
 
         st.markdown("### Ned Flanders")
-        st.image("images/ned/ned_presentacion.jpeg", width=300, caption="Integrar con GitHub es como un saludito amistosito!")
+        st.image("images/ned/ned_presentacion.jpeg", width=200)
         st.markdown("""
         **Integración con GitHub con Ned Flanders**: ¡Hola holita, vecinitos! Integrar Git con GitHub es más fácil que una limonada bien fresquita en una tarde de verano. ¡Nada complicado, lo prometo!
         """)
 
         st.markdown("### Apu")
-        st.image("images/apu/apu_presentacion.jpeg", width=300, caption="¡Gracias, vuelve pronto! Dominaremos Git como los precios del Badulaque.")
+        st.image("images/apu/apu_presentacion.jpeg", width=200)
         st.markdown("""
         **Ejercicios Prácticos con Apu**: ¡Gracias, vuelve pronto! Soy Apu, y no te preocupes, te tengo preparado un surtido de ejercicios prácticos para que domines Git mejor que los precios en el Badulaque.
         """)
- 
-    st.markdown("")    
-    st.markdown("")    
-    st.markdown("")    
-    st.markdown("¡Estamos emocionados de que te unas a nosotros en esta aventura Git al estilo de Springfield! Y recuerda, si Ralph ha podido aprender Git, tú también puedes, de todas maneras Nelson te ayudará a repasar ha-ha")
 
-
-
+    
+    st.markdown("¡Estamos emocionados de que te unas a nosotros en esta aventura Git al estilo de Springfield! Y recuerda, si Ralph ha podido aprender Git, tú también puedes.")
 
 def comandos_basicos_terminal():
-    st.markdown("<h1 style='text-align: center;'>¡Hazlo a lo Ralph! Guía Para No Derribar Todo en la Terminal</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Comandos Básicos con Ralph: ¡Chu-chu-chuly!</h1>", unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("""
     Bienvenido a esta clase especial de comandos de terminal, ¡guiada por el mismísimo Ralph Wiggum! Si Ralph puede aprender esto (aunque piense que 'terminal' es un tipo de dinosaurio), tú también puedes. ¡Prepárate para aprender con los mejores ejemplos al estilo de Springfield!
@@ -173,7 +169,7 @@ def comandos_basicos_terminal():
     ¡Enhorabuena, Ralph! Has vuelto a la carpeta `dinosaurios` sano y salvo. Ahora puedes seguir buscando dinosaurios.
     """)
 
-    st.image("images/ralph/ralph_carpetas_dinosaurios.jpeg", width=300, caption="¡Mira! Tengo carpetas de dinosaurios. Son muy fuertes y a veces tienen colas largas como... ¡mi papá!")
+    st.image("images/ralph/ralph_carpetas_dinosaurios.jpeg", width=200)
 
     st.markdown("### 2. 🏗️ Gestión de Directorios: Construyendo la Casa de los Simpson")
     st.markdown("""
@@ -245,14 +241,14 @@ def comandos_basicos_terminal():
     **Lección:** Asegúrate siempre de estar en el directorio correcto antes de eliminar algo. Un paso en falso puede tener consecuencias desastrosas.
     """)
 
-    st.image("images/ralph/ralph_bart_constuctores.jpeg", width=300, caption="¡Construir es como jugar con espaguetis! ¡A veces se rompen, pero se ven tan ricos!")
+    st.image("images/ralph/ralph_bart_constuctores.jpeg", width=200)
 
     st.markdown("### 3. 📦 Gestión de Archivos con Bart y Sus Bromas: Ralph Aprende a Ser Travieso")
     st.markdown("""
     Ralph ha encontrado a su nuevo mejor amigo y socio de travesuras: ¡Bart Simpson! Bart es un experto en hacer bromas a la gente de Springfield, y ahora Ralph quiere aprender a hacer bromas usando la terminal. Vamos a enseñar a Ralph y Bart cómo gestionar archivos mientras preparan sus travesuras.
 
-#### Crear un Nuevo Archivo (¡Bart y Ralph Preparan una Broma!)
-Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema operativo, el comando varía:
+    #### Crear un Nuevo Archivo (¡Bart y Ralph Preparan una Broma!)
+    Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema operativo, el comando varía:
 
 - **En Linux o macOS**: Puedes crear un archivo vacío con `touch`:
     ```bash
@@ -330,10 +326,12 @@ Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema 
     - Poner una bomba de ruido en la nevera de Homer.
     - Cambiar el shampoo de Lisa por pegamento.
     ```
-    Ralph se ríe a carcajadas y ya está pensando en cómo llevar a cabo algunas de estas ideas locas.  """) 
+    Ralph se ríe a carcajadas y ya está pensando en cómo llevar a cabo algunas de estas ideas locas.
 
-    st.image("images/ralph/ralph_bart_bromas.jpeg", width=300, caption="¡Las bromas son como las galletas! ¡Siempre hay espacio para más, aunque me den un poco de tos!")
+    **Conclusión:** Así es como Ralph y Bart aprenden a gestionar archivos mientras planifican bromas en Springfield.¡Que se preparen los vecinos de Springfield! 🎉
+    """)               
 
+    st.image("images/ralph/ralph_bart_bromas.jpeg", width=200)
     st.markdown("""
     ## Resumen de Comandos
     A continuación, se presenta un resumen de los comandos básicos de la terminal en formato de tabla, inspirado en las locuras de Springfield. ¡Porque aprender puede ser divertido!
@@ -355,35 +353,14 @@ Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema 
 
     df_comandos = pd.DataFrame(comandos)
     st.dataframe(df_comandos)
-
     st.markdown("""
     Con estos comandos, ¡serás tan eficiente como Bart organizando sus bromas o Ralph buscando dinosaurios! Practica y diviértete con la terminal. Si Ralph puede aprender, tú también puedes hacerlo.
     """)
 
-    st.image("images/ralph/profe.jpeg", width=300, caption="¡Mira, una foto de mí siendo el mejor estudiante!")
-
-
-    # Título de la conclusión
-    st.markdown("""
-    ## Terminamos ¡Chu-chu-chuly! 🚂""")
-                    
-    # Contenido de la conclusión
-    st.markdown("""
-    Acabamos de ver algunos comandos de terminal. Fue como un paseo en la montaña rusa, ¡pero sin la montaña! 
-
-    Así que, cuando decimos `ls`, es como si estuviéramos buscando dinosaurios. Y cuando usamos `pwd`, es como decirle a mamá que no me perdí en el centro comercial. ¡Hola, mamá! 
-
-    Y si alguien dice `rm -rf *`, ¡es como un monstruo que se come todos mis juguetes! ¡No, no! No dejeis que eso pase, es malo. 
-
-    Y si quereis hacer un nuevo archivo, solo teneis que usar `touch`. Es como si Bart y yo estuviéramos haciendo una broma y tratando de hacer que desaparezca, pero... ¡no quiero que mis dibujos desaparezcan! 
-
-    Pero no os preocupeis, porque la próxima vez Marge nos va a enseñar a configurar Git. ¡Espero que no sea un gato! ¡Hasta la próxima!
-    """)
-
-
 def configuracion_e_inicializacion_git():
-    st.markdown("<h1 style='text-align: center;'>Cocinando Código: ¡Sazona tu Proyecto de Git con Marge!</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Operaciones Básicas con Git y Homer Simpson</h1>", unsafe_allow_html=True)
     st.markdown("---")
+    st.title("Configuración e Inicialización de Git con Marge")
     st.markdown("""
     ¡Hola! Soy Marge Simpson, y hoy te llevaré a un viaje en el tiempo y el espacio, a través de las complejidades del mundo de Git. Piensa en esto como una de esas aventuras locas que la familia Simpson suele tener, pero esta vez, no se trata de evitar que Bart le haga una broma a Skinner en el colegio, sino de asegurarnos de que tus proyectos digitales estén perfectamente organizados.
 
@@ -395,8 +372,7 @@ def configuracion_e_inicializacion_git():
     - **Velocidad**: Git es más rápido que Homer comiendo una krusty burguer; además, maneja proyectos grandes sin despeinarse.
     - **Colaboración**: Permite que todos trabajen juntos sin estorbarse, como en una cena familiar bien organizada. Cada uno tiene su rol, ¡y juntos logramos una comida espectacular… o una catástrofe!
     """)
-    st.image("images/marge/marge_recetas_git.jpeg", width=300, caption="Las recetas de Git son como las mías: siempre hay un secreto para que queden perfectas!")
-
+    st.image("images/marge/marge_recetas_git.jpeg", width=200)
 
     st.markdown("""
     ### Contenido
@@ -474,7 +450,7 @@ def configuracion_e_inicializacion_git():
     df_comandos_git = pd.DataFrame(comandos)
     st.dataframe(df_comandos_git, use_container_width=True)
 
-    st.image("images/marge/marge_enseñando.jpeg", width=300, caption="La clave para aprender Git es practicar y no rendirse. ¡Como hacer una buena lasaña!")
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
     st.markdown("### 2. 🚀 Inicialización de Repositorios en GitHub")
     st.markdown("""
@@ -533,6 +509,17 @@ def configuracion_e_inicializacion_git():
 
     """)
 
+
+    st.markdown("""
+    ### Conclusión
+    ¡Y ahí lo tienes! Desde la configuración inicial hasta la creación de tu primer repositorio, ahora estás listo para sumergirte en el mundo de Git. Recuerda que, como en la cocina, la práctica es clave. Cada pequeño paso que tomas te acerca a convertirte en un maestro en este arte.
+
+    Si tienes preguntas, ¡no dudes en preguntar! Estoy aquí para ayudarte, al igual que cuando ayudo a Bart y Lisa a hacer su tarea (aunque eso a veces puede ser un desafío).
+
+    ¡Feliz codificación y que disfrutes de tus proyectos tanto como disfruto yo de mis galletas de chocolate! 🍪
+    """)
+    st.image("images/marge/marge_profe.jpeg", width=200)
+    
     st.markdown("""
     ## Resumen de Comandos
     Aquí tienes un resumen de los comandos básicos para inicializar tu repositorio, como un recetario bien organizado que siempre debes tener a mano:
@@ -553,20 +540,8 @@ def configuracion_e_inicializacion_git():
     df_comandos_inicializacion = pd.DataFrame(comandos_inicializacion)
     st.dataframe(df_comandos_inicializacion, use_container_width=True)
 
-    st.image("images/marge/marge_profe.jpeg", width=300, caption="Marge enseñando lo esencial de Git, ¡siempre con amor y paciencia!")
-
-    st.markdown("""
-    ### Conclusión al Estilo Marge: ¡Todo en su Lugar!
-    ¡Y ahí lo tienes! Desde la configuración inicial hasta la creación de tu primer repositorio, ahora estás listo para sumergirte en el mundo de Git. Recuerda que, como en la cocina, la práctica es clave. Cada pequeño paso que tomas te acerca a convertirte en un maestro en este arte.
-
-    Si tienes preguntas, ¡no dudes en preguntar! Estoy aquí para ayudarte, al igual que cuando ayudo a Bart y Lisa a hacer su tarea (aunque eso a veces puede ser un desafío).
-
-    ¡Feliz codificación y que disfrutes de tus proyectos tanto como disfruto yo de mis galletas de chocolate! 🍪
-    """)
-
-
 def operaciones_basicas():
-    st.markdown("<h1 style='text-align: center;'>Operaciones Básicas de Git con Homer </h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Operaciones Básicas con Git y Homer Simpson</h1>", unsafe_allow_html=True)
     st.markdown("---")
 
     st.markdown("""
@@ -581,424 +556,375 @@ def operaciones_basicas():
     5. ✨ **Crear Alias para Comandos**
     """)
 
+    # Clonar Repositorios
     st.markdown("""
     ### 1. Clonar Repositorios
-                
-    Mmm… ¡software libre! Lo bueno de Git es que, si lo rompes, solo tú te das cuenta… ¡nadie te castiga! Ahora vamos a hablar de clonar repositorios. ¿Qué es eso? Bueno, imagina que tienes todas las rosquillas del mundo, y puedes hacer copias de ellas, ¡una para cada Homer del universo! O como diría yo, "¡cuántas más rosquillas, mejor!"
+    **Homer**: *¡D'oh! Clonar es como copiar las rosquillas de Moe... solo que en el mundo digital, ¡y sin que te atrapen!*
 
-    Clonar es como cuando veo una rosquilla en la tele y quiero otra en la mano. Es tener el mismo proyecto que está en internet, ¡pero ahora en tu ordenador! Así puedes hacer con él lo que quieras, sin que nadie te mire mal si metes la pata… que no sé, quizá eso suene familiar.
+    Clonar un repositorio es el primer paso para empezar a colaborar en un proyecto existente o para trabajar en un proyecto desde otra máquina. Este proceso copia todo el contenido del repositorio desde el servidor remoto a tu máquina local.
 
     #### ¿Por Qué Clonar un Repositorio?
-    - **Colaboración**: Como en la planta nuclear, si todos tenemos el mismo clon, ¡podemos hacer nuestras "tareas" sin que se entere el Señor Burns!
-    - **Acceso Completo**: Cuando Marge me hace la lista de las cosas que he roto, el historial de un repositorio te deja ver todo lo que ha pasado en el proyecto. Es como mirar cuántas duffs me he bebido sin que Marge enterarse.
-    - **Desarrollo Local**: Puedes hacer lo que te dé la gana sin que nadie te diga nada. Y si te sale mal, solo le echas la culpa a Bart.
+    - **Colaboración**: Permite trabajar en equipo en el mismo proyecto.
+    - **Acceso Completo**: Obtienes todo el historial del proyecto, facilitando el seguimiento de cambios.
+    - **Desarrollo Local**: Puedes trabajar en tu propio entorno de desarrollo sin afectar el repositorio original hasta que decidas enviar tus cambios.
 
     #### Pasos para Clonar un Repositorio
-    1. **Obtén la URL del Repositorio**: Es como cuando vas al bar de Moe y apuntas dónde está para que no se te olvide. Copia la URL del proyecto que quieres clonar.
-    2. **Ejecuta el Comando para Clonar**: Abre esa cosa de la terminal (¡tranqui! No es tan difícil… si yo puedo, cualquiera puede) y pon esto:
-        ```bash
-        git clone <URL-del-repositorio>
-        ```
-        
-        **Ejemplo Real:** Si quiero clonar un repositorio llamado `Git` desde GitHub, hago:
-        ```bash
-        git clone https://github.com/AlexCapis/Git.git
-        ```
-        
-        📌 **Tip:** Si el repositorio es privado, necesitarás tu cuenta y acceso, como cuando Apu te deja a deber una cerveza en el Badulaque… ¡eso no es para todos, amigo!
+    1. **Obtener la URL del Repositorio**: Encuentra la URL en la página principal del repositorio en plataformas como GitHub, GitLab, o Bitbucket.
+    2. **Ejecutar el Comando de Clonado**: Abre tu terminal y utiliza el siguiente comando:
+    ```bash
+    git clone <URL-del-repositorio>
+    ```
 
-    Y ya lo tienes, ¡eres todo un clonador! ¿Ves? Con este método puedes trastear con el código tanto como quieras, y si la cosa explota… nadie sabrá que fuiste tú, porque tienes tu propio clon. ¡D'oh!
+    **Ejemplo Real:**
+    Para clonar el repositorio `Git` de GitHub, usa el siguiente comando:
+    ```bash
+    git clone https://github.com/AlexCapis/Git.git
+    ```
 
+    📌 **Tip:** Si el repositorio es privado, necesitarás autenticación. Por ejemplo, si usas GitHub, puedes usar tu usuario y token de acceso en lugar de tu contraseña.
+
+    **Homer**: *¡Y así, mis amigos, comienza nuestra aventura! Listos para explorar el mundo de Git como verdaderos héroes de la tecnología, ¡igual que cuando trato de evitar el ejercicio mientras disfruto de una buena cerveza Duff!*
     """)
+    st.image("images/homer/clonar.jpeg", width=200)
 
-    st.image("images/homer/clonar.jpeg", caption="¡Clones de Homers por todas partes! La planta nuclear nunca ha estado tan bien atendida.", width=300)
-
-
-    # Sección de Añadir y Eliminar Archivos
+    # Añadir y Eliminar Archivos
     st.markdown("""
     ### 2. Añadir y Eliminar Archivos
-    *Mmm... ¡añadir archivos es como añadir más rosquillas a mi colección! Siempre hay espacio para más... y si necesito quitar alguno, es solo porque quiero espacio para algo aún mejor.*
+    **Homer**: *¿Sabías que añadir archivos es como añadir más rosquillas a mi dieta? ¡No puedo dejar de hacerlo, especialmente después de un día en el buffet!*
 
-    Con Git, puedo **añadir archivos** al área de staging, y cuando ya no quiero más (aunque eso nunca pasa con las rosquillas), también puedo **eliminarlos**. Así mantengo mi repositorio limpio y organizado... o al menos lo intento.
+    Git te permite añadir nuevos archivos a tu repositorio y eliminar los que ya no necesitas. Esto te ayuda a gestionar los cambios y mantener tu proyecto limpio y organizado.
 
     #### Añadir Archivos al Repositorio
-    Para añadir nuevos archivos al área de staging (o, como yo diría, ¡a mi "stash de rosquillas"!), usa este comando:
+    Para añadir nuevos archivos al área de staging, utiliza el comando `git add`.
     """)
-
+    
     st.code("git add <archivo>", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Creé un archivo de receta de rosquillas llamado `Receta_Rosquilla.txt`. ¡Lo quiero en mi repositorio para consultarlo cuando quiera! Entonces escribo:
-    """)
+    **Ejemplo Real:**
+    Homer decidió que su colección de recetas de rosquillas necesitaba un nuevo archivo llamado `Receta_Rosquilla.txt`. Para añadirlo, usa el siguiente comando:
+    ```bash
+    git add Receta_Rosquilla.txt
+    ```
 
-    st.code("git add Receta_Rosquilla.txt", language='bash')
-
-    st.markdown("""
     #### Eliminar Archivos del Repositorio
-    Pero si algún día decido que ya tengo suficientes recetas y necesito espacio para más (¡como si eso pasara!), puedo **eliminar un archivo** que ya no necesite. Para eso, uso `git rm`:
+    Pero, un día, se dio cuenta de que había demasiadas recetas en su colección, así que tuvo que eliminar un archivo. Para hacerlo, usa el comando `git rm`.
     """)
-
+    
     st.code("git rm <archivo>", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Digamos que tengo una receta de pizza en el archivo `Receta_Pizza.txt`... pero la verdad es que prefiero enfocarme en las rosquillas. Así que para eliminarlo, escribo:
+    **Ejemplo Real:**
+    Si decide que el archivo `Receta_Pizza.txt` ya no es necesario porque ya tiene su receta favorita, puede eliminarlo con este comando:
+    ```bash
+    git rm Receta_Pizza.txt
+    ```
+
+    📌 **Tip:** Si solo deseas eliminar el archivo del área de staging pero mantenerlo en tu directorio de trabajo, usa `git reset HEAD <archivo>` en lugar de `git rm`.
+
+    **Ejemplo del Tip:**
+    Si Homer se arrepiente de añadir `Receta_Rosquilla.txt` al área de staging, puede deshacerlo con:
+    ```bash
+    git reset HEAD Receta_Rosquilla.txt
+    ```
+    Esto mantendrá el archivo en su directorio, pero lo eliminará del área de staging.
     """)
 
-    st.code("git rm Receta_Pizza.txt", language='bash')
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
-    st.markdown("""
-    📌 **Tip de Chef Homer:** Si solo quiero quitar el archivo del área de staging pero aún conservarlo en mi computadora (por si decido que realmente lo quiero), uso `git reset HEAD <archivo>` en lugar de `git rm`.
-
-    **Ejemplo del Tip:** Me arrepiento un poco de añadir `Receta_Rosquilla.txt` al área de staging porque quiero revisarla un poco más. Así que, para sacarlo del staging y seguir trabajándolo, hago esto:
-    """)
-
-    st.code("git reset HEAD Receta_Rosquilla.txt", language='bash')
-
-    st.markdown("""
-    Esto mantiene el archivo en mi directorio de trabajo pero lo elimina del área de staging, como si nada hubiera pasado. ¡Nadie me quita mis rosquillas!
-    """)
-
-    # Imagen asociada a Añadir y Eliminar Archivos
-    st.image("images/homer/homer_comiendo_rosquillas.jpeg", caption="Añadir archivos es como tener más rosquillas... ¡nunca es suficiente!", width=300)
-
-    # Sección de Hacer Commits y Ver Historial
+    # Hacer Commits y Ver Historial
     st.markdown("""
     ### 3. Hacer Commits y Ver Historial
-    *Mmm... hacer commits es como guardar mis mejores momentos en un álbum de recuerdos. Cada cambio es como una nueva página en mi historia, ¡y puedo ver cómo ha crecido mi colección con el tiempo!*
+    **Homer**: *¡Hacer commits es como guardar mis episodios de televisión favoritos! Siempre quiero saber cómo han evolucionado mis aventuras en Springfield mientras disfruto de un buffet sin fin.*
 
-    Con Git, cada commit es una oportunidad de **guardar el estado de tu proyecto** en un momento específico, como si estuvieras haciendo una captura de pantalla de tus avances. Y cuando quieras revivir esos momentos, puedes ver el historial de commits para ver cada cambio guardado.
+    Realizar commits es una de las funciones más importantes de Git. Te permite guardar el estado de tu proyecto en un punto específico en el tiempo y ver el historial de cambios.
 
     #### Hacer un Commit
-    Para capturar esos momentos importantes en el repositorio, usa el comando `git commit` junto con un mensaje que explique el cambio.
+    Para guardar los cambios en el repositorio, usa el comando `git commit` con un mensaje descriptivo.
     """)
-
+    
     st.code("git commit -m \"Mensaje del commit\"", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Digamos que acabo de añadir una receta súper secreta de rosquillas... ¡definitivamente merece ser parte de mi historia! Para guardar este momento, escribiría:
-    """)
+    **Ejemplo Real:**
+    Homer decidió que había añadido su nueva receta, así que lo guardó en su historia culinaria con gran entusiasmo:
+    ```bash
+    git commit -m "Añadida nueva receta de rosquilla"
+    ```
 
-    st.code("git commit -m \"Añadida nueva receta de rosquilla\"", language='bash')
-
-    st.markdown("""
     #### Ver el Historial de Commits
-    Ahora, ¿qué pasa si quiero ver todos los momentos que he guardado? Para eso está el comando `git log`. Con él, puedo revisar cada paso que he dado.
+    Para ver el historial de commits, utiliza el comando `git log`.
     """)
-
+    
     st.code("git log", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Quiero ver todas mis hazañas y recetas guardadas, así que uso:
+    **Ejemplo Real:**
+    Homer, emocionado, quiere ver cómo ha crecido su colección de recetas y qué aventuras ha vivido, así que ejecuta:
+    ```bash
+    git log
+    ```
+
+    📌 **Tip:** Usa `git log --oneline` para un historial más compacto y legible, como un resumen de sus aventuras culinarias.
+
+    **Ejemplo del Tip:**
+    Homer usa el siguiente comando para obtener un resumen rápido:
+    ```bash
+    git log --oneline
+    ```
+    Esto le mostrará solo el mensaje de cada commit, permitiéndole revisar rápidamente la historia de su colección.
     """)
 
-    st.code("git log", language='bash')
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
-    st.markdown("""
-    📌 **Tip Rápido:** Para ver un historial más compacto, como si fuera un resumen de mis aventuras, usa `git log --oneline`. Esto te mostrará solo los mensajes de cada commit, ¡perfecto para una vista rápida de tu historia de cambios!
-
-    **Ejemplo del Tip:** Digamos que quiero ver un resumen sin entrar en detalles, entonces puedo escribir:
-    """)
-
-    st.code("git log --oneline", language='bash')
-
-    st.markdown("""
-    Esto me dará un resumen más breve y directo, ideal para cuando quiero recordar mis mejores momentos sin revisar cada detalle.
-    """)
-
-    # Imagen asociada a Hacer Commits y Ver Historial
-    st.image("images/homer/recuerdos.jpeg", caption="Revisar el historial de commits es como recordar mis mejores aventuras... ¡me encanta!", width=300)
-
-    # Sección de Actualizar y Sincronizar Repositorios
+    # Actualizar y Sincronizar Repositorios
     st.markdown("""
     ### 4. Actualizar y Sincronizar Repositorios
-    *¿Sabes? Actualizar mi repositorio es como recibir una nueva temporada de mi serie favorita... ¡Siempre quiero estar al día con lo que pasa en Springfield! Así que cuando alguien agrega algo nuevo, necesito actualizar mi colección.*
+    **Homer**: *Actualizar es como recibir una nueva temporada de mi serie favorita... ¡Siempre quiero estar al día con las aventuras de mis amigos mientras me tomo una Duff en el bar de Moe!*
 
-    Para trabajar en equipo con Git, es esencial que tu repositorio local esté sincronizado con el remoto. Aquí vamos a ver cómo hacerlo:
+    Mantener tu repositorio local actualizado con los cambios del repositorio remoto es esencial para colaborar efectivamente.
 
     #### Actualizar el Repositorio Local
-    Cuando alguien en tu equipo, como Bart, añade algo nuevo, puedes descargar y fusionar esos cambios a tu repositorio local usando el comando `git pull`.
+    Usa `git pull` para descargar y fusionar los cambios del repositorio remoto con tu repositorio local.
     """)
-
+    
     st.code("git pull", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Me enteré de que Bart agregó nuevas recetas a nuestra colección y quiero traerlas a mi repositorio para probarlas yo también. Para actualizar mi repositorio, usaría:
-    """)
+    **Ejemplo Real:**
+    Homer se entera de que Bart ha añadido nuevas recetas a su colección y quiere actualizarlas en su propia colección. Para hacerlo, utiliza:
+    ```bash
+    git pull
+    ```
 
-    st.code("git pull", language='bash')
-
-    st.markdown("""
     #### Enviar Cambios al Repositorio Remoto
-    Por supuesto, si yo quiero compartir una de mis recetas (como la de mi famosa rosquilla doble), uso `git push` para enviar mis cambios al repositorio remoto y que todos puedan disfrutarlo.
+    Pero, Homer también quiere compartir su nueva receta con Bart, así que usa `git push` para enviar sus cambios locales al repositorio remoto.
     """)
-
+    
     st.code("git push", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Si quiero que Bart y el resto de Springfield puedan ver y probar mi receta, ¡envío mis cambios con:
-    """)
+    **Ejemplo Real:**
+    Para compartir su receta con Bart y hacer que todos en Springfield se enteren de sus delicias culinarias, Homer ejecuta:
+    ```bash
+    git push
+    ```
 
-    st.code("git push", language='bash')
-
-    st.markdown("""
     #### Verificar el Estado del Repositorio
-    Y antes de enviar cualquier cambio, siempre verifico que todo esté en orden con `git status`. Esto me permite ver si hay algo pendiente o sin guardar.
+    Finalmente, para asegurarse de que todo está en orden, utiliza `git status` para ver el estado actual de su repositorio.
     """)
-
+    
     st.code("git status", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Como siempre soy un poco curioso (y a veces un poco despistado), reviso mi estado actual usando:
-    """)
+    **Ejemplo Real:**
+    Homer, siempre curioso y un poco nervioso, chequea el estado con:
+    ```bash
+    git status
+    ```
 
-    st.code("git status", language='bash')
-
-    st.markdown("""
     #### Estado Compacto del Repositorio
-    Si quiero ver el estado en un formato más corto, uso `git status -s`, que es como ver solo el resumen.
-
-    **Ejemplo Real:** Para un vistazo rápido, ejecuto:
+    También puede usar `git status -s` para ver el estado del repositorio en un formato compacto.
     """)
-
+    
     st.code("git status -s", language='bash')
 
     st.markdown("""
-    📌 **Tip:** Si necesitas un estado más detallado, usa `git status` sin la opción `-s`.
+    **Ejemplo Real:**
+    Para ver el estado en un formato compacto, Homer usa:
+    ```bash
+    git status -s
+    ```
+
+    📌 **Tip:** Si necesitas un estado más detallado, simplemente utiliza `git status` sin la opción `-s`.
     """)
 
-    # Imagen asociada a Actualizar y Sincronizar Repositorios
-    st.image("images/homer/tele.jpeg", caption="Mantenerme al día con los cambios es como descubrir una nueva temporada en mi amada tele", width=300)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
-    # Sección de Crear Alias para Comandos
+    # Crear Alias para Comandos
     st.markdown("""
     ### 5. Crear Alias para Comandos
-    *A veces me canso de escribir tanto, como cuando me canso de esperar a que cocinen mis rosquillas. Crear alias es como tener atajos directos a las cosas importantes... ¡así no pierdo tiempo y puedo volver a lo que realmente me interesa!*
+    **Homer**: *¡Crear alias es como ponerle un nombre divertido a mis recetas de rosquillas! ¡Así puedo ser más eficiente mientras me como una!*
 
-    Con los alias, puedo reducir los comandos largos a algo breve y directo. ¡Ahora soy más rápido con Git y sigo siendo Homer!
+    Puedes crear alias para comandos frecuentes de Git para facilitar tu flujo de trabajo.
 
     #### Cómo Crear un Alias
-    Para hacer un alias, usa el comando `git config` y asígnale un nombre fácil de recordar al comando de Git que quieras abreviar.
+    Puedes crear un alias utilizando el comando `git config`.
     """)
-
+    
     st.code("git config --global alias.<alias> '<comando>'", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** 
-    Imaginemos que quiero ver el estado de mi repositorio sin escribir `git status` cada vez. Puedo abreviarlo con el alias `s` de la siguiente forma:
+    **Ejemplo Real:**
+    Si Homer desea crear un alias para `git status`, podría hacer lo siguiente:
+    ```bash
+    git config --global alias.s 'status'
+    ```
+
+    Ahora, en lugar de escribir `git status`, puede simplemente usar `git s`.
+
+    **Homer**: *¡Esto es increíble! ¡Ahora puedo ser más eficiente y aún así parecer genial, como un experto en rosquillas mientras disfruto de una Duff!*
+
+    **Resumen de Comandos**
+    Para ayudarte a recordar, aquí tienes un resumen de los comandos básicos que hemos aprendido:
     """)
+    st.image("images/marge/marge_enseñando.jpeg", width=200)
 
-    st.code("git config --global alias.s 'status'", language='bash')
-
-    st.markdown("""
-    Ahora, cada vez que quiera ver el estado, solo tengo que escribir `git s`. ¡Es como tener un botón directo para la rosquilla perfecta!
-
-    #### Alias Útiles
-    Aquí tienes algunos alias que podrían gustarte:
-    - `git config --global alias.co 'checkout'`: Usa `git co` en lugar de `git checkout`.
-    - `git config --global alias.br 'branch'`: Usa `git br` para ver tus ramas.
-    - `git config --global alias.ci 'commit'`: Usa `git ci` para hacer un commit rápido.
-
-    ¡Estos atajos hacen que usar Git sea casi tan fácil como alcanzar una rosquilla!
-    """)
-
-    # Imagen de Homer riéndose delante del ordenador
-    st.image("images/homer/homer_riendose_ordenador.jpeg", caption="¡Los alias me facilitan la vida!", width=300)
-
-    # Título de la aplicación
-    st.title("¡D'oh! Resumen de Comandos de Git")
-
-    # Introducción
-    st.write("""
-        Bienvenidos a mi fabulosa guía de comandos de Git. Aquí aprenderás a manejar el control de versiones 
-        con la misma destreza que yo manejo el sofá. ¡Vamos a sumergirnos en el delicioso mundo de Git, 
-        donde cada commit es como una dona que no quieres perder!
-    """)
-
-
-    # Datos de los comandos
-    data = {
+    # Resumen de comandos en un DataFrame
+    df_resumen = pd.DataFrame({
         "Comando": [
-            "git clone [url]",
-            "git add [archivo]",
-            "git rm [archivo]",
-            "git reset HEAD [archivo]",
-            "git commit -m 'mensaje'",
+            "git clone <URL>",
+            "git add <archivo>",
+            "git rm <archivo>",
+            "git commit -m '<mensaje>'",
             "git log",
-            "git log --oneline",
             "git pull",
             "git push",
             "git status",
-            "git status -s",
-            "git config --global alias.[alias] [comando]",
+            "git config --global alias.<alias> '<comando>'"
         ],
         "Descripción": [
-            "Crea una copia local de un repositorio remoto. ¡Es como tener una nevera llena de donas en casa!",
-            "Agrega cambios específicos de un archivo al área de preparación. ¡Como poner tu sabor de dona favorito en la lista de compras!",
-            "Elimina un archivo del directorio de trabajo y del área de preparación. ¡Adiós, archivo, nunca serás olvidado... o tal vez sí!",
-            "Deshace el último 'git add'. Es como arrepentirte de comer esa última dona y decidir que no era una buena idea.",
-            "Crea un nuevo commit con los cambios en el área de preparación. ¡Es como contarle a todos lo genial que eres cada vez que comes una dona!",
-            "Muestra el historial de commits del repositorio. ¡Es como ver el álbum familiar, pero sin las fotos embarazosas!",
-            "Muestra un resumen conciso del historial de commits. ¡Rápido y directo, como yo cuando veo una caja de donas!",
-            "Actualiza la rama local con los cambios del repositorio remoto. ¡Recibe las novedades como si fueran las últimas noticias sobre donas!",
-            "Envía los cambios de la rama local al repositorio remoto. ¡Como lanzar una dona al aire y esperar que caiga justo en tu boca!",
-            "Muestra el estado actual del repositorio. ¡Te dice si estás en el camino correcto o si necesitas más donas para seguir!",
-            "Proporciona una salida abreviada del estado del repositorio. ¡Es como un '¿todo bien?' pero sin el compromiso de preguntar!",
-            "Crea un alias global para un comando de Git. ¡Es como apodar a tu mejor amigo, pero en lugar de eso, le pones un nombre a tu comando!",
-        ],
-    }
+            "Clona un repositorio desde una URL.",
+            "Añade un archivo al área de staging.",
+            "Elimina un archivo del repositorio.",
+            "Guarda los cambios con un mensaje.",
+            "Muestra el historial de commits.",
+            "Actualiza el repositorio local con cambios remotos.",
+            "Envía los cambios locales al repositorio remoto.",
+            "Muestra el estado actual del repositorio.",
+            "Crea un alias para un comando."
+        ]
+    })
 
-    # Crear un DataFrame
-    df = pd.DataFrame(data)
+    st.dataframe(df_resumen)
 
-    # Mostrar los comandos en formato de tabla
-    st.subheader("Tabla de Comandos de Git")
-    st.dataframe(df)
+    st.markdown("""
+    **Homer**: *Ahora que tienes estas herramientas, ¡estás listo para convertirte en un maestro de Git y hacer que tus amigos se mueran de envidia con tus habilidades tecnológicas mientras devoras rosquillas y disfrutas de unas Duff en el bar de Moe!*
 
-    # Imagen de Homer riéndose delante del ordenador
-    st.image("images/homer/profe.jpeg", caption="¡El maestro del control de versiones!", width=300)
-
-
-    # Sección de conclusión
-    st.markdown("### 🍩 ¡Cierre Rosquilloso! 🍩")
-    st.write("""
-        ¡Woo-hoo! Hemos llegado al final de nuestra sección sobre los comandos de Git. Recuerda, cada vez que haces un commit, es como guardar una rosquilla para más tarde (¡mmm, rosquillas!). ¡Siempre es bueno tener una a mano para esos días en los que todo se vuelve un lío!
-
-        Pero espera, ¡no te vayas todavía! Ahora le toca a Bart para hablarte sobre las ramas de Git. ¡Es como cuando intenté encontrar el camino de regreso a casa después de un mal día en el trabajo, pero con menos enredos y más diversión! 
-
-        Así que ponte cómodo, relájate y prepárate para aprender algo nuevo. ¡No te preocupes! Bart no lanzará un libro, solo algunas ramas de Git que son más interesantes que los discursos de Lisa. ¡D'oh!
+    ¡Recuerda! Practicar es la clave. Así que ve y haz que tus proyectos brillen, ¡como la mejor rosquilla de Springfield! ¡Hasta la próxima, amigos!
     """)
+    
+
+
+
+
 
 
 def ramas_colaboracion():
-    # Título y estilo
-    st.markdown("<h1 style='text-align: center; color: #FFA500;'>🌿 Ramas y Colaboración con Bart y El Barto 🛹</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Ramas y Colaboración con Bart y El Barto</h1>", unsafe_allow_html=True)
     st.markdown("---")
-
-    # Introducción de Bart
+    
     st.markdown("""
-    ¡Ey, colega! Soy Bart Simpson, y hoy te voy a enseñar cómo yo, el grandioso **El Barto**, maneja las ramas en Git como si fueran trucos en mi skate. Créeme, si puedes seguir mis pasos, serás un maestro de Git antes de que digas "¡Ay caramba!".
-    """)
+    En esta sección, descubrirás cómo Bart y su alter ego, El Barto, manejan las ramas y la colaboración en sus épicas aventuras, y cómo tú también puedes hacer lo mismo en tus proyectos de Git.
 
-    # Contenido
-    st.markdown("""
     ### Contenido
     1. 🌿 **Crear y Gestionar Ramas**
     2. 🔀 **Realizar Merges y Resolver Conflictos**
     3. 🤝 **Estrategias de Colaboración en Proyectos**
     """)
 
-    # Sección de Crear y Gestionar Ramas
     st.markdown("### 1. 🌿 Crear y Gestionar Ramas")
     st.markdown("""
-    Imagínate que quiero organizar mis bromas, digo... mis proyectos, para tener más tiempo libre y así hacerle más sorpresas a Skinner. ¿Cómo lo hago? Fácil, ¡creando ramas en mi proyecto de aventuras en skate! 😎
+    Imagina que Bart Simpson, conocido por sus bromas, decide organizar su vida para tener más tiempo para jugar. ¿Cómo lo hace? Creando ramas en su proyecto personal: *La aventura del skate*.
+
+    #### Crear una Nueva Rama
+    Bart decide que necesita una nueva estrategia, así que se crea una nueva rama en su proyecto. Usa el siguiente comando para crear una nueva rama:
+    ```bash
+    git branch aventura-skate
+    ```
+    Con `git branch aventura-skate` Bart crea una rama llamada `aventura-skate` donde podrá planificar su próximo truco en la patineta sin afectar el resto de sus travesuras.
+
+    #### Cambiar a una Rama Diferente
+    Una vez que ha creado la rama, Bart quiere entrar en acción. Para hacerlo, usa:
+    ```bash
+    git checkout aventura-skate
+    ```
+
+    Con `git checkout aventura-skate` Bart cambia a la rama `aventura-skate`, permitiéndole enfocarse en sus nuevos trucos mientras mantiene sus otras aventuras intactas.
+
+    #### Crear y Cambiar a una Nueva Rama en un Solo Paso
+    A veces, Bart como es muy vago es muy eficiente. Entonces, decide hacer todo en un solo paso:
+    ```bash
+    git checkout -b aventura-nueva
+    ```
+
+    Con `git checkout -b aventura-nueva` Bart crea y cambia a una nueva rama llamada `aventura-nueva` para comenzar su próxima travesura sin perder tiempo.
+
+    #### Ver todas las Ramas
+    En su cuaderno de skater, Bart quiere ver qué ramas ha creado:
+    ```bash
+    git branch
+    ```
+
+    Con `git branch` Muestra todas las ramas en su repositorio, ayudando a Bart a recordar sus locuras anteriores.
+
+    📌 **Tip:** Bart siempre usa nombres creativos para sus ramas, como `feature/skate_futurista`, para que no se confunda.
+
+    📌 **Tip:** Si alguna de sus ramas (bromas) está vieja, Bart la elimina con:
+    ```bash
+    git branch -d aventura_olvidada
+    ```
+
+    Esto asegura que su cuaderno siempre esté ordenado.
+
     """)
+    st.image("images/bart/ramas.jpeg", width=200)
 
-    # Crear una Nueva Rama
-    st.markdown("#### Crear una Nueva Rama")
-    st.markdown("Cada vez que quiero probar algo nuevo (¡como un truco de skate!), creo una nueva rama. Así no rompo nada de lo que ya tengo. Míralo así:")
-    st.code("git branch aventura-skate", language="bash")
-    st.markdown("""
-    Con `git branch aventura-skate`, creo una rama solo para mis trucos de skate, sin afectar mis otras bromas. ¡Todo limpio y ordenado!
-    """)
-
-    # Cambiar a una Rama Diferente
-    st.markdown("#### Cambiar a una Rama Diferente")
-    st.markdown("Ahora que tengo mi nueva rama lista, ¡vamos a la acción! Para meterme de lleno en esa rama, solo uso:")
-    st.code("git checkout aventura-skate", language="bash")
-    st.markdown("""
-    Este comando me lleva directo a la rama de aventura-skate, donde puedo planear mis trucos sin estropear nada de lo demás. Es como cambiar de skate según el truco que quiero hacer. 🛹
-    """)
-
-    # Crear y Cambiar a una Nueva Rama en un Solo Paso
-    st.markdown("#### Crear y Cambiar a una Nueva Rama en un Solo Paso")
-    st.markdown("A veces no tengo tiempo para tonterías, así que hago todo de una sola vez:")
-    st.code("git checkout -b aventura-nueva", language="bash")
-    st.markdown("""
-    Con `git checkout -b aventura-nueva`, creo y entro en la nueva rama llamada `aventura-nueva` en un solo paso. ¡Así ahorro tiempo para hacer más travesuras! 💥
-    """)
-
-    # Ver todas las Ramas
-    st.markdown("#### Ver todas las Ramas")
-    st.markdown("Para asegurarme de no olvidar ninguna broma (digo, proyecto), le echo un vistazo a todas las ramas creadas:")
-    st.code("git branch", language="bash")
-    st.markdown("""
-    Con `git branch`, puedo ver todas mis ramas y recordar qué estaba haciendo en cada una. ¡Nunca pierdo una idea genial!
-    """)
-
-    # Tips
-    st.markdown("📌 **Tip:** Siempre uso nombres chulos para mis ramas, como `feature/skate_futurista`, así no me confundo.")
-    st.markdown("📌 **Tip:** Si alguna rama (broma) ya está pasada de moda, la elimino con:")
-    st.code("git branch -d aventura_olvidada", language="bash")
-    st.markdown("¡Así mantengo mi cuaderno de bromas ordenado y fresco!")
-
-    # Imagen de Bart haciendo skate
-    
-    st.image("images/bart/ramas.jpeg", caption="Bart en su aventura skate", width=300)
-
-    # Sección de Merges y Conflictos
     st.markdown("### 2. 🔀 Realizar Merges y Resolver Conflictos")
     st.markdown("""
-    Después de un día lleno de travesuras y patinetas, quiero que todos mis amigos vean mis nuevos trucos. Para eso, necesito mezclar (hacer un *merge*) mi rama `aventura-skate` con la rama principal, `main`. ¡Así todos pueden ver mis avances! 💥
-    """)
+    Después de un día lleno de aventuras, Bart quiere compartir sus nuevos trucos con sus amigos. Así que necesita mezclar sus cambios de la rama `aventura-skate` a la rama principal, `main`.
 
-    # Realizar un Merge
-    st.markdown("#### Realizar un Merge")
-    st.markdown("Primero, me muevo a la rama principal donde quiero que se unan los cambios. Lo hago así:")
-    st.code("git checkout main", language="bash")
-    st.markdown("""
-    Ahora que estoy en `main` y listo para hacer magia, hago el merge:
-    """)
-    st.code("git merge aventura-skate", language="bash")
-    st.markdown("""
-    Con `git merge aventura-skate`, ¡mezclo los trucos de `aventura-skate` en la rama principal! Así, todos podrán ver lo genial que soy en mi skate. 🛹
-    """)
+    #### Realizar un Merge
+    Primero, Bart cambia a la rama donde quiere integrar los cambios:
+    ```bash
+    git checkout main
+    ```
 
-    # Sección de Estrategias de Colaboración
+    Luego, realiza el merge:
+    ```bash
+    git merge aventura-skate
+    ```
+
+    Con `git merge aventura-skate` Bart integra los cambios de `aventura-skate` en la rama principal, compartiendo sus trucos con todos.
+
+    #### Resolver Conflictos
+    Pero, ¡oh no! Alguien más estaba trabajando en la misma sección del proyecto y Bart se enfrenta a un conflicto. Así que debe resolverlo. Abre el archivo conflictivo y lo edita, y luego añade los cambios al área de staging:
+    ```bash
+    git add conflictivo.txt
+    ```
+
+    Con `git add conflictivo.txt` Bart añade el archivo después de resolver el conflicto, asegurándose de que sus amigos tengan lo mejor de sus aventuras.
+
+    Una vez resueltos todos los conflictos, Bart guarda los cambios:
+    ```bash
+    git commit -m "Resolver conflictos de merge"
+    ```
+
+    Con `git commit -m "Resolver conflictos de merge"`Bart guarda sus cambios y da un mensaje claro sobre lo que resolvió.
+
+    """)
+    st.image("images/bart/conflictos.jpeg", width=200)
+
     st.markdown("### 3. 🤝 Estrategias de Colaboración en Proyectos")
     st.markdown("""
-    Para asegurarse de que sus aventuras sean aún más épicas, Bart implementa algunas estrategias de colaboración que lo ayudan a trabajar en equipo con sus amigos. ¡Después de todo, es más divertido practicar juntos! 🛹
-    """)
+    Para asegurarse de que sus aventuras sean aún más épicas, Bart implementa algunas estrategias de colaboración.
 
-    # Uso de Pull Requests
-    st.markdown("#### Uso de Pull Requests")
-    st.markdown("""
-    Bart sabe que es importante recibir feedback, así que decide crear un **Pull Request (PR)** para que sus amigos revisen su nuevo truco. 
-    Esto es como invitar a sus amigos a ver su última hazaña y dar sugerencias. Los PRs son una excelente manera de discutir cambios antes de integrarlos en la rama principal. 
-    Al abrir un PR, Bart deja un mensaje que explica lo que ha hecho y por qué. 
-    """)
+    #### Uso de Pull Requests
+    Bart sabe que es importante recibir feedback, así que crea un Pull Request (PR) para que sus amigos revisen su nuevo truco. Los PRs son una excelente manera de discutir cambios antes de integrarlos en la rama principal.
 
-    # Revisión de Código
-    st.markdown("#### Revisión de Código")
-    st.markdown("""
-    Para hacer las cosas aún mejor, organiza sesiones de **revisión de código** con sus amigos. Aquí, todos pueden aportar ideas y mejorar los trucos de skate de Bart. 
-    Durante estas sesiones, analizan el código juntos y se aseguran de que todo esté a la altura. Además, las revisiones regulares mantienen la calidad de sus trucos y bromas.
-    """)
+    #### Revisión de Código
+    Organiza sesiones de revisión de código con sus amigos, donde todos pueden aportar ideas y mejorar los trucos de skate. Las revisiones regulares aseguran que el equipo mantenga la calidad de sus trucos y bromas.
 
-    # Integración Continua
-    st.markdown("#### Integración Continua")
-    st.markdown("""
-    Bart también se da cuenta de que configurar **CI/CD** es clave para evitar sorpresas. Así que decide integrar herramientas como **Jenkins** en su flujo de trabajo. 
-    Esto le ayuda a asegurarse de que sus trucos no rompan la diversión. Las pruebas automáticas garantizan que cada nueva aventura esté lista para impresionar a todos.
-    """)
+    #### Integración Continua
+    Bart se da cuenta de que configurar CI/CD es clave. Así que integra herramientas como Jenkins para asegurarse de que sus trucos no rompan la diversión. Las pruebas automáticas garantizan que todo esté en su lugar.
 
-    # Consejos y Tip
-    st.markdown("📌 **Tip:**")
-    st.markdown("""
-    Establecer **convenciones de commits** y flujos de trabajo como **GitFlow** ayuda a Bart a mantener su proyecto organizado y fácil de seguir. Así, cada quien sabe qué hacer y cuándo, ¡como un verdadero equipo de skaters!
-    """)
+    📌 **Tip:** Establecer convenciones de commits y flujos de trabajo como GitFlow ayuda a Bart a mantener su proyecto organizado y fácil de seguir.
 
-    # Imagen de Bart revisando código con sus amigos
-    st.image("images/bart/revisar_codigo.jpeg", caption="Bart y sus amigos revisando código juntos para mejorar sus trucos de skate.", width=300)
+    """)
+    st.image("images/bart/revisar_codigo.jpeg", width=200)
 
     # Título de la sección
     st.markdown("### Resumen de Comandos para Ramas y Colaboración")
-
-    # Introducción
-    st.markdown("""
-    Después de un día lleno de aventuras y bromas con el skate, Bart se da cuenta de que ha aprendido un montón sobre cómo trabajar en equipo y gestionar su código. 
-    Para ayudar a sus amigos skaters a recordar todos los comandos importantes que han usado, decide hacer un resumen práctico. 
-    Así, todos pueden tener a mano los comandos de Git que les permiten crear ramas, mezclar cambios y colaborar sin problemas. ¡Vamos a ello! 🚀
-    """)
 
     # Crear un DataFrame para la tabla de comandos
     data = {
@@ -1013,14 +939,14 @@ def ramas_colaboracion():
             "`git branch -d <nombre-de-la-rama>`"
         ],
         "Descripción": [
-            "Crea una nueva rama para nuevas aventuras.",
-            "Cambia a una rama diferente y comienza a patinar allí.",
-            "Crea una nueva rama y cambia a ella en un solo paso, ¡todo junto!",
-            "Ver todas las ramas disponibles en el proyecto, como ver el mapa del parque.",
-            "Realiza un merge de los cambios de una rama a otra, como unir dos pistas de skate.",
-            "Añade archivos conflictivos resueltos al área de staging, preparando todo para la acción.",
-            "Guarda los cambios después de resolver conflictos de merge, dejando claro que el problema fue resuelto.",
-            "Elimina una rama que ya no necesitas, como quitar un truco que ya no quieres hacer."
+            "Crea una nueva rama",
+            "Cambia a una rama diferente",
+            "Crea una nueva rama y cambia a ella en un solo paso",
+            "Ver todas las ramas",
+            "Realizar un merge",
+            "Añadir archivos conflictivos resueltos al área de staging",
+            "Guardar los cambios después de resolver conflictos de merge",
+            "Eliminar una rama"
         ]
     }
 
@@ -1029,27 +955,22 @@ def ramas_colaboracion():
     # Mostrar la tabla usando Streamlit
     st.table(df)
 
-    # Imagen de Bart revisando código con sus amigos
-    st.image("images/bart/profe.jpeg", caption="Bart mostrando sus mejores trucos de Git.", width=300)
 
-    # Sección de conclusión
-    st.markdown("### 🏁 Conclusión: ¡El Viaje No Termina Aquí!")
+
     st.markdown("""
-    Bart ha aprendido a surfear las olas de Git como un verdadero profesional, dominando las técnicas esenciales para gestionar sus ramas y colaborar con sus amigos en sus emocionantes aventuras de skate. Pero esto es solo el principio de su viaje en el mundo del control de versiones.
-
-    Así que, mientras se prepara para realizar sus mejores trucos en la pista, Bart sabe que hay mucho más por descubrir. Las habilidades básicas son solo la punta del iceberg, y en la próxima sección, **Lisa** nos llevará a través de un emocionante recorrido por **comandos avanzados de Git**.
-
-    ¡Prepárate para elevar tu juego y convertirte en un auténtico ninja de Git! 🥷✨
+    Así, con la creatividad y inteligencia de Bart para salirse siempre con la suya, y las herramientas adecuadas de Git, podrás colaborar y gestionar tus proyectos como un verdadero maestro del skate. ¡A practicar y aplicar lo que has aprendido!
     """)
+    
+
 
 
 def avanzado_git():
-    st.markdown("<h1 style='text-align: center;'>¡Las Aventuras de Lisa en el Mundo de Git!</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Las Aventuras de Lisa en el Mundo de Git</h1>", unsafe_allow_html=True)
     st.markdown("---")
 
     st.markdown("""
-    ¡Hola, mentes curiosas del código! Soy Lisa Simpson, y hoy seré su guía en esta fascinante aventura por el vasto universo de Git.
-    Al igual que en mi constante búsqueda por el conocimiento, exploraremos los comandos más avanzados de Git, que ayudan a los proyectos a mantenerse tan organizados como mis apuntes de ciencias. ¡Vamos a aprender y a divertirnos al mismo tiempo!
+    ¡Hola, amigos del código! Soy Lisa Simpson, y hoy seré su guía en esta emocionante aventura por el vasto universo de Git.
+    Con cada comando que aprendamos, también exploraremos algunos de mis momentos favoritos de la serie. ¡Prepárense para aprender y divertirse! 
 
     ### Contenido
     1. 🔄 **Rebase**
@@ -1062,8 +983,8 @@ def avanzado_git():
 
     st.markdown("### 🔄 Rebase")
     st.markdown("""
-    Recuerdan esa vez en que intenté que la familia participara en un día educativo de ciencias, pero Homer acabó interrumpiendo con su versión de 'Música para Dormir'? 🎶
-    Bueno, usar `rebase` es como lograr que todos sigan al ritmo de tu proyecto, sin interrupciones y manteniendo un flujo de trabajo ordenado.
+    Recuerden esa vez en que intenté organizar un grupo de estudio para un examen de ciencias, y Homer interrumpió con su versión de 'Música para Dormir'. 🎶
+    El rebase es como asegurarte de que tu grupo de estudio tenga toda la información más reciente y útil, para que todos estén al tanto sin perder el hilo de la conversación.
 
     #### Comando de Rebase
     ```bash
@@ -1071,244 +992,187 @@ def avanzado_git():
     ```
 
     **Ejemplo Real:**
-    Imagina que estás trabajando en un proyecto de ciencias, y tu maestro, el Sr. Skinner, ha añadido algunos cambios importantes en `main`. Lo primero es asegurarte de estar en tu rama de trabajo (por ejemplo, `feature`) con:
+    Imagina que estás trabajando en un proyecto sobre biología y tu maestro, el Sr. Skinner, ha añadido algunos cambios importantes a su trabajo en `main`:
     ```bash
     git checkout feature
     git rebase main
     ```
-    Después, al aplicar `git rebase main`, tomas todos los cambios recientes en `main` y los integras en tu rama actual, como si pidieras prestadas las últimas notas del Sr. Skinner para que tu proyecto esté actualizado.
+    Con `git rebase main` te ayuda a llevar todos esos cambios valiosos a tu proyecto, como si estuvieras pidiendo las notas de tu maestro para estar siempre al día.
 
-    📌 **Tip de Lisa:** Mantén tu historial de trabajo tan claro y organizado como un buen cuaderno de apuntes. ¡Recuerda que un rebase bien hecho es como una página sin borrones! 📚
+    📌 **Tip:** Usa `rebase` para mantener la historia de tus proyectos clara y organizada, así como tus apuntes en la biblioteca. 📚
     """)
-    st.image("images/lisa/informacion.jpeg", caption="Compartir información es clave. Recuerda, el conocimiento se multiplica cuando lo compartes con los demás!", width=300)
+    st.image("images/lisa/informacion.jpeg", width=200)
+
 
     st.markdown("### 🗂️ Stash")
     st.markdown("""
-    Imagina que estás trabajando en un emocionante proyecto de investigación sobre el medio ambiente y tomando notas súper importantes, cuando de repente Bart entra pidiendo ayuda para salir de un apuro. 🎷👀
+    ¿Alguna vez has tenido que guardar tu saxofón mientras intentabas resolver un complicado problema de matemáticas? 🎷🧩
+    Eso es lo que hace `stash`: te permite guardar tus cambios temporalmente para que puedas concentrarte en otras cosas.
 
-    Así que, ¿qué haces? Bueno, `git stash` es como una caja especial donde puedes guardar todo lo que estabas haciendo, para dejarlo en pausa sin perder nada, como cuando guardo mi saxofón para concentrarme en un examen complicado.
-
-    #### Paso 1: Guardar los Cambios con `git stash`
-    Primero, usamos el comando `git stash` para guardar tus cambios en un lugar temporal:
+    #### Comando de Stash
     ```bash
     git stash
     ```
-    Ahora tus cambios están seguros, como si los hubieras puesto en una caja con tu nombre. ¡Puedes ir a ayudar a Bart sin preocuparte por perder nada!
 
-    #### Paso 2: Cambiar a la Rama Principal con `git checkout main`
+    **Ejemplo Real:**
+    Estás trabajando en tu investigación sobre el medio ambiente, pero de repente debes ayudar a Bart a escapar de un problema. ¡Es momento de guardar tus notas!
     ```bash
+    git stash
     git checkout main
     ```
-    Este comando es como si estuvieras cambiando de clase: necesitas ir a la rama `main`, o "clase principal", antes de empezar cualquier otra cosa. Cambiar a `main` es importante si quieres trabajar en otra cosa sin mezclar lo que ya tienes en tu rama actual.
 
-    #### Paso 3: Recuperar Cambios Guardados con `git stash apply` y `git stash pop`
-    Después de ayudar a Bart, vuelves a tu proyecto de investigación. ¡Es momento de recuperar tus notas! Para ello, tienes dos opciones:
+    - Con `git stash`, guardas tu trabajo a salvo para atender a tu hermano, ¡igual que guardas tu saxofón para ayudar a Bart!
 
-    - **`git stash apply`**: Este comando saca tus cambios de la caja y los coloca en tu trabajo actual sin eliminarlos del "cajón de stashes", por si quieres volver a usarlos.
-    - **`git stash pop`**: Este comando es como sacar los cambios de la caja y borrar la caja. Úsalo si estás seguro de que ya no necesitas guardar una copia de esos cambios.
-
+    #### Aplicar y Eliminar Stash
     ```bash
     git stash apply
     git stash pop
     ```
 
-    #### Paso 4: Volver a la Rama de Trabajo con `git checkout feature`
-    Una vez que tienes tus cambios, asegúrate de estar en la rama donde trabajabas originalmente, en este caso, `feature`:
+    **Ejemplo Real:**
+    Después de ayudar a Bart, vuelves a tu proyecto:
     ```bash
     git checkout feature
+    git stash apply
     ```
-    Este paso es crucial para retomar el trabajo donde lo dejaste. Así, es como regresar al mismo escritorio en la biblioteca después de ayudar a Bart.
 
-    📌 **Tip de Lisa:** Usa `git stash list` para ver todos los cambios que guardaste con `stash`. ¡Es como revisar tus notas para saber qué proyectos tienes pendientes!
+    **Explicación del Ejemplo:**
+    - `git stash apply` saca tus notas del cofre, listas para seguir con tu investigación.
+
+    📌 **Tip:** Usa `git stash list` para ver todos tus trabajos guardados, como tus proyectos en la biblioteca. 🏫
     """)
-    st.image("images/lisa/saxo.jpeg", caption="La programación y la música tienen algo en común: ¡hay que encontrar el ritmo!", width=300)
+    st.image("images/lisa/saxo.jpeg", width=200)
 
-
-    # Título de la sección
-    st.markdown("### 🍒 Cherry-Pick con Lisa Simpson")
-
-    # Introducción al comando cherry-pick
+    st.markdown("### 🍒 Cherry-Pick")
     st.markdown("""
-    A continuación, te enseñaré cómo usar `cherry-pick`, un comando especial de Git. Imagínate que estás eligiendo solo las mejores cerezas del árbol 🍒, como cuando escojo las respuestas más brillantes en clase. `Cherry-pick` te permite traer justo esos cambios clave de otra rama, sin tener que arrastrar todo.
-    """)
+    En una competencia de inteligencia, siempre hay un momento clave donde puedes tomar la respuesta correcta sin seguir todo el proceso. 🍒
+    Así es como funciona `cherry-pick`: seleccionas solo lo que necesitas de los cambios de otra rama.
 
-    # Comando de cherry-pick
-    st.markdown("#### Comando de Cherry-Pick")
-    st.code("git cherry-pick <id-del-commit>")
+    #### Comando de Cherry-Pick
+    ```bash
+    git cherry-pick <id-del-commit>
+    ```
 
-    # Ejemplo de cherry-pick contextualizado
-    st.markdown("""
     **Ejemplo Real:**
-    Supón que encontré un descubrimiento genial sobre la fotosíntesis en la rama `investigaciones`. Quiero llevar ese hallazgo a la rama principal (`main`) de mi proyecto, ¡pero sin traer otros cambios extra!
-    """)
-    st.code("""
+    Supón que descubriste un experimento increíble sobre la fotosíntesis en la rama `investigaciones`, y quieres llevarlo a `main`:
+    ```bash
     git checkout main
     git cherry-pick a1b2c3d4
-    """)
+    ```
 
-    # Explicación detallada
-    st.markdown("""
     **Explicación del Ejemplo:**
-    - Primero, uso `git checkout main` para asegurarme de que estoy en la rama `main`, que es donde quiero añadir este cambio especial.
-    - Después, con `git cherry-pick a1b2c3d4`, recojo solo ese commit importante, como si tomara la mejor cereza del árbol. Así, llevo mi descubrimiento sobre la fotosíntesis directo a `main` sin mezclar nada más.
+    - `git cherry-pick a1b2c3d4` te permite llevar esa valiosa información directamente a tu trabajo sin complicaciones.
 
-    📌 **Tip:** ¡Es perfecto para elegir justo lo que necesitas, como cuando escojo los datos más interesantes en mis proyectos de ciencias! 💡
+    📌 **Tip:** Ideal para seleccionar solo las mejores ideas, como elegir la respuesta más brillante en un concurso. 💡
     """)
+    st.image("images/lisa/lisa_cherry.jpeg", width=200)
 
-    # Imagen contextual
-    st.image("images/lisa/lisa_cherry.jpeg", caption="Las ideas brillantes son como cerezas, ¡se pueden disfrutar mejor en un grupo!", width=300)
-
-
-    # Título e introducción de Lisa para el comando Reset
     st.markdown("### 🔄 Reset")
-
     st.markdown("""
-    Esta vez quiero mostrarte cómo `git reset` es como tener una máquina del tiempo ⏳, ¡una herramienta perfecta para volver a un momento anterior en tu proyecto! 
-    A veces, cuando estamos experimentando, nos damos cuenta de que necesitamos retroceder a un punto seguro en nuestro camino. `git reset` es justo para eso: nos lleva atrás en el tiempo, como si viajáramos al pasado para arreglar algo sin que nadie lo note. 
-    """)
+    A veces, en mis aventuras, me doy cuenta de que necesito retroceder. `git reset` es como tener una máquina del tiempo que me permite volver a un punto anterior en mi camino. ⏳
 
-    # Comando de Reset con explicación del uso "hard"
-    st.markdown("#### Comando de Reset con `--hard`")
-    st.code("git reset --hard <commit-id>")
+    #### Comando de Reset
+    ```bash
+    git reset --hard <commit-id>
+    ```
 
-    st.markdown("""
     **Ejemplo Real:**
-    Supón que estuviste trabajando en un proyecto de ciencias pero el último experimento no salió como esperabas. Decides que lo mejor es regresar a un estado donde todo estaba bien:
-    """)
-    st.code("""
+    Imagina que decides que un experimento en el que trabajaste no salió como esperabas, y quieres volver a un punto anterior:
+    ```bash
     git reset --hard a1b2c3d4
-    """)
+    ```
 
-    # Explicación del ejemplo
-    st.markdown("""
     **Explicación del Ejemplo:**
-    - Usando `git reset --hard`, retrocedes a un momento en el tiempo, donde todo estaba como lo querías, igual que si saltaras en la máquina del tiempo para corregir tu experimento.
-    - **¡Advertencia!** ❌ Con `--hard`, todos los cambios no confirmados que hayas hecho desaparecerán, ¡así que úsalo con cuidado!
+    - Con `git reset --hard`, vuelves a un estado donde todo estaba perfecto, pero cuidado: todos tus cambios no confirmados se perderán. ❌
 
-    #### Comando de Reset Suave con `--soft`
-    Si quieres volver en el tiempo pero conservar tu información:
-    """)
-    st.code("git reset --soft HEAD~1")
-
-    st.markdown("""
-    **Ejemplo Real:**
-    Si el último paso en tu experimento fue un error, pero aún quieres conservar los datos que anotaste, puedes usar `git reset --soft` para retroceder sin perder nada:
-    """)
-    st.code("""
+    #### Reset Suave
+    ```bash
     git reset --soft HEAD~1
-    """)
+    ```
 
-    # Explicación del reset suave
-    st.markdown("""
-    **Explicación del Ejemplo:**
-    - Con `git reset --soft HEAD~1`, eliminas el último cambio pero mantienes tus notas y datos. Es como si pudieras borrar solo una pizarra sin perder la información, lista para escribir de nuevo en limpio.
-
-    📌 **Tip:** Usa `git reset --hard` solo si estás seguro de que quieres eliminar esos cambios, igual que si viajaras al pasado y estuvieras listo para empezar de cero. ⚖️
-    """)
-
-    # Imagen de Lisa con la máquina del tiempo
-    st.image("images/lisa/lisa_maquina_tiempo.jpeg", caption="Si solo tuviéramos una máquina del tiempo para deshacer esos errores...", width=300)
-
-    # Título y separación de secciones
-    st.markdown("### 🔍 Diff y 📖 Reflog")
-
-    # Explicación de Diff
-    st.markdown("#### Comando de Diff")
-    st.markdown("""
-    Cuando estoy trabajando en un artículo para la revista escolar, reviso lo que he cambiado para asegurarme de que esté perfecto antes de enviarlo. `git diff` es como un espejo 🔍 que muestra las diferencias entre el borrador y el documento final, resaltando cada ajuste que he hecho.
-    """)
-
-    # Ejemplo real de Diff
-    st.markdown("""
     **Ejemplo Real:**
-    Supón que estás editando tu ensayo de ciencias y quieres ver todos los cambios que has realizado antes de enviarlo:
-    """)
+    Si decides que tu último experimento fue un error, pero no quieres perder la información:
+    ```bash
+    git reset --soft HEAD~1
+    ```
 
-    st.code("git diff", language="bash")
-
-    # Explicación del ejemplo Diff
-    st.markdown("""
     **Explicación del Ejemplo:**
-    Con `git diff`, puedes revisar las modificaciones, igual que reviso cada anotación en mi ensayo antes de entregarlo a mi profesora.
+    - `git reset --soft HEAD~1` te permite eliminar ese paso pero conservar todo lo que aprendiste, como volver a dibujar tu experimento en el pizarrón.
 
-    📌 **Tip:** Siempre revisa tus cambios con `git diff` antes de hacer un commit; es como dar una última lectura antes de entregar un trabajo importante. ✨
+    📌 **Tip:** Usa `git reset --hard` con precaución; a veces es mejor aprender de los errores. ⚖️
     """)
+    st.image("images/lisa/lisa_maquina_tiempo.jpeg", width=200)
 
-    # Explicación de Reflog
-    st.markdown("#### Comando de Reflog")
+
+    st.markdown("### 🔄 Diff y Reflog")
     st.markdown("""
-    Para recordar cada paso en mis investigaciones, `git reflog` es como mi diario personal 📖, donde anoto todo lo que he hecho en cada proyecto.
-    """)
-    # Ejemplo real de Reflog
-    st.markdown("""
+    #### Diff
+    Cuando estoy escribiendo mi artículo para la revista escolar, a menudo reviso lo que he cambiado. `git diff` es como mirar en un espejo que te muestra las diferencias entre tu borrador y el documento final. 🔍
+
+    ```bash
+    git diff
+    ```
+
     **Ejemplo Real:**
-    Si necesitas revisar el historial de tus experimentos y ver qué métodos funcionaron o no:
-    """)
+    Para ver los cambios que has hecho en tu último ensayo de ciencias:
+    ```bash
+    git diff
+    ```
 
-    # Comando Reflog
-    st.code("git reflog", language="bash")
-
-
-    # Explicación del ejemplo Reflog
-    st.markdown("""
     **Explicación del Ejemplo:**
-    `git reflog` te permite ver todos los cambios que has hecho en tu proyecto, como si consultaras tu propio diario de aventuras y experimentos.
+    - `git diff` te muestra las modificaciones, como ver las anotaciones en tu trabajo antes de entregarlo.
 
-    📌 **Tip:** `git reflog` es útil para ver todos tus pasos anteriores, por si necesitas regresar a un punto específico. 
+    #### Reflog
+    Y cuando necesito recordar todos los pasos que he dado en mis investigaciones, `git reflog` es como mi diario personal. 📖
+
+    ```bash
+    git reflog
+    ```
+
+    **Ejemplo Real:**
+    Para revisar el historial de tus experimentos y saber qué ha funcionado y qué no:
+    ```bash
+    git reflog
+    ```
+
+    **Explicación del Ejemplo:**
+    - `git reflog` te permite ver todos los cambios que has hecho en tu proyecto, como mirar atrás en tu diario de aventuras.
+
+    📌 **Tip:** Usa `git diff` antes de hacer un commit para asegurarte de que todo esté en su lugar. ¡Es como revisar tu trabajo antes de entregarlo! ✨
     """)
+    st.image("images/lisa/ver_cambios.jpeg", width=200)
 
-    # Imagen de Lisa levantando un trofeo
-    st.image("images/lisa/ver_cambios.jpeg", caption="Revisar cambios es como leer un buen libro: ¡no te saltes ni una línea!", width=300)
-
-
-
-    # Sección de Tag
     st.markdown("### 🏷️ Tag")
-
-    # Introducción al concepto de Tag
     st.markdown("""
-    En cada proyecto, siempre hay hitos que merecen ser celebrados, como cuando gané el concurso de ciencias en la escuela. `git tag` es perfecto para marcar esos momentos especiales y recordarlos para siempre. 🏅
-    """)
+    A veces, hay momentos en mis proyectos que merecen ser celebrados, como cuando gané el concurso de ciencias. `git tag` es la forma perfecta de marcar esos hitos. 🏅
 
-    # Comando de Tag
-    st.markdown("#### Comando de Tag")
-    st.code("git tag <nombre-del-tag>", language="bash")
+    #### Comando de Tag
+    ```bash
+    git tag <nombre-del-tag>
+    ```
 
-    # Ejemplo real del uso de Tag
-    st.markdown("""
     **Ejemplo Real:**
-    Imagina que acabas de completar una versión importante de tu proyecto y quieres etiquetarla como `v1.0`:
-    """)
-    st.code("git tag v1.0", language="bash")
+    Para marcar una versión de tu trabajo como `v1.0` después de un gran esfuerzo:
+    ```bash
+    git tag v1.0
+    ```
 
-    # Explicación del ejemplo de Tag
-    st.markdown("""
     **Explicación del Ejemplo:**
-    Usar `git tag v1.0` es como colocar una medalla en tu trabajo, recordando un momento de triunfo y logros alcanzados en el proyecto.
+    - `git tag v1.0` es como poner una medalla en tu proyecto para recordar ese gran momento de triunfo.
 
-    📌 **Tip:** Usa etiquetas para señalar esas versiones clave que merecen ser recordadas. ¡Así siempre tendrás presente cada logro en tu camino! 🏆
+    📌 **Tip:** Usa etiquetas para marcar versiones clave en tus proyectos, ¡así siempre recordarás tus logros! 🏆
     """)
 
-    # Imagen de Lisa levantando un trofeo
-    st.image("images/lisa/triunfo.jpeg", caption="Cada triunfo es un pequeño paso hacia un gran avance.", width=300)
+    st.image("images/lisa/triunfo.jpeg", width=200)
 
+    # Resumen de Comandos
+    st.markdown("### Resumen de Comandos Avanzados")
 
-    # Título y breve introducción de Lisa
-    st.markdown("### 🎓 Resumen de Comandos Avanzados")
-
-    # Introducción de Lisa
-    st.markdown("""
-    Este es nuestro resumen de los comandos avanzados que hemos aprendido en esta aventura. 
-    Aquí tienes una guía rápida para recordar cada herramienta, como tener todas las fórmulas antes de un examen. ¡Vamos a repasarlas para que nunca te pierdas en el mundo de Git!
-    """)
-
-    # Datos para el DataFrame con descripciones al estilo de Lisa
     data = {
         "Comando": [
             "`git rebase <rama-base>`",
             "`git stash`",
             "`git stash apply`",
-            "`git stash pop`",
             "`git cherry-pick <id-del-commit>`",
             "`git reset --hard <commit-id>`",
             "`git reset --soft HEAD~1`",
@@ -1317,52 +1181,24 @@ def avanzado_git():
             "`git tag <nombre-del-tag>`"
         ],
         "Descripción": [
-            "Mantiene tu grupo de estudio al día con los últimos cambios.",
-            "Guarda tus ideas en pausa mientras resuelves otros problemas.",
-            "Recupera tus ideas guardadas y sigue desde donde lo dejaste.",
-            "Recupera tus ideas guardadas y elimínalas del stash, ¡como sacar tus notas justo a tiempo para usarlas!",
-            "Elige solo lo mejor de tus experimentos y aplica el cambio.",
-            "Viaja en el tiempo a un estado anterior, perfecto para empezar de nuevo.",
-            "Deshaz un paso, pero guarda tus ideas para retomarlas después.",
-            "Revisa lo que ha cambiado en tu trabajo, como repasar las anotaciones antes de entregarlo.",
-            "Mira atrás y revisa todos tus pasos en el proyecto.",
-            "Marca tus logros como versiones especiales, como una medalla para celebrar un hito."
+            "Mantiene tu grupo de estudio al día.",
+            "Guarda tus ideas mientras resuelves problemas.",
+            "Recupera tus ideas guardadas.",
+            "Elige solo lo mejor de tus experimentos.",
+            "Vuelve en el tiempo a un estado anterior.",
+            "Deshazte de un paso pero conserva tus ideas.",
+            "Revisa lo que ha cambiado en tu trabajo.",
+            "Mira atrás y revisa tus pasos.",
+            "Marca tus logros como versiones especiales."
         ]
     }
 
-    # Crear el DataFrame
     df = pd.DataFrame(data)
-
-    # Mostrar el DataFrame en Streamlit
     st.dataframe(df)
-
-        # Imagen de Bart revisando código con sus amigos
-    st.image("images/lisa/profe.jpeg", caption="El código es como una buena canción, ¡debe tener ritmo y siempre ser comprensible!.", width=300)
-
-
-
-    # Conclusión de Lisa
-    st.markdown("""
-    Ahora que tienes todos estos comandos en la punta de tus dedos, ¡estás listo para enfrentar cualquier reto en Git!
-    Recuerda que cada herramienta tiene su momento, igual que cada fórmula en un examen. ¡Usa esta guía siempre que necesites una pequeña ayuda extra!
-    """)
-
-    # Conclusión de la lección de Lisa y transición hacia la lección con Ned
-    st.markdown("### Ciencia y Código: Una Conclusión con el Estilo de Lisa")
-
-    st.markdown("""
-    ¡Genial! Hemos recorrido juntos los comandos avanzados de Git, como auténticos exploradores del conocimiento. Ahora tienes las herramientas esenciales para mantener el control de tus proyectos, navegar entre cambios, elegir tus mejores ideas, y marcar esos hitos clave como si fueran trofeos de ciencia. 🏅
-
-    Ahora bien, hemos hablado mucho sobre cómo organizar tu trabajo en Git, ¡pero el siguiente paso es compartirlo con el mundo! 🌎 Aquí es donde entra **GitHub**: un lugar donde podrás llevar tu código en línea, colaborar con otros, y aprender aún más. 
-
-    Pero, ¿quién mejor para guiarnos en esta misión que nuestro vecino favorito? Te dejo en las excelentes manos de **Ned Flanders**, quien te ayudará a integrar Git y GitHub y a compartir tu progreso. Ned te enseñará a subir repositorios, hacer pull requests, y aprovechar la comunidad de desarrolladores al máximo.
-
-    ¡Nos vemos en el siguiente desafío! Hasta pronto, y recuerda que el aprendizaje es aún mejor cuando lo compartimos. 👋
-    """)
 
 
 def integracion_github():
-    st.markdown("<h1 style='text-align: center;'>De Vecinito a Vecinito: Conectando con GitHub</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Integración de GitHub con Ned Flanders</h1>", unsafe_allow_html=True)
     st.markdown("---")
 
     st.markdown("""
@@ -1403,7 +1239,7 @@ def integracion_github():
     📌 **Tip bendecidito:** Recuerda cambiar `<URL-del-repositorio>` por la URL de tu repositorio en GitHub, ¡y todo saldrá bien bonitito!
 
     """)
-    st.image("images/ned/conectar_gitHub.jpeg", width=300, caption="Conectar Git con GitHub es como abrirle la puertita a los vecinitos para que todos disfruten del trabajito.")
+    st.image("images/ned/conectar_gitHub.jpeg", width=200)
 
     st.markdown("### Pull Requests (o como pedir ayudita a los vecinitos)")
     st.markdown("""
@@ -1436,7 +1272,7 @@ def integracion_github():
     📌 **Tip divinito:** Sé claro y preciso al describir tu pull request, vecinito, ¡así ayudarás a tus compañeros a entender mejor y todos seremos más felices!
 
     """)
-    st.image("images/ned/pull_request.jpeg", width=300, caption="Ay, hacer un pull request es como pedir un favorcito: siempre con mucho respeto y amabilidad.")
+    st.image("images/ned/pull_request.jpeg", width=200)
 
     st.markdown("### Consejitos útiles para vecinitos")
     st.markdown("""
@@ -1485,7 +1321,18 @@ def integracion_github():
     📌 **Tip celestial:** Mantén siempre tus ramitas ordenadas, vecinito, ¡así todo será más fácil y bendecidito para ti y los demás!
 
     """)
-    st.image("images/ned/amigos.jpeg", width=300, caption="¡Nada más bonito que trabajar en equipo, vecinito! Juntos en el código y en el corazón.")
+    st.image("images/ned/amigos.jpeg", width=200)
+
+
+
+
+
+
+
+
+
+
+
 
 
     # Resumen de Comandos (como un sermoncito dominical)
@@ -1519,32 +1366,16 @@ def integracion_github():
     df = pd.DataFrame(data)
     st.table(df)
 
-    st.image("images/ned/jesucristo.jpeg", width=300, caption="Oh, querido Jesucristo, siempre nos muestras el caminito correcto. ¡Paciencia y humildad en cada línea de código!")
-
-
-    st.markdown("### Conclusión Bendecidita de Ned Flanders")
-
-    st.markdown("""
-    ¡Pues vaya, vecinitos! Hemos llegado al final de este maravilloso paseo por el vecindario de GitHub. Ahora, con mucho amorcito y alegría, sabes cómo conectar tu repositorio local, hacer pull requests, y mantener todo bien organizadito, ¡como si fuera un jardín florido!
-
-    Trabajar en equipo y compartir nuestros avances es tan bonito como un día soleado, y GitHub es el lugar perfecto para que nuestro código esté siempre accesible y a la vista de todos nuestros vecinitos. ¡Qué alegría tan grandecita es poder colaborar y mejorar juntos!
-
-    #### ¿Y qué sigue, queriditos?
-
-    Te dejo en las manitas de nuestro querido Nelson, quien, con un poquito más de energía, te ayudará a revisar todo lo que hemos aprendido. ¡Así reforzaremos conocimientos y terminaremos esta lección como buenos vecinitos que somos!
-
-    ¡Nos vemos en el vecindario, y recuerda, compartir es bendecir! 🙏
-    """)
 
 
 def resumen_taller():
-    st.markdown("<h1 style='text-align: center;'>¿Recuerdas el Taller de Git? ¡Yo Sí!</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Resumen del Taller de Git</h1>", unsafe_allow_html=True)
     st.markdown("---")
 
     st.header("Comandos de Git Tratados")
 
     st.markdown("""
-    En esta sección, encontrarás una tabla con los comandos clave de Git y arenderás con Nelson Muntz que hemos cubierto en el taller. Cada comando viene con una descripción, un ejemplo práctico y enlaces a la documentación oficial para que puedas aprender más en profundidad.
+    En esta sección, encontrarás una tabla con los comandos clave de Git que hemos cubierto en el taller. Cada comando viene con una descripción, un ejemplo práctico y enlaces a la documentación oficial para que puedas aprender más en profundidad.
 
     Esta referencia rápida está diseñada para ayudarte a recordar y aplicar los comandos básicos y avanzados de Git de manera efectiva.
     """)
@@ -1681,14 +1512,15 @@ def resumen_taller():
 
     st.header("Documentación")
 
-    st.image("images/nelson/nelson_enseñando_ir_bici.jpeg", width=200)
+    st.image("images/nelson/nelson_enseñando.jpeg", width=200)
     
     st.markdown("""
     **Recursos Adicionales:**
-    - [Libro Pro Git Gratuito](https://git-scm.com/book/en/v2) Un libro gratuito de Git para....
-    - [Cheat Sheet Git](https://training.github.com/downloads/es_ES/github-git-cheat-sheet/) Resumen de los comandos principales de Git
-    - [Git Official Documentation](https://git-scm.com/doc) Documanetación oficial de Git donde hay videos cortos para aprender lo más básico
-    - [Juego Interactivo de Git](https://learngitbranching.js.org/?locale=es_ES) Aprende de forma interactiva           
+    - [Libro Pro Git Gratuito](https://git-scm.com/book/en/v2)
+    - [Cheat Sheet Git](https://training.github.com/downloads/es_ES/github-git-cheat-sheet/)
+    - [Documentación GitHub](docs.github.com/es)
+    - [Git Official Documentation](https://git-scm.com/doc)
+    - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
     """)
 
 
@@ -1696,161 +1528,6 @@ def resumen_taller():
 
 
 
-
-
-
-
-
-
-    # Título principal
-    st.markdown("<h1 style='text-align: center;'>💥¿Recuerdas el Taller de Git? Con Nelson si lo harás,  ja, ja</h1>", unsafe_allow_html=True)
-    st.markdown("---")
-
-    # Introducción al estilo de Nelson
-    st.write("¡Bienvenido al resumen rápido de Git al estilo de Nelson! 🎉")
-    st.write("Vas a repasar todo lo aprendido sobre Git sin hacer el ridículo.¡Prepárate para pulir tus habilidades o te espera un buen **Ja, ja!**")
-    st.write("Así que ponte cómodo, coge papel y boli y prepárate para dominar Git. ¡Vamos allá!")
-
-    # Comandos Básicos
-    st.header("⚙️ Comandos Básicos: Como cuando le robas el almuerzo a Milhouse")
-    st.write("Empieza con lo básico, porque si no sabes esto, mejor ni te acerques a Git.")
-
-    st.write("""
-    - **`ls`**: Lista los archivos y directorios. Para saber dónde estás metido.
-    - **`pwd`**: Muestra el directorio actual. Así evitas perderte, como el tonto de Milhouse.
-    - **`cd <nombre_del_directorio>`**: Cambia de directorio. Imagínate que es como entrar a una nueva zona de la escuela.
-    - **`mkdir <nombre_del_directorio>`**: Crea un directorio nuevo. No te pongas sentimental, son solo carpetas.
-    - **`rm -r <nombre_del_directorio>`**: Borra un directorio con todos sus archivos. Como borrar los recuerdos de Ralph.
-    - **`rm -rf <nombre_del_directorio>`**: Elimina sin preguntar. Esto es solo para valientes… ¡o locos!
-    - **`touch <nombre_del_archivo>`**: Crea un archivo vacío. Algo que ni necesita usar Milhouse.
-    - **`New-Item -Path . -Name "broma_homer.txt" -ItemType "File"`**: En Windows, crea un archivo. ¡Para dejarle notitas a Homero!
-    - **`cp <origen> <destino>`**: Copia archivos. ¿Tramposo? Sí, pero se vale.
-    - **`mv <origen> <destino>`**: Mueve o renombra archivos. Cambia las cosas de sitio como cuando Bart quiere esconder pruebas.
-    - **`cat <archivo>`**: Muestra el contenido de un archivo. No te pongas a leer mi diario, ja, ja!
-    """)
-
-    st.write("Si llegaste hasta aquí y no te confundiste con los comandos básicos de Ralph... ¡entonces ya es un logro! Que no se te olvide el **`rm -rf *`**... ¡no queremos que borres todo el sistema como Ralph! 😅")
-
-    st.image("images/nelson/construir_casa.jpeg", width=300, caption="Construyendo la casa... de los pipelines, ¡que no se cae con el viento!")
-
-
-
-    # Configuración e Inicialización de Git
-    st.header("🔧 Configuración e Inicialización de Git: Para que sepan quién eres (y te vigilen)")
-    st.write("Configura tu identidad en Git. Si no lo haces bien, podrías acabar siendo **Usuario Desconocido**. ¡Ja, ja!")
-
-    st.write("""
-    - **`git config --global user.name "Tu Nombre"`**: Configura tu nombre. Si la riegas, te van a recordar.
-    - **`git config --global user.email "tuemail@example.com"`**: Configura tu correo. Sin esto, te vas a ver como un bot.
-    - **`git config --list`**: Muestra la configuración actual. Es como un espejo: no miente.
-    - **`git config user.name "Nombre Local"`**: Cambia el nombre solo para este proyecto. Pa' que nadie sospeche.
-    """)
-
-    st.image("images/nelson/firma.jpeg", width=300, caption="Firmando el commit, porque estilo siempre hay que poner.")
-
-
-    # Operaciones Básicas
-    st.header("📂 Operaciones Básicas de Git: Para que no te quedes como Ralph cuando algo sale mal")
-    st.write("Aquí tienes lo esencial para guardar, enviar y gestionar cambios en Git. ¡Hazlo bien o prepárate para el **Ja, ja!**")
-
-    st.write("""
-    - **`git clone <URL-del-repositorio>`**: Clona un repositorio de GitHub. Como copiarle la tarea al listo.
-    - **`git add <archivo>`**: Añade archivos al índice. ¡Todo bajo control!
-    - **`git rm <archivo>`**: Elimina un archivo del repositorio. Sin dejar rastro.
-    - **`git reset HEAD Receta_Rosquilla.txt`**: Revierte un archivo al último commit. No más recetas de Homero.
-    - **`git commit -m "Mensaje del commit"`**: Guarda cambios con un mensaje. Sé claro, como un buen maestro.
-    - **`git log`**: Muestra el historial de commits. Toda la historia sucia.
-    - **`git log --oneline`**: Muestra el historial en una línea. Sencillo y directo.
-    - **`git pull`**: Trae los últimos cambios del repositorio remoto. Que no te tomen por sorpresa.
-    - **`git push`**: Sube tus cambios al repositorio remoto. Presume lo que hiciste.
-    - **`git status`**: Muestra el estado de los archivos. Como tu bitácora.
-    - **`git status -s`**: Muestra el estado en formato corto. Con esto ni Bart se perdería.
-    - **`git config --global alias.<alias> '<comando>'`**: Crea un alias para un comando. ¡Más rápido!
-    """)
-
-
-    st.write("Después tenemos a Homer, quien te enseñó las operaciones básicas… espero que hayas seguido las instrucciones y no hayas hecho un `git add cerveza.jpg` por accidente. ¡Ja, ja! No te preocupes, Homer también lo hace a veces. 🍩")
-
-    st.image("images/nelson/elimina_archivo.jpeg", width=300, caption="Eliminando archivos… y rezando para que no sea el importante.")
-
-
-    # Ramas y Colaboración
-    st.header("🌱 Ramas y Colaboración: No dejes que te saquen de tu propia historia")
-    st.write("Con estas instrucciones, podrás trabajar en paralelo sin hacer un lío (o algo peor).")
-
-    st.write("""
-    - **`git branch aventura-skate`**: Crea una nueva rama. Como empezar una nueva historia.
-    - **`git checkout aventura-skate`**: Cambia a la rama 'aventura-skate'. Listo para explorar.
-    - **`git checkout -b aventura-nueva`**: Crea y cambia a una nueva rama. No más excusas para no innovar.
-    - **`git branch`**: Lista las ramas. Para que sepas de dónde vienes.
-    - **`git branch -d aventura_olvidada`**: Elimina una rama. Como un recuerdo amargo.
-    - **`git checkout main`**: Vuelve a la rama principal. Porque no hay lugar como casa.
-    - **`git merge aventura-skate`**: Une cambios de otra rama en la actual. ¡Todo en un solo lugar!
-    """)
-
-    st.write("Luego vino Bart con las ramas y colaboración. ¡Claro, porque quién más para enseñarnos a meternos en problemas y luego intentar `mergearlos`! Solo recuerda: si la lías con un `merge`, ¡culpa a Milhouse! O... haz un `rebase`, que nadie se entere. 😆")
-    st.image("images/nelson/cambia_estilo.jpeg", width=300, caption="Cambiando el estilo como si fuera un día casual.")
-
-
-
-    # Uso Avanzado de Git
-    st.header("🔥 Uso Avanzado de Git: Aquí es donde separas a los fuertes de los débiles")
-    st.write("Si has llegado hasta aquí, ya deberías saber lo básico. ¡Hora de jugar en las grandes ligas!")
-
-    st.write("""
-    - **`git rebase <rama-base>`**: Reorganiza commits de una rama sobre otra. Un baile de cambios.
-    - **`git checkout feature`** / **`git rebase main`**: Aplica los commits de 'main' en 'feature'. Para no quedar desactualizado.
-    - **`git stash`**: Guarda cambios sin hacer commit. Un truco bajo la manga.
-    - **`git checkout main`** / **`git stash apply`**: Aplica el último stash. Como sacarlo del cajón.
-    - **`git stash pop`**: Aplica y elimina el último stash. Un movimiento rápido.
-    - **`git cherry-pick <id-del-commit>`**: Toma un commit específico y aplícalo en la rama actual. Para lo mejor de lo mejor.
-    - **`git reset --hard <commit-id>`**: Revierte todos los cambios hasta el commit especificado. Para empezar de cero.
-    - **`git reset --soft HEAD~1`**: Revierte el último commit. Si te arrepentiste, no pasa nada.
-    - **`git diff`**: Muestra diferencias entre cambios no confirmados. Para detectar al culpable.
-    - **`git reflog`**: Muestra el historial de operaciones recientes. Como la caja negra de un avión.
-    - **`git tag <nombre-del-tag>`**: Crea un marcador en el historial. Como una firma de Nelson.
-    """)
-    st.write("Y ahí va Lisa, con el uso avanzado de Git, que seguro te dejó pensando. Con tanto `rebase` y `cherry-pick`, casi parece que ella está buscando la verdad del universo y no solo los commits. ¡Ja, ja! Espero que hayas sobrevivido a su parte sin quedarte con dolor de cabeza. 🧠")
-    st.image("images/nelson/pasado_maquina_tiempo.jpeg", width=300, caption="Viajando al pasado en la máquina del tiempo para corregir un ‘push’ equivocado.")
-
-
-    # Integración de GitHub
-    st.header("🌐 Integración de GitHub: Lleva tu grandeza al mundo digital")
-    st.write("Si quieres presumir tus cambios, GitHub es el lugar. No subas cualquier cosa… ¡Nelson te vigila!")
-
-    st.write("""
-    - **`git remote add origin <URL-del-repositorio>`**: Conecta el repositorio local con GitHub. ¡Como un grito en el vacío!
-    - **`git branch -M main`**: Renombra la rama principal a 'main'. Porque los tiempos cambian.
-    - **`git push -u origin main`**: Sube la rama principal a GitHub. Hora de compartir.
-    - **`git checkout -b <nombre-de-la-ramita>`**: Crea y cambia a una nueva rama para trabajo en GitHub. ¡Aventúrate!
-    - **`git push origin <nombre-de-la-ramita>`**: Sube una rama específica a GitHub. Pa' que todos vean.
-    - **`git push origin :<nombre-antiguo>`** / **`git push origin <nombre-nuevo>`**: Cambia el nombre de una rama en GitHub. ¡Actualízate o queda en el pasado!
-    """)
-    st.write("Por último, Ned Flanders, tan amiguito como siempre, te enseñó la integración con GitHub. Si alguien tiene todo bajo control en **La Nube**, ese es Ned. Solo recuerda, cuando empujes tus cambios (`push`), hazlo con una sonrisa y un **hola vecinito!** como él.")
-    st.image("images/nelson/vigilando.jpeg", width=300, caption="¡Vigilando el código como un halcón en busca de bugs!")
-
-    st.header("Documentación y Recursos Adicionales")
-
-
-    
-    st.markdown("""
-    - [Libro Pro Git Gratuito](https://git-scm.com/book/en/v2) Un libro gratuito de Git para....
-    - [Cheat Sheet Git](https://training.github.com/downloads/es_ES/github-git-cheat-sheet/) Resumen de los comandos principales de Git
-    - [Git Official Documentation](https://git-scm.com/doc) Documanetación oficial de Git donde hay videos cortos para aprender lo más básico
-    - [Juego Interactivo de Git](https://learngitbranching.js.org/?locale=es_ES) Aprende de forma interactiva           
-    """)
-    st.image("images/nelson/leer_libro_git.jpeg", width=300, caption="Leyendo el manual de Git... porque los commits no se arreglan solos.")
-
-
-    # Conclusión 
-    st.header("🎉 ¡Y con eso hemos terminado, ja, ja! 🎉")
-    st.write("Si llegaste hasta aquí y no te perdiste en el camino, ya eres casi tan bueno en Git como yo en hacerle bromas a Milhouse. Ahora, cuando alguien más esté peleando con Git, podrás aparecer y decir: ‘¿En serio no sabes eso? ¡Ja, ja!’")
-    st.write("Git ya no será un misterio, sino tu carta secreta para verte como un genio. Y no olvides, ¡cuando surjan dudas, responde como un campeón en la siguiente sección de repaso! ¡Vamos a ver si has aprendido algo o solo estabas de turista!")
-    st.write("Si has practicado cada comando y no has terminado hecho un lío, ¡entonces Git ya no será un misterio, sino tu herramienta secreta! ¡Cuando alguien necesite ayuda con Git, podrás decirles 'Ja, ja!' como yo, tu buen amigo Nelson!")
-    st.write("¡Ahora, vamos con las preguntas de repaso, y a ver si no haces como Bart y te lo copias todo, ja, ja!")
-
-
-    st.markdown("**Recuerda**: el que **ja-ja**  último, **ja-ja** mejor…" )
 
 # Inicializar variables de estado para las respuestas y puntuación
 if 'correctas' not in st.session_state:
@@ -1939,7 +1616,7 @@ def ejercicios():
     respuesta3 = st.radio("Selecciona la respuesta correcta:", opciones3, key="q3_respuesta")
     if st.button("Verificar Respuesta 3", key="q3_btn"):
         verificar_respuesta(respuesta3, "q3")
-    st.image("images/apu/precios.jpeg", width=200)
+    st.image("images/apu/donuts_cambio.jpeg", width=200)
 
     # Ejercicio 4
     st.header("Ejercicio 4: Ver el Historial de Commits")
@@ -2036,7 +1713,7 @@ def ejercicios():
 
 
 def feedback():
-    st.markdown("<h1 style='text-align: center;'>Tss... silencio Maggie sólo quiere escucharte 🍼</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Feedback del Taller con Maggie 🍼</h1>", unsafe_allow_html=True)
     st.markdown("---")
 
     st.markdown("""
@@ -2106,50 +1783,6 @@ def feedback():
             st.success("¡Gracias por tu feedback! Maggie dice: ¡goo goo ga ga! (Lo que significa 'Gracias' en su idioma).")
         else:
             st.error("Por favor, introduce tu nombre antes de enviar el feedback.")
-
-    st.markdown("---")
-
-    # Mensaje final del taller
-    st.markdown("<h2 style='text-align: center;'>🎉 ¡Felicidades por completar el taller de Git! 🎉</h2>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center;'>Espero que te haya sido útil y que te lleves una sonrisa junto con el conocimiento. ¡Recuerda que siempre hay espacio para mejorar!</p>", unsafe_allow_html=True)
-
-    # Agradecimiento y firma
-    st.markdown(
-        """
-        <p style='text-align: center; font-size: 20px;'>
-            Realizado con 💻 y con mucha dedicación por 
-            <span style='color: #8D99AE; font-weight: bold;'>Alex Marzá</span>
-        </p>
-        """, 
-        unsafe_allow_html=True
-    )
-
-    st.markdown("<p style='text-align: center;'>Si quieres conectar o tienes alguna duda, no dudes en visitar mi perfil en LinkedIn:</p>", unsafe_allow_html=True)
-
-    # Enlace a LinkedIn
-    st.markdown(
-        """
-        <div style='text-align: center;'>
-            <a href='https://www.linkedin.com/in/alex-marza-data-science/' target='_blank' style='font-size: 20px; color: #0073b1; text-decoration: none;'>
-                👤 Alex Marzá Manuel
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    # Mensaje de despedida
-    st.markdown("<p style='text-align: center;'>¡Gracias por participar y por el feedback proporcionado! 👋</p>", unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
-
 
 # Diccionario para la navegación
 paginas = {
