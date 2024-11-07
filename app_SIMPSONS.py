@@ -19,85 +19,77 @@ def pagina_principal():
     st.markdown("<h1 style='text-align: center;'>¡Bienvenidos al Taller de Git con Los Simpsons!</h1>", unsafe_allow_html=True)
     st.markdown("---")
 
-    # Centrando la imagen de Maggie usando st.image() y con ancho ajustado
-    col1, col2, col3 = st.columns([1, 2, 1])  # Tres columnas para centrar el contenido en el medio
-    with col2:
-        st.image("images/SIMPSONS.jpeg", width=400)  # Imagen centrada en la columna del medio
 
-
-    # Historia de introducción
-    st.markdown("""
-    ### ¡Bienvenidos a Springfield!
-
-    En este taller aprender Git te resultará más fácil que beberse una Duff para Homer. En este taller, aprenderás a manejar el control de versiones como si fueras parte de la familia Simpson. ¿Te imaginas a Homer aprendiendo a hacer commits? ¡Eso es un espectáculo que no querrás perderte!
-
-    Aquí, cada personaje tiene algo que enseñarte. Lisa, la cerebrito del grupo, se asegura de que todo sea ordenado y eficiente. Marge, con su infalible sentido del hogar, te guiará para que tu proyecto esté tan limpio como su casa. Bart, el rebelde, te mostrará cómo tomar riesgos y hacer cosas inesperadas con Git, mientras que Maggie, aunque no hable, siempre está lista para detectar mejoras que nadie más ve.
-    """)
-
-    # Menú de Navegación
-    st.markdown("## Menú de Navegación")
-
-    # Dividir en dos columnas
+    # Configuración de columnas
     col1, col2 = st.columns(2)
 
     # Primera columna (izquierda)
     with col1:
-        st.markdown("### Ralph")
-        st.image("images/ralph/ralph_presentacion.jpeg", width=300, caption="Git es como caramelos,/n ¡pero sin pegamento!")
-        st.markdown("""
-        **Comandos Básicos con Ralph**: Hola, ¡Hola, soy Ralph! No te preocupes, aprenderemos lo básico del terminal. ¡No habrá nada raro como una cebolla en el parque, lo prometo!
-        """)
+        with st.container():
+            st.markdown("### Ralph")
+            st.image("images/ralph/ralph_presentacion.jpeg", width=300, caption="Git es como caramelos, ¡pero sin pegamento! A veces hago cosas y aparecen en otro lado... ¡Es como magia rara!")
+            st.markdown("""
+            **Comandos Básicos con Ralph**: ¡Hola! Soy Ralph y aquí te guiaré por los comandos básicos de terminal. ¡Nada de cebollas misteriosas en el parque, lo prometo!
+            """)
 
-        st.markdown("### Homer")
-        st.image("images/homer/homer_presentacion.jpeg", width=300, caption="¿Por qué programar cuando puedes comer?")
-        st.markdown("""
-        **Operaciones Básicas con Homer**: ¡Mmm, comandos básicos de Git! Tan buenos como una cerveza fría después del trabajo. Verás que hacer **git add** o **git commit** es como abrir una Duff: una vez que empiezas, no puedes parar.
-        """)
+        with st.container():
+            st.markdown("### Homer")
+            st.image("images/homer/homer_presentacion.jpeg", width=300, caption="¿Por qué programar cuando puedes comer?")
+            st.markdown("""
+            **Operaciones Básicas con Homer**: ¡Mmm, comandos básicos de Git! Tan buenos como una cerveza fría. Con **git add** y **git commit**, ¡verás que es tan bueno como abrir una Duff!
+            """)
 
-        st.markdown("### Lisa")
-        st.image("images/lisa/lisa_presentacion.jpeg", width=300, caption="Organizar código es como el jazz, ¡requiere práctica y ritmo!")
-        st.markdown("""
-        **Uso Avanzado de Git con Lisa**: Soy Lisa Simpson y, como siempre, me toca poner un poco de orden. Aprenderemos técnicas avanzadas para que tu proyecto sea tan eficiente como mi saxofón los domingos por la tarde.
-        """)
+        with st.container():
+            st.markdown("### Lisa")
+            st.image("images/lisa/lisa_presentacion.jpeg", width=300, caption="Organizar código es como el jazz, ¡requiere práctica y ritmo!")
+            st.markdown("""
+            **Uso Avanzado de Git con Lisa**: Soy Lisa Simpson y aquí me toca poner orden. Aprenderemos técnicas avanzadas para que tu proyecto sea tan eficiente como mi saxofón en domingo.
+            """)
 
-        st.markdown("### Nelson")
-        st.image("images/nelson/nelson_presentacion_2.jpeg", width=300, caption="Ha-ha! ¡Si aprendes Git, te salvas de mis bromas!")
-        st.markdown("""
-        **Resumen del Taller con Nelson**: Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo porque lo digo yo… ¡o sino verás!
-        """)
+        with st.container():
+            st.markdown("### Nelson")
+            st.image("images/nelson/nelson_presentacion_2.jpeg", width=300, caption="Ha-ha! ¡Si aprendes Git, te salvas de mis bromas!")
+            st.markdown("""
+            **Resumen del Taller con Nelson**: ¡Ha-ha! Soy Nelson y aquí no te escapas sin aprender Git. Repasaremos todo porque lo digo yo… ¡o sino verás!
+            """)
 
-        st.markdown("### Maggie")
-        st.image("images/maggie/maggie_presentacion.jpeg", width=300, caption="(Maggie asiente en silencio... ¡Tu feedback es importante, así que cuéntanos!)")
-        st.markdown("""
-        **Feedback con Maggie**: Incluso Maggie tiene algo que decir, ¿por qué no tú? ¡Tu feedback es valioso! Déjanos tus comentarios y sugerencias para que podamos mejorar y hacer que este taller sea todavía más increíble.
-        """)
+        with st.container():
+            st.markdown("### Maggie")
+            st.image("images/maggie/maggie_presentacion.jpeg", width=300, caption="Maggie asiente en silencio... ¡Tu feedback es importante, así que cuéntanos!")
+            st.markdown("""
+            **Feedback con Maggie**: Incluso Maggie tiene algo que decir, ¿por qué no tú? ¡Tu feedback es valioso! Déjanos tus comentarios y sugerencias para que podamos mejorar y hacer que este taller sea todavía más increíble.
+            """)
 
-     # Segunda columna (derecha)
+    # Segunda columna (derecha)
     with col2:
-        st.markdown("### Marge")
-        st.image("images/marge/marge_presentacion.jpeg", width=300, caption="Organizar Git es como ordenar la cocina. ¡Todo en su sitio!")
-        st.markdown("""
-        **Configuración e Inicialización con Marge**: Hola, soy Marge. Configurar Git es como organizar la despensa: una vez que todo está en su sitio, la vida es mucho más fácil. ¡Vamos a evitar que Homer borre todo accidentalmente!
-        """)
+        with st.container():
+            st.markdown("### Marge")
+            st.image("images/marge/marge_presentacion.jpeg", width=300, caption="Organizar Git es como ordenar la cocina. ¡Todo en su sitio!")
+            st.markdown("""
+            **Configuración e Inicialización con Marge**: Hola, soy Marge. Configurar Git es como organizar la despensa: una vez que todo está en su sitio, la vida es mucho más fácil. ¡Vamos a evitar que Homer borre todo accidentalmente!
+            """)
 
-        st.markdown("### Bart")
-        st.image("images/bart/bart_presentacion.jpeg", width=300, caption="¡Soy el Barto! El caos de Git es mi especialidad.")
-        st.markdown("""
-        **Ramas y Colaboración con Bart**: ¡Yo soy el Barto! Vamos a liarla con unas cuantas ramas de Git, pero no te preocupes, ¡Lisa nos salvará antes de que se nos vaya todo de las manos!
-        """)
+        with st.container():
+            st.markdown("### Bart")
+            st.image("images/bart/bart_presentacion.jpeg", width=300, caption="¡Soy el Barto! El caos de Git es mi especialidad.")
+            st.markdown("""
+            **Ramas y Colaboración con Bart**: ¡Yo soy el Barto! Vamos a liarla con unas cuantas ramas de Git, pero no te preocupes, ¡Lisa nos salvará antes de que se nos vaya todo de las manos!
+            """)
 
-        st.markdown("### Ned Flanders")
-        st.image("images/ned/ned_presentacion.jpeg", width=300, caption="Integrar con GitHub es como un saludito amistosito!")
-        st.markdown("""
-        **Integración con GitHub con Ned Flanders**: ¡Hola holita, vecinitos! Integrar Git con GitHub es más fácil que una limonada bien fresquita en una tarde de verano. ¡Nada complicado, lo prometo!
-        """)
+        with st.container():
+            st.markdown("### Ned Flanders")
+            st.image("images/ned/ned_presentacion.jpeg", width=300, caption="Integrar con GitHub es como un saludito amistosito!")
+            st.markdown("""
+            **Integración con GitHub con Ned Flanders**: ¡Hola holita, vecinitos! Integrar Git con GitHub es más fácil que una limonada bien fresquita en una tarde de verano. ¡Nada complicado, lo prometo!
+            """)
 
-        st.markdown("### Apu")
-        st.image("images/apu/apu_presentacion.jpeg", width=300, caption="¡Gracias, vuelve pronto! Dominaremos Git como los precios del Badulaque.")
-        st.markdown("""
-        **Ejercicios Prácticos con Apu**: ¡Gracias, vuelve pronto! Soy Apu, y no te preocupes, te tengo preparado un surtido de ejercicios prácticos para que domines Git mejor que los precios en el Badulaque.
-        """)
- 
+        with st.container():
+            st.markdown("### Apu")
+            st.image("images/apu/apu_presentacion.jpeg", width=300, caption="¡Gracias, vuelve pronto! Dominaremos Git como los precios del Badulaque.")
+            st.markdown("""
+            **Ejercicios Prácticos con Apu**: ¡Gracias, vuelve pronto! Soy Apu, y no te preocupes, te tengo preparado un surtido de ejercicios prácticos para que domines Git mejor que los precios en el Badulaque.
+            """)
+
     st.markdown("")    
     st.markdown("")    
     st.markdown("")    
@@ -191,10 +183,10 @@ def comandos_basicos_terminal():
     ls
     dinosaurios  chu-chu-chuly  habitacion_de_bart
     ```
-    ¡Ralph ha creado una nueva habitación en la casa! Bart ahora tiene su espacio propio para hacer travesuras sin molestar a Lisa... al menos por ahora.
+    ¡Ralph ha creado una nueva habitación en la casa! Bart ahora tiene su espacio propio para hacer bromas sin molestar a Lisa... al menos por ahora.
 
     #### Crear Otras Habitaciones (¡La Casa Sigue Creciendo!)
-    Ralph está en racha y decide que todos los Simpson necesitan su propia habitación. Ahora quiere construir una habitación para Lisa, otra para Homer (¡cerca de la nevera, claro!) y una para Maggie.
+    Ralph está en racha y decide que todos los Simpson necesitan su propia habitación. Ahora quiere construir una habitación para Lisa, otra para Homer y Marge (¡cerca de la nevera, claro!) y una para Maggie.
 
     **Ejemplo:** Ralph construye las demás habitaciones:
     ```bash
@@ -242,14 +234,14 @@ def comandos_basicos_terminal():
     ```
     ¡Oh no! Ralph ha borrado toda la casa de los Simpson por accidente. Marge se enfada, y Homer se queda sin su habitación y sin su preciada nevera.
 
-    **Lección:** Asegúrate siempre de estar en el directorio correcto antes de eliminar algo. Un paso en falso puede tener consecuencias desastrosas.
+    **Nota:** Asegúrate siempre de estar en el directorio correcto antes de eliminar algo. Un paso en falso puede tener consecuencias desastrosas.
     """)
 
     st.image("images/ralph/ralph_bart_constuctores.jpeg", width=300, caption="¡Construir es como jugar con espaguetis! ¡A veces se rompen, pero se ven tan ricos!")
 
     st.markdown("### 3. 📦 Gestión de Archivos con Bart y Sus Bromas: Ralph Aprende a Ser Travieso")
     st.markdown("""
-    Ralph ha encontrado a su nuevo mejor amigo y socio de travesuras: ¡Bart Simpson! Bart es un experto en hacer bromas a la gente de Springfield, y ahora Ralph quiere aprender a hacer bromas usando la terminal. Vamos a enseñar a Ralph y Bart cómo gestionar archivos mientras preparan sus travesuras.
+    Ralph ha encontrado a su nuevo mejor amigo: ¡Bart Simpson! Bart es un experto en hacer bromas a la gente de Springfield, y ahora Ralph quiere aprender a hacer bromas usando la terminal. Vamos a enseñar a Ralph y Bart cómo gestionar archivos mientras preparan sus bromas.
 
 #### Crear un Nuevo Archivo (¡Bart y Ralph Preparan una Broma!)
 Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema operativo, el comando varía:
@@ -263,7 +255,7 @@ Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema 
     ```bash
     touch broma_homer.txt
     ls
-    broma_homer.txt travesuras_de_bart dinosaurios rosquillas
+    broma_homer.txt travesuras_de_bart dinosaurios
     ```
 
 - **En Windows**: Usan `New-Item` en PowerShell para hacer lo mismo:
@@ -272,20 +264,6 @@ Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema 
     ```
 
     Ahora tienen un archivo listo para llenarlo de ideas graciosas. Ralph está emocionado porque Homer ni siquiera sospechará de la broma que están planeando.
-
-    #### Eliminar un Archivo (¡Bart y Ralph Borran las Evidencias!)
-    Después de que una de sus bromas se sale de control (como suele pasar cuando Ralph está involucrado), necesitan borrar las pruebas rápidamente. Bart le enseña a Ralph cómo eliminar archivos para no ser atrapados:
-    ```bash
-    rm <nombre-del-archivo>
-    ```
-
-    **Ejemplo:** Bart y Ralph eliminan el archivo `broma_homer.txt` para que Homer no descubra su plan:
-    ```bash
-    rm broma_homer.txt
-    ls
-    travesuras_de_bart  dinosaurios
-    ```
-    ¡Uf! El archivo ha sido eliminado justo a tiempo. Ralph suspira aliviado porque no quiere que Homer lo descubra.
 
     #### Copiar un Archivo (¡Bart y Ralph Multiplican Sus Bromas!)
     Bart le explica a Ralph cómo copiar un archivo para que las bromas puedan expandirse por todo Springfield. Usan este comando para copiar sus archivos de broma:
@@ -299,8 +277,22 @@ Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema 
     ls
     broma_homer.txt  broma_homer_copia.txt  travesuras_de_bart  dinosaurios
     ```
-    ¡Misión cumplida! Ahora tienen copias de su broma en varios lugares, por si alguna se pierde en el camino. Ralph sonríe porque es más probable que la broma funcione.
+    ¡Misión cumplida! Ahora tienen copias de su broma en varios directorios, por si alguna se pierde en el camino.
 
+    #### Eliminar un Archivo (¡Bart y Ralph Borran las Evidencias!)
+    Después de que una de sus bromas se sale de control (como suele pasar cuando Ralph está involucrado), necesitan borrar las pruebas rápidamente. Bart le enseña a Ralph cómo eliminar archivos para no ser atrapados:
+    ```bash
+    rm <nombre-del-archivo>
+    ```
+
+    **Ejemplo:** Bart y Ralph eliminan el archivo `broma_homer.txt` para que Homer no descubra su plan:
+    ```bash
+    rm broma_homer.txt
+    ls
+    broma_homer_copia.txt travesuras_de_bart  dinosaurios
+    ```
+    ¡Uf! El archivo ha sido eliminado justo a tiempo. Ralph suspira aliviado porque no quiere que Homer lo descubra.
+                                
     #### Mover un Archivo (¡Bart y Ralph Ocultan las Bromas!)
     Ralph quiere esconder sus bromas y Bart le enseña a usar `mv` para mover los archivos a nuevos lugares, como cuando Bart esconde su tirachinas en la nevera:
     ```bash
@@ -309,9 +301,9 @@ Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema 
 
     **Ejemplo:** Bart y Ralph mueven el archivo de broma de Homer a otro lugar en la casa para confundirlo aún más:
     ```bash
-    mv broma_homer.txt /casa_de_los_simpson/nevera/
+    mv broma_homer_copia.txt /casa_de_los_simpson/nevera/
     ls
-    broma_homer_copia.txt  travesuras_de_bart  dinosaurios
+    travesuras_de_bart  dinosaurios
     ```
     ¡Perfecto! El archivo ha sido movido a un lugar secreto. Ahora Homero jamás encontrará el archivo de la broma.
 
@@ -330,7 +322,7 @@ Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema 
     - Poner una bomba de ruido en la nevera de Homer.
     - Cambiar el shampoo de Lisa por pegamento.
     ```
-    Ralph se ríe a carcajadas y ya está pensando en cómo llevar a cabo algunas de estas ideas locas.  """) 
+    Ralph se ríe a carcajadas y ya está pensando en cómo llevar a cabo algunas de estas ideas locas como cambiar la pasta de dientes de Lisa por mayonesa: ¡Para que su boca tenga el mejor sabor a sándwich del mundo!""") 
 
     st.image("images/ralph/ralph_bart_bromas.jpeg", width=300, caption="¡Las bromas son como las galletas! ¡Siempre hay espacio para más, aunque me den un poco de tos!")
 
@@ -344,9 +336,10 @@ Bart le muestra a Ralph cómo crear archivos para sus bromas. Según el sistema 
         {"Comando": "pwd", "Descripción": "Muestra la ruta del directorio actual (Ralph se asegura de no perderse)."},
         {"Comando": "cd <directorio>", "Descripción": "Cambia de directorio (Ralph va a buscar más rosquillas)."},
         {"Comando": "mkdir <nombre>", "Descripción": "Crea un nuevo directorio (Ralph construye nuevas habitaciones)."},
-        {"Comando": "rm -r <directorio>", "Descripción": "Elimina un directorio (Ralph derriba una habitación por error)."},
+        {"Comando": "rm -r <directorio>", "Descripción": "Elimina un directorio (Ralph derriba la habitación del dinosario)."},
         {"Comando": "rm -rf *", "Descripción": "Elimina todo en el directorio actual (Ralph derriba todo como un tornado)."},
-        {"Comando": "touch <archivo>", "Descripción": "Crea un nuevo archivo vacío (Bart y Ralph preparan una broma)."},
+        {"Comando": "touch <archivo>", "Descripción": "Crea un nuevo archivo vacío en linux o macOs(Bart y Ralph preparan una broma)."},
+        {"Comando": "New-Item -Path . -Name \"nombre-archivo\" -ItemType \"File\"", "Descripción": "Crea un nuevo archivo vacío en windows (Bart y Ralph preparan una broma)."},
         {"Comando": "rm <archivo>", "Descripción": "Elimina un archivo (Bart y Ralph borran las pruebas)."},
         {"Comando": "cp <origen> <destino>", "Descripción": "Copia un archivo (Bart y Ralph multiplican sus bromas)."},
         {"Comando": "mv <origen> <destino>", "Descripción": "Mueve o renombra un archivo (Bart y Ralph cambian el nombre de su última broma)."},
@@ -480,8 +473,6 @@ def configuracion_e_inicializacion_git():
     st.markdown("""
     Ahora que tienes todo configurado, ¡es hora de comenzar tu proyecto! Imagina que estás haciendo una nueva receta para una cena especial. Estoy aquí para guiarte en cada paso del camino.
 
-    ### Pasos para Inicializar un Repositorio en GitHub
-
     #### Paso 1: Crea el Repositorio en GitHub
     Primero, dirígete a [GitHub](https://github.com/) y crea un nuevo repositorio. Copia la URL del repositorio, como si estuvieras guardando una receta especial en tu libro de cocina. ¡Asegúrate de que la URL sea más sólida que la casa de los Simpson!
 
@@ -559,7 +550,7 @@ def configuracion_e_inicializacion_git():
     ### Conclusión al Estilo Marge: ¡Todo en su Lugar!
     ¡Y ahí lo tienes! Desde la configuración inicial hasta la creación de tu primer repositorio, ahora estás listo para sumergirte en el mundo de Git. Recuerda que, como en la cocina, la práctica es clave. Cada pequeño paso que tomas te acerca a convertirte en un maestro en este arte.
 
-    Si tienes preguntas, ¡no dudes en preguntar! Estoy aquí para ayudarte, al igual que cuando ayudo a Bart y Lisa a hacer su tarea (aunque eso a veces puede ser un desafío).
+    Si tienes preguntas, ¡no dudes en preguntar! Estoy aquí para ayudarte, al igual que cuando ayudo a Bart y Lisa a hacer sus deberes (aunque eso a veces puede ser todo un desafío).
 
     ¡Feliz codificación y que disfrutes de tus proyectos tanto como disfruto yo de mis galletas de chocolate! 🍪
     """)
@@ -584,9 +575,9 @@ def operaciones_basicas():
     st.markdown("""
     ### 1. Clonar Repositorios
                 
-    Mmm… ¡software libre! Lo bueno de Git es que, si lo rompes, solo tú te das cuenta… ¡nadie te castiga! Ahora vamos a hablar de clonar repositorios. ¿Qué es eso? Bueno, imagina que tienes todas las rosquillas del mundo, y puedes hacer copias de ellas, ¡una para cada Homer del universo! O como diría yo, "¡cuántas más rosquillas, mejor!"
+    Mmm… ¡software libre! Lo bueno de Git es que, si lo rompes, solo tú te das cuenta… ¡nadie te castiga! Ahora vamos a hablar de clonar repositorios. ¿Qué es eso? Bueno, imagina que tienes todas las rosquillas del mundo, y puedes hacer copias de ellas, ¡una para cada Homer del universo! O como diría yo, ¡mmmm... rosquillas!
 
-    Clonar es como cuando veo una rosquilla en la tele y quiero otra en la mano. Es tener el mismo proyecto que está en internet, ¡pero ahora en tu ordenador! Así puedes hacer con él lo que quieras, sin que nadie te mire mal si metes la pata… que no sé, quizá eso suene familiar.
+    Clonar es como cuando veo una rosquilla en la tele y quiero otra en la mano. Es tener el mismo proyecto que está en internet, ¡pero ahora en tu ordenador! Así puedes hacer con él lo que quieras, sin que nadie te mire mal si metes la pata.
 
     #### ¿Por Qué Clonar un Repositorio?
     - **Colaboración**: Como en la planta nuclear, si todos tenemos el mismo clon, ¡podemos hacer nuestras "tareas" sin que se entere el Señor Burns!
@@ -600,18 +591,18 @@ def operaciones_basicas():
         git clone <URL-del-repositorio>
         ```
         
-        **Ejemplo Real:** Si quiero clonar un repositorio llamado `Git` desde GitHub, hago:
+        **Ejemplo:** Si quiero clonar un repositorio llamado `Git` desde GitHub, hago:
         ```bash
         git clone https://github.com/AlexCapis/Git.git
         ```
         
-        📌 **Tip:** Si el repositorio es privado, necesitarás tu cuenta y acceso, como cuando Apu te deja a deber una cerveza en el Badulaque… ¡eso no es para todos, amigo!
+        📌 **Tip:** Si el repositorio es privado, necesitarás tu cuenta y acceso, como cuando Moe te deja a deber una cerveza en su bar ¡eso no es para todos, amigo!
 
     Y ya lo tienes, ¡eres todo un clonador! ¿Ves? Con este método puedes trastear con el código tanto como quieras, y si la cosa explota… nadie sabrá que fuiste tú, porque tienes tu propio clon. ¡D'oh!
 
     """)
 
-    st.image("images/homer/clonar.jpeg", caption="¡Clones de Homers por todas partes! La planta nuclear nunca ha estado tan bien atendida.", width=300)
+    st.image("images/homer/clonar.jpeg", caption="¡Clones de Homers por todas partes! Las rosquillas del mundo tiemblan.", width=300)
 
 
     # Sección de Añadir y Eliminar Archivos
@@ -622,13 +613,13 @@ def operaciones_basicas():
     Con Git, puedo **añadir archivos** al área de staging, y cuando ya no quiero más (aunque eso nunca pasa con las rosquillas), también puedo **eliminarlos**. Así mantengo mi repositorio limpio y organizado... o al menos lo intento.
 
     #### Añadir Archivos al Repositorio
-    Para añadir nuevos archivos al área de staging (o, como yo diría, ¡a mi "stash de rosquillas"!), usa este comando:
+    Para añadir nuevos archivos al área de staging (o, como yo diría, ¡a mi stash de rosquillas!), usa este comando:
     """)
 
     st.code("git add <archivo>", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Creé un archivo de receta de rosquillas llamado `Receta_Rosquilla.txt`. ¡Lo quiero en mi repositorio para consultarlo cuando quiera! Entonces escribo:
+    **Ejemplo:** Creé un archivo de receta de rosquillas llamado `Receta_Rosquilla.txt`. ¡Lo quiero en mi repositorio para consultarlo cuando quiera! Entonces escribo:
     """)
 
     st.code("git add Receta_Rosquilla.txt", language='bash')
@@ -641,21 +632,21 @@ def operaciones_basicas():
     st.code("git rm <archivo>", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Digamos que tengo una receta de pizza en el archivo `Receta_Pizza.txt`... pero la verdad es que prefiero enfocarme en las rosquillas. Así que para eliminarlo, escribo:
+    **Ejemplo:** Digamos que tengo una receta de pizza en el archivo `Receta_Pizza.txt`... pero la verdad es que prefiero enfocarme en las rosquillas. Así que para eliminarlo, escribo:
     """)
 
     st.code("git rm Receta_Pizza.txt", language='bash')
 
     st.markdown("""
-    📌 **Tip de Chef Homer:** Si solo quiero quitar el archivo del área de staging pero aún conservarlo en mi computadora (por si decido que realmente lo quiero), uso `git reset HEAD <archivo>` en lugar de `git rm`.
+    📌 **Tip de Chef Homer:** Si solo quiero quitar el archivo del área de staging, pero aún conservarlo en mi pc (por si decido que realmente lo quiero), uso `git reset HEAD <archivo>` en lugar de `git rm`.
 
-    **Ejemplo del Tip:** Me arrepiento un poco de añadir `Receta_Rosquilla.txt` al área de staging porque quiero revisarla un poco más. Así que, para sacarlo del staging y seguir trabajándolo, hago esto:
+    **Ejemplo:** Me arrepiento un poco de añadir `Receta_Rosquilla.txt` al área de staging porque quiero revisarla un poco más. Así que, para sacarlo del staging y seguir trabajándolo, hago esto:
     """)
 
     st.code("git reset HEAD Receta_Rosquilla.txt", language='bash')
 
     st.markdown("""
-    Esto mantiene el archivo en mi directorio de trabajo pero lo elimina del área de staging, como si nada hubiera pasado. ¡Nadie me quita mis rosquillas!
+    Esto mantiene el archivo en mi directorio de trabajo, pero lo elimina del área de staging, como si nada hubiera pasado. ¡Nadie me quita mis rosquillas!
     """)
 
     # Imagen asociada a Añadir y Eliminar Archivos
@@ -675,7 +666,7 @@ def operaciones_basicas():
     st.code("git commit -m \"Mensaje del commit\"", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Digamos que acabo de añadir una receta súper secreta de rosquillas... ¡definitivamente merece ser parte de mi historia! Para guardar este momento, escribiría:
+    **Ejemplo:** Digamos que acabo de añadir una receta súper secreta de rosquillas... ¡definitivamente merece ser parte de mi historia! Para guardar este momento, escribiría:
     """)
 
     st.code("git commit -m \"Añadida nueva receta de rosquilla\"", language='bash')
@@ -688,7 +679,7 @@ def operaciones_basicas():
     st.code("git log", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** Quiero ver todas mis hazañas y recetas guardadas, así que uso:
+    **Ejemplo:** Quiero ver todas mis hazañas y recetas guardadas, así que uso:
     """)
 
     st.code("git log", language='bash')
@@ -696,7 +687,7 @@ def operaciones_basicas():
     st.markdown("""
     📌 **Tip Rápido:** Para ver un historial más compacto, como si fuera un resumen de mis aventuras, usa `git log --oneline`. Esto te mostrará solo los mensajes de cada commit, ¡perfecto para una vista rápida de tu historia de cambios!
 
-    **Ejemplo del Tip:** Digamos que quiero ver un resumen sin entrar en detalles, entonces puedo escribir:
+    **Ejemplo:** Digamos que quiero ver un resumen sin entrar en detalles, entonces puedo escribir:
     """)
 
     st.code("git log --oneline", language='bash')
@@ -716,39 +707,21 @@ def operaciones_basicas():
     Para trabajar en equipo con Git, es esencial que tu repositorio local esté sincronizado con el remoto. Aquí vamos a ver cómo hacerlo:
 
     #### Actualizar el Repositorio Local
-    Cuando alguien en tu equipo, como Bart, añade algo nuevo, puedes descargar y fusionar esos cambios a tu repositorio local usando el comando `git pull`.
-    """)
-
-    st.code("git pull", language='bash')
-
-    st.markdown("""
-    **Ejemplo Real:** Me enteré de que Bart agregó nuevas recetas a nuestra colección y quiero traerlas a mi repositorio para probarlas yo también. Para actualizar mi repositorio, usaría:
+    Cuando alguien en tu equipo, como Bart, añade algo nuevo, puedes descargar y fusionar esos cambios a tu repositorio local usando el comando `git pull`como por ejemplo cuando me enteré de que Bart añadió nuevas recetas a nuestra colección y quiero traerlas a mi repositorio para probarlas yo también.
     """)
 
     st.code("git pull", language='bash')
 
     st.markdown("""
     #### Enviar Cambios al Repositorio Remoto
-    Por supuesto, si yo quiero compartir una de mis recetas (como la de mi famosa rosquilla doble), uso `git push` para enviar mis cambios al repositorio remoto y que todos puedan disfrutarlo.
-    """)
-
-    st.code("git push", language='bash')
-
-    st.markdown("""
-    **Ejemplo Real:** Si quiero que Bart y el resto de Springfield puedan ver y probar mi receta, ¡envío mis cambios con:
+    Por supuesto, si yo quiero compartir una de mis recetas (como la de mi famosa rosquilla doble), uso `git push` para enviar mis cambios al repositorio remoto y que todos puedan disfrutarlo como por ejemplo si quiero que Bart y el resto de Springfield puedan ver y probar mi receta, ¡envío mis cambios con:
     """)
 
     st.code("git push", language='bash')
 
     st.markdown("""
     #### Verificar el Estado del Repositorio
-    Y antes de enviar cualquier cambio, siempre verifico que todo esté en orden con `git status`. Esto me permite ver si hay algo pendiente o sin guardar.
-    """)
-
-    st.code("git status", language='bash')
-
-    st.markdown("""
-    **Ejemplo Real:** Como siempre soy un poco curioso (y a veces un poco despistado), reviso mi estado actual usando:
+    Y antes de enviar cualquier cambio, siempre verifico que todo esté en orden con `git status` y me permite ver si hay algo pendiente o sin guardar. Como siempre soy un poco curioso (y a veces un poco despistado), reviso mi estado actual usando: 
     """)
 
     st.code("git status", language='bash')
@@ -756,14 +729,12 @@ def operaciones_basicas():
     st.markdown("""
     #### Estado Compacto del Repositorio
     Si quiero ver el estado en un formato más corto, uso `git status -s`, que es como ver solo el resumen.
-
-    **Ejemplo Real:** Para un vistazo rápido, ejecuto:
     """)
 
     st.code("git status -s", language='bash')
 
     st.markdown("""
-    📌 **Tip:** Si necesitas un estado más detallado, usa `git status` sin la opción `-s`.
+    📌 **Recuerda:** Usa `git status` sin la opción `-s` si necesitas un estado más detallado y  `git status -s` si quieres un resumen.
     """)
 
     # Imagen asociada a Actualizar y Sincronizar Repositorios
@@ -783,7 +754,7 @@ def operaciones_basicas():
     st.code("git config --global alias.<alias> '<comando>'", language='bash')
 
     st.markdown("""
-    **Ejemplo Real:** 
+    **Ejemplo:** 
     Imaginemos que quiero ver el estado de mi repositorio sin escribir `git status` cada vez. Puedo abreviarlo con el alias `s` de la siguiente forma:
     """)
 
@@ -794,9 +765,9 @@ def operaciones_basicas():
 
     #### Alias Útiles
     Aquí tienes algunos alias que podrían gustarte:
-    - `git config --global alias.co 'checkout'`: Usa `git co` en lugar de `git checkout`.
+    - `git config --global alias.che 'checkout'`: Usa `git che` en lugar de `git checkout`.
     - `git config --global alias.br 'branch'`: Usa `git br` para ver tus ramas.
-    - `git config --global alias.ci 'commit'`: Usa `git ci` para hacer un commit rápido.
+    - `git config --global alias.co 'commit'`: Usa `git co` para hacer un commit rápido.
 
     ¡Estos atajos hacen que usar Git sea casi tan fácil como alcanzar una rosquilla!
     """)
@@ -809,9 +780,9 @@ def operaciones_basicas():
 
     # Introducción
     st.write("""
-        Bienvenidos a mi fabulosa guía de comandos de Git. Aquí aprenderás a manejar el control de versiones 
-        con la misma destreza que yo manejo el sofá. ¡Vamos a sumergirnos en el delicioso mundo de Git, 
-        donde cada commit es como una dona que no quieres perder!
+        Bienvenidos a mi increíble guía de comandos de Git. Aquí aprenderás los comandos iniciales del control de versiones 
+        con la misma destreza que yo domino el sofá. ¡Vamos a sumergirnos en el delicioso mundo de Git, 
+        donde cada commit es como una rosquilla que no quieres perder!
     """)
 
 
