@@ -1741,19 +1741,6 @@ def resumen_taller():
     # Imagen graciosa de Nelson
     st.image("images/nelson/leer_libro_git.jpeg", width=300, caption="¡Ja, ja! Leyendo el manual porque los commits no se arreglan solos.")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     # Conclusión 
     st.header("🎉 ¡Y con eso hemos terminado, ja, ja! 🎉")
     st.write("Si llegaste hasta aquí y no te perdiste en el camino, ya eres casi tan bueno en Git como yo en hacerle bromas a Milhouse. Ahora, cuando alguien más esté peleando con Git, podrás aparecer y decir: ‘¿En serio no sabes eso? ¡Ja, ja!’")
@@ -1946,7 +1933,6 @@ def ejercicios():
             st.success("¡Excelente trabajo! Has demostrado un gran dominio de Git. Sigue así.")
 
 
-
 def feedback():
     st.markdown("<h1 style='text-align: center;'>Tss... silencio Maggie sólo quiere escucharte 🍼</h1>", unsafe_allow_html=True)
     st.markdown("---")
@@ -2053,16 +2039,6 @@ def feedback():
     # Mensaje de despedida
     st.markdown("<p style='text-align: center;'>¡Gracias por participar y por el feedback proporcionado! 👋</p>", unsafe_allow_html=True)
 
-
-
-
-
-
-
-
-
-
-
 # Diccionario para la navegación
 paginas = {
     "Home": pagina_principal,
@@ -2083,4 +2059,3 @@ seleccion = st.sidebar.radio("Selecciona una sección", list(paginas.keys()))
 
 # Ejecutar la función correspondiente a la selección de página
 paginas[seleccion]()
-
