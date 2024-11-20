@@ -21,7 +21,7 @@ def pagina_principal():
     # Centrando la imagen de Maggie usando st.image() y con ancho ajustado
     col1, col2, col3 = st.columns([1, 2, 1])  # Tres columnas para centrar el contenido en el medio
     with col2:
-        st.image("images/SIMPSONS.jpeg", width=400)  # Imagen centrada en la columna del medio
+        st.image("images/Portadas/SIMPSONS.jpeg", width=400)  # Imagen centrada en la columna del medio
 
 
     # Historia de introducción

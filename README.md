@@ -1,3 +1,6 @@
+
+<img src="images/Portadas/learn_git.jpeg" width="800">
+
 # Taller de Git con Los Simpsons
 
 ¡Bienvenidos al **Taller de Git**! Este taller ha sido diseñado para que aprendas las bases del control de versiones de manera práctica y entretenida, en compañía de los icónicos personajes de **Los Simpsons**. Aquí verás cómo dominar Git mientras te diviertes con las aventuras de Springfield.
