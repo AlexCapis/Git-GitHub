@@ -1,10 +1,22 @@
 # Taller de Git con Los Simpsons
 
-¡Bienvenidos al Taller de Git! Este taller ha sido diseñado para ofrecerte una comprensión práctica de las herramientas de control de versiones y cómo utilizarlas en tu flujo de trabajo, todo esto con la divertida y entrañable compañía de los personajes de Los Simpson.
+¡Bienvenidos al **Taller de Git**! Este taller ha sido diseñado para que aprendas las bases del control de versiones de manera práctica y entretenida, en compañía de los icónicos personajes de **Los Simpsons**. Aquí verás cómo dominar Git mientras te diviertes con las aventuras de Springfield.
 
-## Temas del Taller
+---
 
-El taller se compone de los siguientes temas:
+## 🎯 **Objetivo del Taller**
+
+Al finalizar este taller, podrás:
+
+- **Entender y usar Git** como herramienta de control de versiones.
+- Colaborar de manera eficiente en proyectos de equipo utilizando Git y GitHub.
+- Crear, modificar y administrar ramas para trabajar con mayor flexibilidad.
+- Resolver conflictos de código sin perder la cabeza... ni el saxofón de Lisa.
+- Integrar las mejores prácticas en tu flujo de trabajo diario.
+
+---
+
+## 📋 **Temas del Taller**
 
 1. **Comandos Básicos con Ralph Wiggum:** Hola, ¡Hola, soy Ralph! No te preocupes, aprenderemos lo básico del terminal. ¡No habrá nada raro como una cebolla en el parque, lo prometo!
 
@@ -23,6 +35,8 @@ El taller se compone de los siguientes temas:
 8. **Ejercicios Prácticos con Apu:** ¡Gracias, vuelve pronto! Soy Apu, y no te preocupes, te tengo preparado un surtido de ejercicios prácticos para que domines Git mejor que los precios en el Badulaque.
 
 9. **Feedback con Maggie:** Incluso Maggie tiene algo que decir, ¿por qué no tú? ¡Tu feedback es valioso! Déjanos tus comentarios y sugerencias para que podamos mejorar y hacer que este taller sea todavía más increíble.
+
+---
 
 ## ¿Cómo usar la aplicación?
 
@@ -44,6 +58,23 @@ Para ejecutar esta aplicación, sigue estos pasos:
 
 Una vez que ejecutes el comando anterior, Streamlit abrirá automáticamente tu navegador web y podrás acceder a la aplicación en la dirección http://localhost:8501.
 
+---
+
+##  Recursos Adicionales
+- Libro Pro Git (gratuito): Una guía completa sobre Git, ideal para usuarios principiantes y avanzados.
+- Cheat Sheet de Git: Un resumen práctico de los comandos más usados.
+- Git Official Documentation: La documentación oficial para aprender de la fuente.
+- Juego interactivo de Git: Practica Git de forma divertida con este juego interactivo.
+
+---
 
 ## Contribuciones
-¡Nos encantaría recibir tus comentarios y sugerencias! Si deseas contribuir a mejorar esta aplicación, no dudes en abrir un problema o enviar una solicitud de extracción (pull request).
+¿Tienes ideas para mejorar el taller? ¡Nos encantaría recibir tus contribuciones! Puedes hacerlo de las siguientes maneras:
+
+- Reporta problemas: Abre un Issue en este repositorio.
+- Haz mejoras: Envía un Pull Request con tus sugerencias o soluciones.
+
+---
+
+## Agradecimientos
+Gracias por ser parte de este taller. Con tu esfuerzo y las enseñanzas de los Simpson, pronto dominarás Git como un verdadero experto. ¡Nos vemos en el repositorio!
