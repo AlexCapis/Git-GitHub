@@ -45,16 +45,22 @@ Para ejecutar esta aplicación, sigue estos pasos:
 1. **Clona este repositorio:**
 
    ```bash
-   git clone <URL del repositorio>
-   cd <nombre del repositorio>
+   git clone https://github.com/AlexCapis/Git-GitHub.git
+   ```
 
-2. **Ejecuta la aplicación**
+2. **Accede al repositorio:**
+
+    ```bash
+   cd Git-GitHub
+   ```
+
+3. **Ejecuta la aplicación**
 
    ```bash
     streamlit run app_SIMPSONS.py
+   ```
 
-
-3. **Accede a la aplicación**
+4. **Accede a la aplicación**
 
 Una vez que ejecutes el comando anterior, Streamlit abrirá automáticamente tu navegador web y podrás acceder a la aplicación en la dirección http://localhost:8501.
 
